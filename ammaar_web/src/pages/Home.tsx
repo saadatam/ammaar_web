@@ -3,6 +3,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -366,8 +367,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-green-400 mb-4">Get in Touch</h2>
-            <p className="text-gray-300 mb-8">Interested in working together? Let's connect!</p>
+               {/* Contact Form */}
+            <ContactForm />
             <div className="flex justify-center gap-6">
               {[
                 { name: 'GitHub', icon: '/icons/github_icon.png' },
