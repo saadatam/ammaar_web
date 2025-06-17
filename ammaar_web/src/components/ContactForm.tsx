@@ -84,23 +84,15 @@ export default function ContactForm() {
       transition={{ delay: 0.5 }}
       className="w-full max-w-2xl mx-auto mt-16"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div 
+      className="grid grid-cols-1 md:grid-cols-2 gap-8"
+      >
         {/* Left Column - Contact Info */}
         <div className="space-y-4">
           <h2 className="text-2xl font-bold text-green-400 mb-2">Get in Touch</h2>
           <p className="text-sm text-gray-300">
             Have a question or want to work together? Feel free to reach out!
           </p>
-          <div className="space-y-2">
-            <div className="flex items-center space-x-2">
-              {/* <span className="text-green-400">📍</span> */}
-              {/* <span className="text-sm text-gray-300">San Francisco, CA</span> */}
-            </div>
-            <div className="flex items-center space-x-2">
-              {/* <span className="text-green-400">📧</span> */}
-              {/* <span className="text-sm text-gray-300">saadatam@umich.edu</span> */}
-            </div>
-          </div>
         </div>
 
         {/* Right Column - Contact Form */}
@@ -145,7 +137,7 @@ export default function ContactForm() {
               name="location"
               value={formData.location}
               onChange={handleChange}
-              placeholder="City, Country"
+              placeholder="City, State"
               className="w-full px-3 py-1.5 bg-black bg-opacity-50 border border-green-400 rounded-md focus:ring-1 focus:ring-green-400 focus:border-transparent text-white text-sm"
               disabled={status.submitting}
             />

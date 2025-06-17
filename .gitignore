@@ -86,3 +86,6 @@
 /ammaar_web/*.bak
 /ammaar_web/*.swp
 /ammaar_web/*~
+
+/ammaar_web/.env
+.DS_Store
