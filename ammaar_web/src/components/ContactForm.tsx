@@ -33,12 +33,11 @@ export default function ContactForm() {
       };
 
       await emailjs.send(
-        'service_m24va57', // Replace with your EmailJS service ID
-        'template_3lvkl7k', // Replace with your EmailJS template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         templateParams,
-        '86h6IWyW72rxJcMb2' // Replace with your EmailJS public key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       );
-
       setStatus({
         submitting: false,
         submitted: true,
