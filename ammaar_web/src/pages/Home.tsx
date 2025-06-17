@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -19,6 +20,79 @@ export default function Home() {
     { name: 'My Plants', path: '/plants' },
     { name: 'Travel', path: '/travel' },
     { name: 'Photography', path: '/photography' },
+  ];
+
+  const projects = [
+    {
+      title: "E-Commerce Platform",
+      description: "A full-stack e-commerce solution with real-time inventory management.",
+      imageUrl: "/placeholder.png",
+      tech: ["React", "Node.js", "MongoDB"],
+      githubUrl: "https://github.com/saadatam" // Add your actual GitHub URL
+    },
+    {
+      title: "AI Image Generator",
+      description: "An AI-powered tool that generates unique images based on text prompts.",
+      tech: ["Python", "TensorFlow", "React"],
+      githubUrl: "https://github.com/saadatam" // Add your actual GitHub URL
+    }
+  ];
+
+  const skills = [
+    {
+      category: "Frontend Development",
+      technologies: [
+        { name: "React", level: "Advanced" },
+        { name: "TypeScript", level: "Advanced" },
+        { name: "Tailwind CSS", level: "Advanced" },
+        { name: "Next.js", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "Backend Development",
+      technologies: [
+        { name: "Node.js", level: "Advanced" },
+        { name: "Python", level: "Intermediate" },
+        { name: "Express.js", level: "Advanced" },
+        { name: "MongoDB", level: "Intermediate" }
+      ]
+    },
+    {
+      category: "DevOps & Tools",
+      technologies: [
+        { name: "Git", level: "Advanced" },
+        { name: "Docker", level: "Intermediate" },
+        { name: "AWS", level: "Intermediate" },
+        { name: "CI/CD", level: "Intermediate" }
+      ]
+    }
+  ];
+
+  const experiences = [
+    {
+      company: "Company Name",
+      role: "Software Engineer",
+      duration: "2022 - Present",
+      location: "San Francisco, CA",
+      description: "Led development of key features for the company's flagship product, resulting in a 40% increase in user engagement.",
+      technologies: ["React", "Node.js", "AWS", "MongoDB"]
+    },
+    {
+      company: "Previous Company",
+      role: "Full Stack Developer",
+      duration: "2020 - 2022",
+      location: "Remote",
+      description: "Developed and maintained multiple web applications, improving system performance by 25% through optimization.",
+      technologies: ["TypeScript", "Python", "Docker", "PostgreSQL"]
+    },
+    {
+      company: "Startup Company",
+      role: "Frontend Developer",
+      duration: "2019 - 2020",
+      location: "New York, NY",
+      description: "Built responsive user interfaces and implemented new features that increased user retention by 30%.",
+      technologies: ["React", "Redux", "Sass", "Jest"]
+    }
   ];
 
   return (
@@ -49,14 +123,19 @@ export default function Home() {
       {/* Glowing orb effect */}
       <div className="fixed inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 blur-3xl"></div>
 
-      {/* Main content */}
+      {/* Main content with name and dropdown */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 text-center"
+        className="relative z-40 flex flex-col items-center justify-center min-h-screen px-4 text-center pointer-events-auto pt-24"
       >
-        <h1 className="text-5xl md:text-7xl font-black mb-6 font-mono tracking-tight">
+        <h1 className="text-5xl md:text-7xl font-black mb-6 font-mono tracking-tight" style={{
+          background: 'linear-gradient(to right, #FFD700, #FFA500)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          textShadow: '0 0 20px rgba(255, 215, 0, 0.3)'
+        }}>
           Ammaar Saadat
         </h1>
         <h1 className="text-4xl md:text-6xl font-black mb-6 font-mono">
@@ -71,9 +150,13 @@ export default function Home() {
               1500,
               'Adventurous Traveler..',
               1500,
-              'Garden Enthusiast..',
+              'Volleyball Player..',
               1500,
-              'Garden Enthusiast..',
+              'Food Photographer..',
+              1500,
+              'Fashion Inspirer..',
+              1500,
+              'Photography Learner..',
               1500,
             ]}
             wrapper="span"
@@ -92,39 +175,18 @@ export default function Home() {
           Crafting digital experiences with modern technologies and creative solutions
         </motion.p>
 
-        {/* Navigation Buttons */}
+        {/* Navigation Dropdown */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
-          className="mt-16 flex flex-col gap-16 w-full"
+          className="mt-16 relative z-50"
         >
-          {navItems.map((item, index) => (
-            <motion.div
-              key={item.path}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2 + index * 0.1 }}
-              whileHover={{
-                scale: 1.05,
-                rotate: [0, -1, 1, -1, 1, 0],
-                transition: {
-                  rotate: {
-                    duration: 0.4,
-                    repeat: 0,
-                    ease: "easeInOut"
-                  },
-                  scale: {
-                    duration: 0.2
-                  }
-                }
-              }}
+          <motion.button
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+            whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="py-2"
-            >
-              <Link
-                to={item.path}
-                className="group relative inline-flex items-center justify-center px-16 py-8 font-black text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[350px] rounded-full font-mono tracking-wide"
+            className="group relative inline-flex items-center justify-center px-16 py-8 font-black text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[350px] rounded-full font-mono tracking-wide"
               >
                 {/* Glowing background effect */}
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-yellow-400 group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:shadow-[0_0_15px_rgba(250,204,21,0.4)] rounded-full"></span>
@@ -134,19 +196,48 @@ export default function Home() {
                 
                 {/* Button text with icon */}
                 <span className="relative text-yellow-400 group-hover:text-gray-900 flex items-center gap-4">
-                  <span className="text-xl sm:text-2xl">{item.name}</span>
+              <span className="text-xl sm:text-2xl">Explore My World</span>
                   <motion.span
-                    initial={{ x: 0 }}
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ rotate: isDropdownOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
                     className="text-2xl sm:text-3xl"
                   >
-                    →
+                ↓
                   </motion.span>
                 </span>
+          </motion.button>
+
+          {/* Dropdown Menu */}
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.2 }}
+                className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[350px] bg-gray-900 rounded-2xl border-2 border-yellow-400 overflow-hidden"
+              >
+                <div className="py-2">
+                  {navItems.map((item, index) => (
+                    <motion.div
+                      key={item.path}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link
+                        to={item.path}
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="block px-6 py-4 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-200 text-lg font-medium"
+                      >
+                        {item.name}
               </Link>
             </motion.div>
           ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </motion.div>
 
         {/* Profile Picture Section - Viewport Responsive with larger size */}
@@ -213,47 +304,114 @@ export default function Home() {
         />
       </motion.div>
 
-      {/* Example Content Section */}
-      <div className="relative z-10 w-full bg-black bg-opacity-50 py-20">
+      {/* Experience Section */}
+      <div className="relative z-10 w-full bg-black bg-opacity-50 py-20 pointer-events-auto">
         <div className="container mx-auto px-6">
-          {/* Tech Stack Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">Featured Projects</h2>
-            <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-              <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3 place-items-center">
-                {[
-                  {
-                    title: "E-Commerce Platform",
-                    description: "A full-stack e-commerce solution with real-time inventory management.",
-                    imageUrl: "/placeholder.png",
-                    tech: ["React", "Node.js", "MongoDB"]
-                  },
-                  {
-                    title: "AI Image Generator",
-                    description: "An AI-powered tool that generates unique images based on text prompts.",
-                    tech: ["Python", "TensorFlow", "React"]
-                  }
-                ].map((project, index) => (
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              Professional Experience
+            </h2>
+            <div style={{
+              maxWidth: '50vw',
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}>
+              <div style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '2rem'
+              }}>
+                {experiences.map((experience, index) => (
                   <motion.div
-                    key={project.title}
+                    key={experience.company}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-3 bg-gray-900 p-6 rounded-2xl border-2 border-green-400 text-center"
-                    // style={{ width: '300px' }}
+                    style={{ 
+                      backgroundColor: '#1a1a1a',
+                      padding: '1.5rem',
+                      borderRadius: '1rem',
+                      border: '2px solid #FFB347',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '1rem',
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                    }}
                   >
-                    <h3 className="text-xl font-bold text-green-400 mb-3">{project.title}</h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {project.tech.map(tech => (
-                        <span 
-                          key={tech} 
-                          className="px-3 py-1 bg-green-400 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    <div style={{
+                      display: 'flex',
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-start'
+                    }}>
+                      <div>
+                        <h3 style={{
+                          fontSize: '1.25rem',
+                          fontWeight: 'bold',
+                          color: '#FFB347',
+                          marginBottom: '0.25rem'
+                        }}>
+                          {experience.role}
+                        </h3>
+                        <p style={{
+                          color: '#d1d5db',
+                          fontSize: '1rem'
+                        }}>
+                          {experience.company}
+                        </p>
+                      </div>
+                      <div style={{
+                        textAlign: 'right'
+                      }}>
+                        <p style={{
+                          color: '#FFB347',
+                          fontSize: '0.875rem',
+                          fontWeight: 'medium'
+                        }}>
+                          {experience.duration}
+                        </p>
+                        <p style={{
+                          color: '#d1d5db',
+                          fontSize: '0.875rem'
+                        }}>
+                          {experience.location}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    <p style={{
+                      color: '#d1d5db',
+                      fontSize: '0.875rem',
+                      lineHeight: '1.5'
+                    }}>
+                      {experience.description}
+                    </p>
+
+                    <div style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '0.5rem'
+                    }}>
+                      {experience.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          style={{
+                            backgroundColor: 'rgba(255, 179, 71, 0.1)',
+                            color: '#FFB347',
+                            padding: '0.25rem 0.75rem',
+                            borderRadius: '9999px',
+                            fontSize: '0.75rem',
+                            fontWeight: 'medium'
+                          }}
                         >
                           {tech}
                         </span>
@@ -264,7 +422,106 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-         {/* Resume Button */}
+        </div>
+      </div>
+
+      {/* Projects Section - Reduced top padding */}
+      <div className="relative z-10 w-full bg-black bg-opacity-50 py-12 pointer-events-auto">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              Featured Projects
+            </h2>
+            <div style={{
+              maxWidth: '50vw',
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+                gap: '2rem',
+                justifyContent: 'center',
+                alignItems: 'center',
+                '@media (minWidth: 640px)': {
+                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+                }
+              }}>
+                {projects.map((project, index) => (
+                  <motion.div
+                    key={project.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    style={{ 
+                      backgroundColor: '#1a1a1a',
+                      padding: '1.5rem',
+                      borderRadius: '1rem',
+                      border: '2px solid #FFB347',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      textAlign: 'center',
+                      width: '100%',
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                    }}
+                  >
+                    <h3 style={{
+                      fontSize: '1.25rem',
+                      fontWeight: 'bold',
+                      color: '#FFB347',
+                      marginBottom: '0.5rem'
+                    }}>
+                      {project.title}
+                    </h3>
+                    <p style={{
+                      color: '#d1d5db',
+                      marginBottom: '1rem'
+                    }}>
+                      {project.description}
+                    </p>
+                    <div style={{
+                      display: 'flex',
+                      flexWrap: 'wrap',
+                      gap: '0.5rem',
+                      justifyContent: 'center'
+                    }}>
+                      {project.tech.map((tech, techIndex) => (
+                            <span 
+                          key={techIndex}
+                          style={{
+                            backgroundColor: '#FFB347',
+                            color: '#1a1a1a',
+                            padding: '0.25rem 0.75rem',
+                            borderRadius: '9999px',
+                            fontSize: '0.875rem',
+                            fontWeight: 'bold'
+                          }}
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Resume Button - Added background container */}
+      <div className="relative z-10 w-full bg-black bg-opacity-50 py-8 pointer-events-auto">
          <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -290,16 +547,16 @@ export default function Home() {
                   }
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-green-400 min-w-[200px] rounded-full"
+            className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[200px] rounded-full"
               >
                 {/* Glowing background effect */}
-                <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-green-400 group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:shadow-[0_0_10px_rgba(74,222,128,0.3)] rounded-full"></span>
+            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-yellow-400 group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:shadow-[0_0_10px_rgba(250,204,21,0.3)] rounded-full"></span>
                 
                 {/* Button background */}
-                <span className="absolute inset-0 w-full h-full bg-gray-900 border-2 border-green-400 group-hover:bg-green-400 transition-colors duration-300 rounded-full"></span>
+            <span className="absolute inset-0 w-full h-full bg-gray-900 border-2 border-yellow-400 group-hover:bg-yellow-400 transition-colors duration-300 rounded-full"></span>
                 
                 {/* Button text with icon */}
-                <span className="relative text-green-400 group-hover:text-gray-900 flex items-center gap-3">
+            <span className="relative text-yellow-400 group-hover:text-gray-900 flex items-center gap-3">
                   <span className="text-lg">View Resume</span>
                   <motion.span
                     initial={{ x: 0 }}
@@ -312,47 +569,101 @@ export default function Home() {
                 </span>
               </motion.a>
             </motion.div>
-          {/* Projects Section */}
+      </div>
+
+      {/* Skills Section */}
+      <div className="relative z-10 w-full bg-black bg-opacity-50 py-20 pointer-events-auto">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">Featured Projects</h2>
-            <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
-              <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3 place-items-center">
-                {[
-                  {
-                    title: "E-Commerce Platform",
-                    description: "A full-stack e-commerce solution with real-time inventory management.",
-                    imageUrl: "/placeholder.png",
-                    tech: ["React", "Node.js", "MongoDB"]
-                  },
-                  {
-                    title: "AI Image Generator",
-                    description: "An AI-powered tool that generates unique images based on text prompts.",
-                    tech: ["Python", "TensorFlow", "React"]
-                  }
-                ].map((project, index) => (
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              Technical Skills
+            </h2>
+            <div style={{
+              maxWidth: '50vw',
+              margin: '0 auto',
+              padding: '0 1rem'
+            }}>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+                gap: '2rem',
+                justifyContent: 'center',
+                alignItems: 'center',
+                '@media (minWidth: 640px)': {
+                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
+                },
+                '@media (minWidth: 1024px)': {
+                  gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'
+                }
+              }}>
+                {skills.map((skillCategory, index) => (
                   <motion.div
-                    key={project.title}
+                    key={skillCategory.category}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    className="col-span-1 sm:col-span-1 md:col-span-2 lg:col-span-3 bg-gray-900 p-6 rounded-2xl border-2 border-green-400 text-center"
-                    // style={{ width: '300px' }}
+                    style={{ 
+                      backgroundColor: '#1a1a1a',
+                      padding: '1.5rem',
+                      borderRadius: '1rem',
+                      border: '2px solid #FFB347',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      textAlign: 'center',
+                      width: '100%',
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                    }}
                   >
-                    <h3 className="text-xl font-bold text-green-400 mb-3">{project.title}</h3>
-                    <p className="text-gray-300 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {project.tech.map(tech => (
-                        <span 
-                          key={tech} 
-                          className="px-3 py-1 bg-green-400 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    <h3 style={{
+                      fontSize: '1.25rem',
+                      fontWeight: 'bold',
+                      color: '#FFB347',
+                      marginBottom: '1rem'
+                    }}>
+                      {skillCategory.category}
+                    </h3>
+                    <div style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '0.75rem',
+                      width: '100%'
+                    }}>
+                      {skillCategory.technologies.map((tech, techIndex) => (
+                        <div
+                          key={techIndex}
+                          style={{
+                            display: 'flex',
+                            justifyContent: 'space-between',
+                            alignItems: 'center',
+                            padding: '0.5rem',
+                            backgroundColor: 'rgba(255, 179, 71, 0.1)',
+                            borderRadius: '0.5rem'
+                          }}
                         >
-                          {tech}
-                        </span>
+                          <span style={{
+                            color: '#FFB347',
+                            fontWeight: 'medium'
+                          }}>
+                            {tech.name}
+                          </span>
+                          <span style={{
+                            color: '#d1d5db',
+                            fontSize: '0.875rem'
+                          }}>
+                            {tech.level}
+                            </span>
+                        </div>
                       ))}
                     </div>
                   </motion.div>
@@ -360,15 +671,16 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
+        </div>
+      </div>
 
-          {/* Contact Section - Moved up and updated with wave icon */}
+      {/* Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-               {/* Contact Form */}
             <ContactForm />
             <div className="flex justify-center gap-6">
               {[
@@ -379,12 +691,17 @@ export default function Home() {
                   key={platform.name}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center gap-2 px-6 py-2 bg-green-400 bg-opacity-20 text-green-400 rounded-lg hover:bg-opacity-30 transition-all"
+              className="flex items-center gap-2 px-6 py-2 rounded-lg transition-all"
+              style={{
+                backgroundColor: 'rgba(255, 179, 71, 0.2)',
+                color: '#FFB347',
+                border: '2px solid #FFB347'
+              }}
                 >
                   <img 
                     src={platform.icon} 
                     alt={`${platform.name} icon`} 
-                    className="w-5 h-5"
+                    className="w-[100px] h-[100px] object-contain"
                   />
                   {platform.name}
                 </motion.button>
@@ -394,8 +711,6 @@ export default function Home() {
 
           {/* Footer */}
           <Footer/>
-        </div>
-      </div>
     </div>
   );
 }

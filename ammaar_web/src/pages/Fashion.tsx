@@ -55,9 +55,10 @@ export default function Fashion() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 }}
+          className="w-full"
         >
-          <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border-2 border-green-400" style={{ width: '300px' }}>
-            <div className="relative h-48 w-full">
+          <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border-2 border-green-400 h-full flex flex-col">
+            <div className="relative aspect-[4/3] w-full">
               <img
                 src={item.imageUrl}
                 alt={item.name}
@@ -67,10 +68,10 @@ export default function Fashion() {
                 {item.season}
               </div>
             </div>
-            <div className="p-6 text-center">
-              <h3 className="text-xl font-bold text-green-400 mb-1">{item.name}</h3>
+            <div className="p-4 sm:p-6 flex-grow flex flex-col">
+              <h3 className="text-lg sm:text-xl font-bold text-green-400 mb-1">{item.name}</h3>
               <p className="text-gray-400 text-sm mb-2">{item.category}</p>
-              <p className="text-gray-300 text-sm mb-4">{item.description}</p>
+              <p className="text-gray-300 text-sm mb-4 flex-grow">{item.description}</p>
               <div className="space-y-1">
                 {item.highlights.map((highlight, i) => (
                   <p key={i} className="text-gray-300 text-sm">• {highlight}</p>

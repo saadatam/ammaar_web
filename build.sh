@@ -52,8 +52,8 @@ case $build_type in
 
         cd "$arg" || { echo "Failed to cd into $arg"; exit 1; }
 
-        npm install -D tailwindcss postcss autoprefixer 
-        npm install -D @tailwindcss/postcss        
+        # npm install -D tailwindcss postcss autoprefixer 
+        # npm install -D @tailwindcss/postcss        
         npm install 
         # npm install -D eslint prettier eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser
 

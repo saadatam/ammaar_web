@@ -9,9 +9,13 @@ import Fashion from './pages/Fashion'
 import Books from './pages/Books'
 import Hobbies from './pages/Hobbies'
 import Photography from './pages/Photography'
+import Navbar from './components/Navbar'
+
 
 export default function App() {
   return (
+    <>
+    <Navbar/>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
@@ -25,5 +29,6 @@ export default function App() {
       <Route path="*" element={<Error />}/>
       
     </Routes>
+    </>
   )
 }

@@ -83,7 +83,11 @@ export default function About() {
                   transition={{ delay: 0.8 + index * 0.1 }}
                   className="flex items-start space-x-3 p-4 bg-black bg-opacity-30 rounded-lg border border-green-400 border-opacity-20"
                 >
-                  <span className="text-green-400">✨</span>
+                  <img 
+                    src="/path-to-your-icon.png" 
+                    alt="Fun Fact Icon" 
+                    className="w-[100px] h-[100px] object-contain"
+                  />
                   <p className="text-gray-300">{fact}</p>
                 </motion.div>
               ))}
@@ -107,6 +111,11 @@ export default function About() {
                   transition={{ delay: 1 + index * 0.1 }}
                   className="px-4 py-2 bg-green-400 bg-opacity-20 text-green-400 rounded-full text-sm"
                 >
+                  <img 
+                    src="/path-to-your-icon.png" 
+                    alt={interest} 
+                    className="w-[100px] h-[100px] object-contain"
+                  />
                   {interest}
                 </motion.span>
               ))}

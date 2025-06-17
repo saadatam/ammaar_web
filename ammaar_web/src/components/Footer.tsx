@@ -30,7 +30,7 @@ export default function Footer() {
                 <img 
                   src={social.icon} 
                   alt={`${social.name} icon`} 
-                  className="w-6 h-6 object-contain"
+                  className="w-[100px] h-[100px] object-contain"
                 />
                 <span className="text-sm">{social.name}</span>
               </motion.a>

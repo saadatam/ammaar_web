@@ -89,3 +89,4 @@
 
 /ammaar_web/.env
 .DS_Store
+ammaar_web/src/vite-env.d.ts

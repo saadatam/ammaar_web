@@ -17,7 +17,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-green-400">
+    <nav className="fixed top-0 w-full z-[100] bg-gray-900 bg-opacity-90 backdrop-blur-sm border-b border-green-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Name */}
@@ -50,7 +50,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-green-400 hover:bg-gray-700 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-yellow-400 hover:text-yellow-300 hover:bg-gray-700 focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
