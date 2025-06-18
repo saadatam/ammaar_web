@@ -2,92 +2,202 @@ import { motion } from 'framer-motion';
 import TravelCard from '../components/TravelCard';
 import Grid from '../components/Grid';
 
+interface TravelCardProps {
+  location: string;
+  country: string;
+  images: { src: string; alt: string }[];
+  date: string;
+  description: string;
+  highlights: string[];
+  rating: number;
+}
+
 export default function Travel() {
-  // Example travel data - replace with your actual travel experiences
   const travels = [
     {
-      location: "Tokyo",
-      country: "Japan",
-      imageUrl: "/placeholder.png",
-      date: "March 2023",
-      description: "An incredible journey through the vibrant streets of Tokyo, experiencing the perfect blend of traditional culture and modern innovation.",
+      location: "Upper Peninsula",
+      country: "MI, USA",
+      images: [
+        { src: "/photography/miners_beach1.jpeg", alt: "Miners Beach" },
+        { src: "/photography/miners_hike1.jpeg", alt: "Miners Hike" },
+        { src: "/photography/miners_pond1.jpeg", alt: "Miners Pond" },
+        { src: "/photography/miners_pond2.jpeg", alt: "Miners Pond 2" }
+      ],
+      date: "Summer 2022",
+      description: "Explored breathtaking waterfalls, forests, and the shores of Lake Superior.",
       highlights: [
-        "Exploring the bustling streets of Shibuya",
-        "Traditional tea ceremony in Asakusa",
-        "Night views from Tokyo Skytree",
-        "Sushi making workshop"
+        "Pictured Rocks National Lakeshore",
+        "Tahquamenon Falls",
+        "Lake Superior sunsets"
       ],
       rating: 5
     },
     {
-      location: "Paris",
-      country: "France",
-      imageUrl: "/placeholder.png",
-      date: "September 2022",
-      description: "A romantic adventure in the City of Light, discovering art, architecture, and the finest French cuisine.",
-      highlights: [
-        "Louvre Museum tour",
-        "Eiffel Tower at sunset",
-        "Seine River cruise",
-        "Montmartre exploration"
+      location: "New York City",
+      country: "NY, USA",
+      images: [
+        { src: "/photography/heritage1.jpeg", alt: "Heritage NYC" },
+        { src: "/photography/heritage2.jpeg", alt: "Heritage NYC 2" }
       ],
-      rating: 4.5
-    },
-    {
-      location: "Bali",
-      country: "Indonesia",
-      imageUrl: "/travel/bali.jpg",
-      date: "January 2023",
-      description: "A tropical paradise offering a perfect mix of culture, adventure, and relaxation.",
+      date: "Spring 2023",
+      description: "The city that never sleeps, full of iconic sights and vibrant culture.",
       highlights: [
-        "Ubud Monkey Forest",
-        "Tegallalang Rice Terraces",
-        "Sacred Monkey Forest Sanctuary",
-        "Traditional Balinese cooking class"
-      ],
-      rating: 5
-    },
-    {
-      location: "New York",
-      country: "USA",
-      imageUrl: "/travel/new-york.jpg",
-      date: "December 2022",
-      description: "The city that never sleeps, offering endless entertainment, culture, and culinary experiences.",
-      highlights: [
-        "Central Park exploration",
-        "Broadway show",
-        "Empire State Building visit",
-        "Brooklyn Bridge walk"
-      ],
-      rating: 4.5
-    },
-    {
-      location: "Barcelona",
-      country: "Spain",
-      imageUrl: "/travel/barcelona.jpg",
-      date: "June 2022",
-      description: "A vibrant city where art, architecture, and beach life come together perfectly.",
-      highlights: [
-        "Sagrada Familia tour",
-        "Park Güell visit",
-        "La Rambla stroll",
-        "Beach day at Barceloneta"
+        "Central Park",
+        "Times Square",
+        "Broadway show"
       ],
       rating: 4.8
     },
     {
-      location: "Sydney",
-      country: "Australia",
-      imageUrl: "/travel/sydney.jpg",
-      date: "February 2023",
-      description: "A stunning coastal city offering iconic landmarks and beautiful beaches.",
+      location: "Ann Arbor Arb",
+      country: "MI, USA",
+      images: [
+        { src: "/photography/a2_arb1.jpeg", alt: "Ann Arbor Arb 1" },
+        { src: "/photography/a2_arb2.jpeg", alt: "Ann Arbor Arb 2" },
+        { src: "/photography/a2_arb3.jpeg", alt: "Ann Arbor Arb 3" },
+        { src: "/photography/a2_arb4.jpeg", alt: "Ann Arbor Arb 4" }
+      ],
+      date: "Fall 2022",
+      description: "A peaceful retreat in the heart of Ann Arbor, perfect for walks and nature photography.",
       highlights: [
-        "Sydney Opera House tour",
-        "Bondi Beach visit",
-        "Harbour Bridge climb",
-        "Blue Mountains day trip"
+        "Peony Garden",
+        "Huron River trails",
+        "Fall foliage"
       ],
       rating: 4.7
+    },
+    {
+      location: "Denver",
+      country: "Colorado, USA",
+      images: [
+        { src: "/travel/denver1.jpg", alt: "Red Rocks Amphitheatre" },
+        { src: "/travel/denver2.jpg", alt: "Rocky Mountain National Park" },
+        { src: "/travel/denver3.jpg", alt: "Denver Art Museum" }
+      ],
+      date: "Winter 2022",
+      description: "Gateway to the Rockies, with a lively downtown and stunning mountain views.",
+      highlights: [
+        "Red Rocks Amphitheatre",
+        "Rocky Mountain National Park",
+        "Denver Art Museum"
+      ],
+      rating: 4.6
+    },
+    {
+      location: "San Francisco",
+      country: "CA, USA",
+      images: [
+        { src: "/travel/san-francisco1.jpg", alt: "Golden Gate Bridge" },
+        { src: "/travel/san-francisco2.jpg", alt: "Alcatraz Island" },
+        { src: "/travel/san-francisco3.jpg", alt: "Fisherman's Wharf" }
+      ],
+      date: "Summer 2021",
+      description: "Famous for its hills, bridges, and diverse neighborhoods.",
+      highlights: [
+        "Golden Gate Bridge",
+        "Alcatraz Island",
+        "Fisherman's Wharf"
+      ],
+      rating: 4.9
+    },
+    {
+      location: "Chicago",
+      country: "IL, USA",
+      images: [
+        { src: "/travel/chicago1.jpg", alt: "Millennium Park" },
+        { src: "/travel/chicago2.jpg", alt: "The Art Institute of Chicago" },
+        { src: "/travel/chicago3.jpg", alt: "Navy Pier" }
+      ],
+      date: "Spring 2022",
+      description: "A city of architecture, deep-dish pizza, and lakefront adventures.",
+      highlights: [
+        "Millennium Park",
+        "The Art Institute of Chicago",
+        "Navy Pier"
+      ],
+      rating: 4.7
+    },
+    {
+      location: "Skagway",
+      country: "Alaska, USA",
+      images: [
+        { src: "/travel/skagway1.jpg", alt: "White Pass & Yukon Route Railway" },
+        { src: "/travel/skagway2.jpg", alt: "Klondike Gold Rush National Park" },
+        { src: "/travel/skagway3.jpg", alt: "Glacier Bay" }
+      ],
+      date: "Summer 2023",
+      description: "Historic Gold Rush town surrounded by mountains and glaciers.",
+      highlights: [
+        "White Pass & Yukon Route Railway",
+        "Klondike Gold Rush National Park",
+        "Glacier Bay"
+      ],
+      rating: 4.8
+    },
+    {
+      location: "Juneau",
+      country: "Alaska, USA",
+      images: [
+        { src: "/photography/Juneau1.jpeg", alt: "Juneau" },
+        { src: "/photography/nugget_falls_glaciar.jpeg", alt: "Nugget Falls Glaciar" }
+      ],
+      date: "Summer 2023",
+      description: "Alaska's capital, nestled between mountains and the sea.",
+      highlights: [
+        "Mendenhall Glacier",
+        "Mount Roberts Tramway",
+        "Whale watching"
+      ],
+      rating: 4.9
+    },
+    {
+      location: "British Columbia",
+      country: "Canada",
+      images: [
+        { src: "/travel/british-columbia1.jpg", alt: "Stanley Park" },
+        { src: "/travel/british-columbia2.jpg", alt: "Capilano Suspension Bridge" },
+        { src: "/travel/british-columbia3.jpg", alt: "Sea-to-Sky Highway" }
+      ],
+      date: "Fall 2021",
+      description: "A province of wild beauty, from Vancouver to the Rockies.",
+      highlights: [
+        "Stanley Park",
+        "Capilano Suspension Bridge",
+        "Sea-to-Sky Highway"
+      ],
+      rating: 4.8
+    },
+    {
+      location: "Sitka",
+      country: "Alaska, USA",
+      images: [
+        { src: "/travel/sitka1.jpg", alt: "Sitka National Historical Park" },
+        { src: "/travel/sitka2.jpg", alt: "Wildlife boat tours" },
+        { src: "/travel/sitka3.jpg", alt: "Russian Bishop's House" }
+      ],
+      date: "Summer 2023",
+      description: "A charming coastal town with rich history and wildlife.",
+      highlights: [
+        "Sitka National Historical Park",
+        "Wildlife boat tours",
+        "Russian Bishop's House"
+      ],
+      rating: 4.7
+    },
+    {
+      location: "Northern Lights",
+      country: "Alaska, USA",
+      images: [
+        { src: "/photography/Northern_Lights1.jpeg", alt: "Northern Lights" }
+      ],
+      date: "Winter 2023",
+      description: "Witnessed the magical aurora borealis in the Alaskan sky.",
+      highlights: [
+        "Aurora viewing",
+        "Stargazing",
+        "Photography"
+      ],
+      rating: 5
     }
   ];
 

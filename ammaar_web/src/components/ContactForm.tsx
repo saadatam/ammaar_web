@@ -104,7 +104,7 @@ export default function ContactForm() {
       initial={{ opacity: 0, y: 20 }}
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
       transition={{ duration: 0.8 }}
-      className="relative z-10 w-full bg-black bg-opacity-50 py-20 pointer-events-auto"
+      className="relative z-10 w-full py-20 pointer-events-auto"
     >
       <div className="container mx-auto px-6">
         <motion.div
@@ -113,27 +113,46 @@ export default function ContactForm() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-16"
         >
-          <h2 className="text-3xl font-bold text-green-400 mb-8 text-center">Contact Me</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center" style={{
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+          }}>
+            Contact Me
+          </h2>
           <div style={{
             maxWidth: '50vw',
             margin: '0 auto',
             padding: '0 1rem'
           }}>
-            <div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-8"
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Left Column - Contact Info */}
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-green-400 mb-2">Get in Touch</h2>
-                <p className="text-sm text-gray-300">
+              <div className="space-y-4" style={{
+                backgroundColor: 'rgba(255, 236, 179, 0.15)', // Warmer, lighter background
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                border: '2px solid #FFB347',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+              }}>
+                <h2 className="text-2xl font-bold text-[#FFB347] mb-2">Get in Touch</h2>
+                <p className="text-sm text-gray-200"> {/* Lighter text */}
                   Have a question or want to work together? Feel free to reach out!
                 </p>
               </div>
 
               {/* Right Column - Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" style={{
+                backgroundColor: 'rgba(255, 236, 179, 0.15)', // Warmer, lighter background
+                padding: '1.5rem',
+                borderRadius: '1rem',
+                border: '2px solid #FFB347',
+                backdropFilter: 'blur(10px)',
+                boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+              }}>
                 <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">
+                  <label htmlFor="name" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
                     Name
                   </label>
                   <input
@@ -142,13 +161,13 @@ export default function ContactForm() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 bg-black bg-opacity-50 border border-green-400 rounded-md focus:ring-1 focus:ring-green-400 focus:border-transparent text-white text-sm"
+                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
                     required
                     disabled={status.submitting}
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-medium text-gray-300 mb-1">
+                  <label htmlFor="email" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
                     Email
                   </label>
                   <input
@@ -157,13 +176,13 @@ export default function ContactForm() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-3 py-1.5 bg-black bg-opacity-50 border border-green-400 rounded-md focus:ring-1 focus:ring-green-400 focus:border-transparent text-white text-sm"
+                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
                     required
                     disabled={status.submitting}
                   />
                 </div>
                 <div>
-                  <label htmlFor="location" className="block text-xs font-medium text-gray-300 mb-1">
+                  <label htmlFor="location" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
                     Location
                   </label>
                   <input
@@ -173,12 +192,12 @@ export default function ContactForm() {
                     value={formData.location}
                     onChange={handleChange}
                     placeholder="City, State"
-                    className="w-full px-3 py-1.5 bg-black bg-opacity-50 border border-green-400 rounded-md focus:ring-1 focus:ring-green-400 focus:border-transparent text-white text-sm"
+                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
                     disabled={status.submitting}
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-xs font-medium text-gray-300 mb-1">
+                  <label htmlFor="message" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
                     Message
                   </label>
                   <textarea
@@ -187,7 +206,7 @@ export default function ContactForm() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={3}
-                    className="w-full px-3 py-1.5 bg-black bg-opacity-50 border border-green-400 rounded-md focus:ring-1 focus:ring-green-400 focus:border-transparent text-white text-sm"
+                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
                     required
                     disabled={status.submitting}
                   />
@@ -216,7 +235,7 @@ export default function ContactForm() {
                   className={`w-full px-4 py-2 text-sm font-bold rounded-md transition-colors flex items-center justify-center ${
                     status.submitting
                       ? 'bg-gray-500 cursor-not-allowed'
-                      : 'bg-green-400 hover:bg-green-500 text-black'
+                      : 'bg-[#FFB347] hover:bg-[#FFCC33] text-black'
                   }`}
                 >
                   {status.submitting ? 'Sending...' : 'Send Message'}

@@ -70,28 +70,40 @@ export default function Home() {
 
   const experiences = [
     {
-      company: "Company Name",
-      role: "Software Engineer",
-      duration: "2022 - Present",
-      location: "San Francisco, CA",
-      description: "Led development of key features for the company's flagship product, resulting in a 40% increase in user engagement.",
-      technologies: ["React", "Node.js", "AWS", "MongoDB"]
+      company: "KLA",
+      role: "Software Engineering Intern",
+      duration: "May 2024 - Aug. 2024",
+      location: "Ann Arbor, Michigan",
+      tech: ["Java", "gRPC", "DevOps", "REST", "protobuf", "CI/CD"],
+      logo: "/icons/KLA.png",
+      description: [
+        "Developed a scalable API web app that integrates hardware controllers using a microservice and plug-in based architecture.",
+        "Introduced automation by utilizing gRPC, Java, and protobuf to decrease tool interface development time by 50% across company 3+ divisions."
+      ]
     },
     {
-      company: "Previous Company",
-      role: "Full Stack Developer",
-      duration: "2020 - 2022",
-      location: "Remote",
-      description: "Developed and maintained multiple web applications, improving system performance by 25% through optimization.",
-      technologies: ["TypeScript", "Python", "Docker", "PostgreSQL"]
+      company: "MIDAS, University of Michigan Institute of Data Science",
+      role: "Web Intern",
+      duration: "Nov. 2023 - May 2024",
+      location: "Ann Arbor, Michigan",
+      tech: ["HTML", "CSS", "WordPress", "AwesomeTables", "WPBakery"],
+      logo: "/icons/UofM.png",
+      description: [
+        "Collaborated with MIDAS team to continuously integrate feedback onto web pages catered to UofM's Institute of Data Science to automate and enhance user interface experience.",
+        "Improved the website's traffic flow by optimizing 12+ web pages during the F23/W24 semesters."
+      ]
     },
     {
-      company: "Startup Company",
-      role: "Frontend Developer",
-      duration: "2019 - 2020",
-      location: "New York, NY",
-      description: "Built responsive user interfaces and implemented new features that increased user retention by 30%.",
-      technologies: ["React", "Redux", "Sass", "Jest"]
+      company: "Vitra - Google × MHacks",
+      role: "Web App Developer",
+      duration: "April. 2024",
+      location: "University of Michigan",
+      tech: ["Gemini Pro 1.5", "Python", "Flask", "React.js"],
+      logo: "/icons/Google.png",
+      description: [
+        "Developed Vitra, a real-time voice transliteration mobile/web app using Python, Flask, and Vite React.js along with Google's Gemini Pro 1.5 model to support over 40 languages.",
+        "Proactively collaborated under 24 hour constraints to deliver MVP of app for healthcare professionals that reduces miscommunication to minorities."
+      ]
     }
   ];
 
@@ -115,7 +127,7 @@ export default function Home() {
       />
       
       {/* Optional: Additional overlay for better text readability */}
-      <div className="fixed inset-0 bg-black bg-opacity-50"></div>
+      {/* <div className="fixed inset-0 bg-black bg-opacity-50"></div> */}
       
       {/* Animated grid overlay */}
       <div className="fixed inset-0 bg-[linear-gradient(rgba(0,0,0,0.8)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.8)_1px,transparent_1px)] bg-[size:20px_20px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
@@ -130,7 +142,7 @@ export default function Home() {
         transition={{ duration: 0.8 }}
         className="relative z-40 flex flex-col items-center justify-center min-h-screen px-4 text-center pointer-events-auto pt-24"
       >
-        <h1 className="text-5xl md:text-7xl font-black mb-6 font-mono tracking-tight" style={{
+        <h1 className="text-5xl md:text-7xl font-black mb-2 font-mono tracking-tight" style={{
           background: 'linear-gradient(to right, #FFD700, #FFA500)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
@@ -138,6 +150,22 @@ export default function Home() {
         }}>
           Ammaar Saadat
         </h1>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="text-xl md:text-2xl font-mono mb-6"
+          style={{
+            fontStyle: 'italic',
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 15px rgba(255, 179, 71, 0.4)',
+            letterSpacing: '0.05em'
+          }}
+        >
+          ["Am-Are"]
+        </motion.p>
         <h1 className="text-4xl md:text-6xl font-black mb-6 font-mono">
           <TypeAnimation
             sequence={[
@@ -304,8 +332,8 @@ export default function Home() {
         />
       </motion.div>
 
-      {/* Experience Section */}
-      <div className="relative z-10 w-full bg-black bg-opacity-50 py-20 pointer-events-auto">
+      {/* Experience Section - Updated styling */}
+      <div className="relative z-10 w-full py-20 pointer-events-auto">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -331,21 +359,22 @@ export default function Home() {
                 flexDirection: 'column',
                 gap: '2rem'
               }}>
-                {experiences.map((experience, index) => (
+                {experiences.map((exp, index) => (
                   <motion.div
-                    key={experience.company}
+                    key={exp.company}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
-                    style={{ 
-                      backgroundColor: '#1a1a1a',
+                    style={{
+                      backgroundColor: 'rgba(255, 236, 179, 0.15)',
                       padding: '1.5rem',
                       borderRadius: '1rem',
                       border: '2px solid #FFB347',
                       display: 'flex',
                       flexDirection: 'column',
                       gap: '1rem',
-                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)',
+                      backdropFilter: 'blur(10px)'
                     }}
                   >
                     <div style={{
@@ -353,21 +382,38 @@ export default function Home() {
                       justifyContent: 'space-between',
                       alignItems: 'flex-start'
                     }}>
-                      <div>
-                        <h3 style={{
-                          fontSize: '1.25rem',
-                          fontWeight: 'bold',
-                          color: '#FFB347',
-                          marginBottom: '0.25rem'
-                        }}>
-                          {experience.role}
-                        </h3>
-                        <p style={{
-                          color: '#d1d5db',
-                          fontSize: '1rem'
-                        }}>
-                          {experience.company}
-                        </p>
+                      {/* Company logo and name */}
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                        {exp.logo && (
+                          <img
+                            src={exp.logo}
+                            alt={`${exp.company} logo`}
+                            style={{
+                              width: '48px',
+                              height: '48px',
+                              objectFit: 'contain',
+                              borderRadius: '0.25rem',
+                              background: '#fff',
+                              border: '1px solid #eee'
+                            }}
+                          />
+                        )}
+                        <div>
+                          <h3 style={{
+                            fontSize: '1.25rem',
+                            fontWeight: 'bold',
+                            color: '#FFB347',
+                            marginBottom: '0.25rem'
+                          }}>
+                            {exp.role}
+                          </h3>
+                          <p style={{
+                            color: '#d1d5db',
+                            fontSize: '1rem'
+                          }}>
+                            {exp.company}
+                          </p>
+                        </div>
                       </div>
                       <div style={{
                         textAlign: 'right'
@@ -377,31 +423,33 @@ export default function Home() {
                           fontSize: '0.875rem',
                           fontWeight: 'medium'
                         }}>
-                          {experience.duration}
+                          {exp.duration}
                         </p>
                         <p style={{
                           color: '#d1d5db',
                           fontSize: '0.875rem'
                         }}>
-                          {experience.location}
+                          {exp.location}
                         </p>
                       </div>
                     </div>
-                    
-                    <p style={{
+                    <ul style={{
                       color: '#d1d5db',
-                      fontSize: '0.875rem',
-                      lineHeight: '1.5'
+                      fontSize: '0.95rem',
+                      lineHeight: '1.5',
+                      marginLeft: '1rem',
+                      listStyle: 'disc'
                     }}>
-                      {experience.description}
-                    </p>
-
+                      {exp.description.map((desc, i) => (
+                        <li key={i}>{desc}</li>
+                      ))}
+                    </ul>
                     <div style={{
                       display: 'flex',
                       flexWrap: 'wrap',
                       gap: '0.5rem'
                     }}>
-                      {experience.technologies.map((tech, techIndex) => (
+                      {exp.tech.map((tech, techIndex) => (
                         <span
                           key={techIndex}
                           style={{
@@ -425,8 +473,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Projects Section - Reduced top padding */}
-      <div className="relative z-10 w-full bg-black bg-opacity-50 py-12 pointer-events-auto">
+      {/* Projects Section - Removed dark background */}
+      <div className="relative z-10 w-full py-12 pointer-events-auto">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -464,7 +512,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
                     style={{ 
-                      backgroundColor: '#1a1a1a',
+                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
                       padding: '1.5rem',
                       borderRadius: '1rem',
                       border: '2px solid #FFB347',
@@ -473,7 +521,8 @@ export default function Home() {
                       alignItems: 'center',
                       textAlign: 'center',
                       width: '100%',
-                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)',
+                      backdropFilter: 'blur(10px)'
                     }}
                   >
                     <h3 style={{
@@ -520,8 +569,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Resume Button - Added background container */}
-      <div className="relative z-10 w-full bg-black bg-opacity-50 py-8 pointer-events-auto">
+      {/* Resume Button - Updated styling */}
+      <div className="relative z-10 w-full py-8 pointer-events-auto">
          <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -548,15 +597,15 @@ export default function Home() {
                 }}
                 whileTap={{ scale: 0.95 }}
             className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[200px] rounded-full"
-              >
-                {/* Glowing background effect */}
-            <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-yellow-400 group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:shadow-[0_0_10px_rgba(250,204,21,0.3)] rounded-full"></span>
-                
-                {/* Button background */}
-            <span className="absolute inset-0 w-full h-full bg-gray-900 border-2 border-yellow-400 group-hover:bg-yellow-400 transition-colors duration-300 rounded-full"></span>
-                
+            style={{
+              backgroundColor: 'rgba(255, 236, 179, 0.15)',
+              backdropFilter: 'blur(10px)',
+              border: '2px solid #FFB347',
+              boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+            }}
+          >
                 {/* Button text with icon */}
-            <span className="relative text-yellow-400 group-hover:text-gray-900 flex items-center gap-3">
+            <span className="relative text-[#FFB347] group-hover:text-[#FFCC33] flex items-center gap-3">
                   <span className="text-lg">View Resume</span>
                   <motion.span
                     initial={{ x: 0 }}
@@ -571,8 +620,8 @@ export default function Home() {
             </motion.div>
       </div>
 
-      {/* Skills Section */}
-      <div className="relative z-10 w-full bg-black bg-opacity-50 py-20 pointer-events-auto">
+      {/* Skills Section - Removed dark background */}
+      <div className="relative z-10 w-full py-20 pointer-events-auto">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -613,7 +662,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.2 }}
                     style={{ 
-                      backgroundColor: '#1a1a1a',
+                      backgroundColor: 'rgba(255, 255, 255, 0.1)',
                       padding: '1.5rem',
                       borderRadius: '1rem',
                       border: '2px solid #FFB347',
@@ -622,7 +671,8 @@ export default function Home() {
                       alignItems: 'center',
                       textAlign: 'center',
                       width: '100%',
-                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
+                      boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)',
+                      backdropFilter: 'blur(10px)'
                     }}
                   >
                     <h3 style={{

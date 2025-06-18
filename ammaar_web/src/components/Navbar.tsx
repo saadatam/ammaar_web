@@ -14,6 +14,7 @@ export default function Navbar() {
     { name: 'Hobbies', path: '/hobbies' },
     { name: 'My Plants', path: '/plants' },
     { name: 'Travel', path: '/travel' },
+    { name: 'Photography', path: '/photography' },
   ];
 
   return (

@@ -1,82 +1,49 @@
 import { motion } from 'framer-motion';
-import Card from '../components/Card';
+import GalleryCard from '../components/GalleryCard';
 import Grid from '../components/Grid';
 
-export default function Hobbies() {
-  const hobbies = [
-    {
-      title: "Photography",
-      imageUrl: "/photography.jpg",
-      tags: ["Creative"],
-      description: "Capturing moments and landscapes through the lens of my camera.",
-      metadata: [
-        { label: "Equipment", value: "Sony A7III", icon: "📸" },
-        { label: "Style", value: "Street & Landscape", icon: "🎨" }
-      ]
-    },
-    {
-      title: "Gardening",
-      category: "Nature",
-      imageUrl: "/placeholder.png",
-      description: "Growing and nurturing plants, creating a sustainable garden space.",
-      equipment: [
-        "Indoor Plants",
-        "Outdoor Garden",
-        "Hydroponics"
-      ],
-      favoritePlants: [
-        "Succulents",
-        "Herbs",
-        "Tropical Plants"
-      ]
-    },
-    {
-      title: "Cooking",
-      category: "Culinary",
-      imageUrl: "/placeholder.png",
-      description: "Experimenting with different cuisines and techniques in the kitchen.",
-      specialties: [
-        "Italian",
-        "Asian Fusion",
-        "Mediterranean"
-      ],
-      favoriteDishes: [
-        "Homemade Pasta",
-        "Sushi",
-        "Curries"
-      ]
-    },
-    {
-      title: "Reading",
-      category: "Literature",
-      imageUrl: "/placeholder.png",
-      description: "Exploring different genres and authors, from fiction to technical books.",
-      genres: [
-        "Science Fiction",
-        "Technical",
-        "Biography"
-      ],
-      favoriteAuthors: [
-        "Yuval Noah Harari",
-        "Andy Weir",
-        "James Clear"
-      ]
-    }
-  ];
+const hobbies = [
+  {
+    title: "Photography",
+    images: [
+      { src: "/photography/a2_arb1.jpeg", alt: "Arb 1" },
+      { src: "/photography/a2_arb2.jpeg", alt: "Arb 2" }
+    ],
+    description: "Capturing moments and landscapes through the lens of my camera."
+  },
+  {
+    title: "Gardening",
+    images: [
+      { src: "/photography/miners_pond1.jpeg", alt: "Pond 1" }
+    ],
+    description: "Growing and nurturing plants, creating a sustainable garden space."
+  },
+  {
+    title: "Reading",
+    images: [
+      { src: "/photography/heritage1.jpeg", alt: "Reading Spot" }
+    ],
+    description: "Exploring different genres and authors, from fiction to technical books."
+  }
+  // Add more hobbies as needed, each with at least one image
+];
 
+export default function Hobbies() {
   return (
-    <Grid 
-      title="My Hobbies"
-      description="Activities and interests that bring joy and creativity to my life."
-    >
-      {hobbies.map((hobby, index) => (
+    <Grid title="My Hobbies" description="Activities and interests that bring joy and creativity to my life.">
+      {hobbies.map((hobby, i) => (
         <motion.div
           key={hobby.title}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1 }}
+          transition={{ delay: i * 0.1 }}
         >
-          <Card {...hobby} />
+          <GalleryCard
+            title={hobby.title}
+            images={hobby.images}
+            description={hobby.description}
+            // If you add subtitle, tags, or metadata, pass them here
+          />
         </motion.div>
       ))}
     </Grid>
