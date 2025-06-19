@@ -3,49 +3,60 @@ import Grid from '../components/Grid';
 
 const currentlyReading = [
   {
-    title: "The Creative Act",
-    author: "Rick Rubin",
-    imageUrl: "/photography/heritage1.jpeg",
-    category: "Creativity",
+    title: "With Heart and Mind",
+    author: "Mikaeel Ahmed Smith",
+    imageUrl: "/book_covers/WHM.jpg",
+    category: "Spiritual",
     rating: 4.5,
-    description: "A look into the creative process by legendary music producer Rick Rubin.",
+    description: "A spiritual guide exploring heart and mind connection.",
     keyPoints: [
-      "Embracing uncertainty",
-      "The art of listening",
-      "Creative rituals"
+      "Spiritual growth",
+      "Mindfulness",
+      "Personal development"
+    ]
+  },
+  {
+    title: "Poppy War",
+    author: "R. F. Kuang",
+    imageUrl: "/book_covers/poppy_war.png",
+    category: "Fantasy",
+    rating: 4.0,
+    description: "An epic fantasy novel with rich world-building and complex characters.",
+    keyPoints: [
+      "Epic fantasy",
+      "Military strategy",
+      "Character development"
     ]
   }
-  // Add more currently reading books here
 ];
 
 const readBooks = [
   {
-    title: "The Pragmatic Programmer",
-    author: "Andrew Hunt & David Thomas",
-    imageUrl: "/photography/a2_arb1.jpeg",
-    category: "Technology",
-    rating: 5,
-    description: "A classic guide to software development best practices.",
+    title: "How to Win Friends and Influence People",
+    author: "Dale Carnegie",
+    imageUrl: "/book_covers/HTWF.jpg",
+    category: "Self-Development",
+    rating: 5.0,
+    description: "A classic guide to improving interpersonal skills and building relationships.",
     keyPoints: [
-      "Software development principles",
-      "Career development",
-      "Technical excellence"
+      "Communication skills",
+      "Relationship building",
+      "Leadership principles"
     ]
   },
   {
-    title: "Atomic Habits",
-    author: "James Clear",
-    imageUrl: "/photography/a2_arb2.jpeg",
-    category: "Self-Development",
+    title: "The White Moon Rose Over us",
+    author: "Shaykh Abdullah Waheed",
+    imageUrl: "/book_covers/Seerah.jpg",
+    category: "Islamic Literature",
     rating: 4.5,
-    description: "An easy and proven way to build good habits and break bad ones.",
+    description: "A spiritual journey through Islamic teachings and wisdom.",
     keyPoints: [
-      "Habit formation",
-      "Behavioral psychology",
-      "Personal growth"
+      "Islamic spirituality",
+      "Personal growth",
+      "Religious wisdom"
     ]
   }
-  // Add more read books here
 ];
 
 function BookCard({ book }: { book: typeof currentlyReading[0] }) {

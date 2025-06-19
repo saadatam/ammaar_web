@@ -4,16 +4,22 @@ import Footer from '../components/Footer';
 
 export default function About() {
   const funFacts = [
-    "I can solve a Rubik's cube in under 2 minutes",
-    "I've visited 15 different countries",
-    "I'm fluent in 3 languages: English, Urdu, and Python",
-    "I once built a robot that could play chess",
-    "I'm an avid rock climber and have climbed in Yosemite",
-    "I can play the guitar and piano",
-    "I'm a certified scuba diver",
-    "I've run a marathon",
-    "I'm a coffee enthusiast and can make latte art",
-    "I've contributed to open-source projects"
+    "I'm an avid Raspberry-Pi 5 owner and developer. Some projects include a DNS Ad tracking blocker,",
+    "I'm a co-founder at Takhat Cafe, a cultural Ice Cream Shop in Westland MI, where I lead marketing, outreach at events, manage customer relations for catering orders, networked at the University of Michigan to coordinate 4-5 events on-campus with our signature traditional ice cream",
+    "I've grown a 9 year old peach tree",
+    "I love to play volleyball (grass or indoor!) with friends, especially in the Summer :)",
+    "My favorite ice cream flavor is Mint Chocolate Chip",
+    "I love to rock climb in Ann Arbor",
+    "I snowboard in the Winter at Brighton, Michigan.",
+    "I've been jet skiing in Lake Michigan near Traverse City",
+    "Thankfully never had COVID-19",
+    "I've been to 17 US States",
+    "I've hiked in Denver Colorado with walkie talkies, and also visited the top of a 14k foot mountain in the rocky mountains",
+    "I've visited 3 cities in Alaska: Sitka, Juneau, and Skagway (the windy city)",
+    "I've won a Super Smash Bros tournament at the University of Michigan and won a sweater",
+    "I've seen a brown bear, along with a black bear, whale (wagging it's tail), and bald eagle in Alaska",
+    "I'm quad-lingual : English (fluent), Urdu (Fluent), Arabic (Moderate), and Spanish (Moderate, haven't spoke for a while)",
+    "I journal. I love the feeling of writing by pencil and paper. "
   ];
 
 const interests = [
@@ -140,7 +146,7 @@ const interests = [
             </div>
           </motion.div>
 
-          {/* Back Button */}
+          {/* Back Button
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -153,7 +159,7 @@ const interests = [
             >
               Back to Home
             </Link>
-          </motion.div>
+          </motion.div> */}
         </div>
         <Footer />
       </motion.div>

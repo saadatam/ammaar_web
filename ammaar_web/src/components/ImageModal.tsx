@@ -128,8 +128,8 @@ export default function ImageModal({
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative z-[201] flex items-center justify-center"
-            style={{ maxWidth: '90vw', maxHeight: '90vh', overflow: 'auto' }}
+            className="relative z-[201] flex items-center justify-center mt-8"
+            style={{ maxWidth: '90vw', maxHeight: '90vh', overflow: 'auto', marginTop: '4rem' }}
             onClick={(e) => e.stopPropagation()}
           >
             <img

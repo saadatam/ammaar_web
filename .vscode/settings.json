@@ -1,7 +1,8 @@
 {
-    "vscode-pets.theme": "forest",
+    "vscode-pets.theme": "none",
     "vscode-pets.throwBallWithMouse": true,
     "vscode-pets.petType": "cat",
-    "vscode-pets.petSize": "large",
-    "vscode-pets.petColor": "brown"
+    "vscode-pets.petSize": "small",
+    "vscode-pets.petColor": "brown",
+    "vscode-pets.disableEffects": false
 }

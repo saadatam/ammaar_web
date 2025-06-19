@@ -620,14 +620,14 @@ export default function Home() {
             </motion.div>
       </div>
 
-      {/* Skills Section - Removed dark background */}
+      {/* Skills Section*/}
       <div className="relative z-10 w-full py-20 pointer-events-auto">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-16"
+            className=""
           >
             <h2 className="text-3xl font-bold mb-8 text-center" style={{
               background: 'linear-gradient(to right, #FFB347, #FFCC33)',
@@ -732,31 +732,7 @@ export default function Home() {
             className="text-center mb-16"
           >
             <ContactForm />
-            <div className="flex justify-center gap-6">
-              {[
-                { name: 'GitHub', icon: '/icons/github_icon.png' },
-                { name: 'LinkedIn', icon: '/wave-icon.png' }
-              ].map((platform) => (
-                <motion.button
-                  key={platform.name}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-              className="flex items-center gap-2 px-6 py-2 rounded-lg transition-all"
-              style={{
-                backgroundColor: 'rgba(255, 179, 71, 0.2)',
-                color: '#FFB347',
-                border: '2px solid #FFB347'
-              }}
-                >
-                  <img 
-                    src={platform.icon} 
-                    alt={`${platform.name} icon`} 
-                    className="w-[100px] h-[100px] object-contain"
-                  />
-                  {platform.name}
-                </motion.button>
-              ))}
-            </div>
+            
           </motion.div>
 
           {/* Footer */}
