@@ -24,7 +24,9 @@ function useMediaQuery(query: string) {
 }
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [
+    isLoaded, 
+    setIsLoaded] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const isDesktop = useMediaQuery('(min-width: 640px)');
   const isLgDesktop = useMediaQuery('(min-width: 1024px)');
