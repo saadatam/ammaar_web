@@ -7,7 +7,7 @@ const currentlyReading = [
     author: "Mikaeel Ahmed Smith",
     imageUrl: "/book_covers/WHM.jpg",
     category: "Spiritual",
-    rating: 4.5,
+    rating: 5.0,
     description: "A spiritual guide exploring heart and mind connection.",
     keyPoints: [
       "Spiritual growth",
@@ -49,7 +49,7 @@ const readBooks = [
     author: "Shaykh Abdullah Waheed",
     imageUrl: "/book_covers/Seerah.jpg",
     category: "Islamic Literature",
-    rating: 4.5,
+    rating: 5.0,
     description: "A spiritual journey through Islamic teachings and wisdom.",
     keyPoints: [
       "Islamic spirituality",

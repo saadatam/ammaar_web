@@ -8,7 +8,7 @@ import Travel from './pages/Travel'
 import Fashion from './pages/Fashion'
 import Books from './pages/Books'
 import Hobbies from './pages/Hobbies'
-import Photography from './pages/Photography'
+import RasProjects from './pages/RasProjects'
 import Navbar from './components/Navbar'
 
 
@@ -25,7 +25,7 @@ export default function App() {
       <Route path="/fashion" element={<Fashion />} />
       <Route path="/Books" element={<Books />} />
       <Route path="/Hobbies" element={<Hobbies />} />
-      <Route path="/photography" element={<Photography />} />
+      <Route path="/rasprojects" element={<RasProjects />} />
       <Route path="*" element={<Error />}/>
       
     </Routes>

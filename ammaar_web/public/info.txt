@@ -23,7 +23,7 @@ Books:
     1) "With Heart and Mind" by Mikaeel Ahmed Smith. Icon image: "/book_covers/WHM.jpg"
     2) "Poppy War" by R. F. Kuang. Icon Image: "book_covers/poppy_war.png"
     Read: 
-    1) "How to win friends and influence people "
+    1) "How to win friends and influence people " by Dale Carnegie. Icon Image: "HTWF.jpg"
     2) "The White Moon Rose Over us" by Shaykh Abdullah Waheed. Icon Image: "/book_covers/Seerah.jpg"
 
 
