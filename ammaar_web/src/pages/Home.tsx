@@ -480,21 +480,8 @@ export default function Home() {
             }}>
               Featured Projects
             </h2>
-            <div style={{
-              maxWidth: '50vw',
-              margin: '0 auto',
-              padding: '0 1rem'
-            }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
-                gap: '2rem',
-                justifyContent: 'center',
-                alignItems: 'center',
-                '@media (minWidth: 640px)': {
-                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
-                }
-              }}>
+            <div className="w-full max-w-4xl mx-auto px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center items-center">
                 {projects.map((project, index) => (
                   <motion.div
                     key={project.title}
@@ -627,24 +614,8 @@ export default function Home() {
             }}>
               Technical Skills
             </h2>
-            <div style={{
-              maxWidth: '50vw',
-              margin: '0 auto',
-              padding: '0 1rem'
-            }}>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
-                gap: '2rem',
-                justifyContent: 'center',
-                alignItems: 'center',
-                '@media (minWidth: 640px)': {
-                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
-                },
-                '@media (minWidth: 1024px)': {
-                  gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'
-                }
-              }}>
+            <div className="w-full max-w-5xl mx-auto px-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center">
                 {skills.map((skillCategory, index) => (
                   <motion.div
                     key={skillCategory.category}
@@ -721,8 +692,17 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <ContactForm />
-            
+            <h2 className="text-3xl font-bold mb-8 text-center" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              Contact Me
+            </h2>
+            <div className="w-full max-w-3xl mx-auto px-4">
+              <ContactForm />
+            </div>
           </motion.div>
 
           {/* Footer */}

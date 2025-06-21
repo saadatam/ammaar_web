@@ -102,149 +102,109 @@ export default function ContactForm() {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
-      className="relative z-10 w-full py-20 pointer-events-auto"
+      className="bg-white/10 backdrop-blur-md border-2 border-yellow-400 rounded-2xl p-8 shadow-lg"
     >
-      <div className="container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold mb-8 text-center" style={{
-            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
-          }}>
-            Contact Me
-          </h2>
-          <div style={{
-            maxWidth: '50vw',
-            margin: '0 auto',
-            padding: '0 1rem'
-          }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Left Column - Contact Info */}
-              <div className="space-y-4" style={{
-                backgroundColor: 'rgba(255, 236, 179, 0.15)', // Warmer, lighter background
-                padding: '1.5rem',
-                borderRadius: '1rem',
-                border: '2px solid #FFB347',
-                backdropFilter: 'blur(10px)',
-                boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
-              }}>
-                <h2 className="text-2xl font-bold text-[#FFB347] mb-2">Get in Touch</h2>
-                <p className="text-sm text-gray-200"> {/* Lighter text */}
-                  Have a question or want to work together? Feel free to reach out!
-                </p>
-              </div>
-
-              {/* Right Column - Contact Form */}
-              <form onSubmit={handleSubmit} className="space-y-4" style={{
-                backgroundColor: 'rgba(255, 236, 179, 0.15)', // Warmer, lighter background
-                padding: '1.5rem',
-                borderRadius: '1rem',
-                border: '2px solid #FFB347',
-                backdropFilter: 'blur(10px)',
-                boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)'
-              }}>
-                <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
-                    required
-                    disabled={status.submitting}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
-                    required
-                    disabled={status.submitting}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="location" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
-                    Location
-                  </label>
-                  <input
-                    type="text"
-                    id="location"
-                    name="location"
-                    value={formData.location}
-                    onChange={handleChange}
-                    placeholder="City, State"
-                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
-                    disabled={status.submitting}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-xs font-medium text-gray-200 mb-1"> {/* Lighter text */}
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={3}
-                    className="w-full px-3 py-1.5 bg-white bg-opacity-15 border border-[#FFB347] rounded-md focus:ring-1 focus:ring-[#FFB347] focus:border-transparent text-white text-sm placeholder-gray-400"
-                    required
-                    disabled={status.submitting}
-                  />
-                </div>
-
-                {/* Status Message */}
-                {status.message && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className={`p-2 rounded-md text-xs ${
-                      status.error ? 'bg-red-500 bg-opacity-20' : 'bg-green-500 bg-opacity-20'
-                    }`}
-                  >
-                    <p className={`${status.error ? 'text-red-400' : 'text-green-400'}`}>
-                      {status.message}
-                    </p>
-                  </motion.div>
-                )}
-
-                <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  type="submit"
-                  disabled={status.submitting}
-                  className={`w-full px-4 py-2 text-sm font-bold rounded-md transition-colors flex items-center justify-center ${
-                    status.submitting
-                      ? 'bg-gray-500 cursor-not-allowed'
-                      : 'bg-[#FFB347] hover:bg-[#FFCC33] text-black'
-                  }`}
-                >
-                  {status.submitting ? 'Sending...' : 'Send Message'}
-                </motion.button>
-              </form>
-            </div>
-          </div>
-        </motion.div>
+      <div className="text-center mb-8">
+        <h2 className="text-2xl font-bold text-yellow-400 mb-2">Get in Touch</h2>
+        <p className="text-sm text-gray-300">
+          Have a question or want to work together? Feel free to reach out!
+        </p>
       </div>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label htmlFor="name" className="block text-xs font-medium text-gray-300 mb-1">
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              className="w-full px-3 py-2 bg-white/15 border border-yellow-400 rounded-md focus:ring-1 focus:ring-yellow-400 focus:border-transparent text-white text-sm placeholder-gray-400"
+              required
+              disabled={status.submitting}
+            />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-xs font-medium text-gray-300 mb-1">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              className="w-full px-3 py-2 bg-white/15 border border-yellow-400 rounded-md focus:ring-1 focus:ring-yellow-400 focus:border-transparent text-white text-sm placeholder-gray-400"
+              required
+              disabled={status.submitting}
+            />
+          </div>
+        </div>
+        <div>
+          <label htmlFor="location" className="block text-xs font-medium text-gray-300 mb-1">
+            Location
+          </label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            value={formData.location}
+            onChange={handleChange}
+            placeholder="City, State"
+            className="w-full px-3 py-2 bg-white/15 border border-yellow-400 rounded-md focus:ring-1 focus:ring-yellow-400 focus:border-transparent text-white text-sm placeholder-gray-400"
+            disabled={status.submitting}
+          />
+        </div>
+        <div>
+          <label htmlFor="message" className="block text-xs font-medium text-gray-300 mb-1">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            rows={4}
+            className="w-full px-3 py-2 bg-white/15 border border-yellow-400 rounded-md focus:ring-1 focus:ring-yellow-400 focus:border-transparent text-white text-sm placeholder-gray-400"
+            required
+            disabled={status.submitting}
+          />
+        </div>
+
+        {/* Status Message */}
+        {status.message && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className={`p-3 rounded-md text-xs text-center ${
+              status.error ? 'bg-red-500/20' : 'bg-green-500/20'
+            }`}
+          >
+            <p className={`${status.error ? 'text-red-400' : 'text-green-400'}`}>
+              {status.message}
+            </p>
+          </motion.div>
+        )}
+
+        <motion.button
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+          type="submit"
+          disabled={status.submitting}
+          className={`w-full px-4 py-3 text-sm font-bold rounded-md transition-colors flex items-center justify-center ${
+            status.submitting
+              ? 'bg-gray-600 cursor-not-allowed'
+              : 'bg-yellow-400 hover:bg-yellow-500 text-gray-900'
+          }`}
+        >
+          {status.submitting ? 'Sending...' : 'Send Message'}
+        </motion.button>
+      </form>
     </motion.div>
   );
 } 
