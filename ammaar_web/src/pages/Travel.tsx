@@ -2,16 +2,6 @@ import { motion } from 'framer-motion';
 import TravelCard from '../components/TravelCard';
 import Grid from '../components/Grid';
 
-interface TravelCardProps {
-  location: string;
-  country: string;
-  images: { src: string; alt: string }[];
-  date: string;
-  description: string;
-  highlights: string[];
-  rating: number;
-}
-
 export default function Travel() {
   const travels = [
     {

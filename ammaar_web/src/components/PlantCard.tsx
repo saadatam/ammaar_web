@@ -74,8 +74,9 @@ export default function PlantCard({
       <ImageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        imageUrl={imageUrl}
-        alt={name}
+        images={[{ src: imageUrl, alt: name }]}
+        currentIndex={0}
+        setCurrentIndex={() => {}}
       />
     </>
   );

@@ -8,7 +8,6 @@ interface CardProps {
   imageUrl: string;
   description: string;
   tags?: string[];
-  icon?: string;
   metadata?: {
     label: string;
     value: string;
@@ -22,7 +21,6 @@ export default function Card({
   imageUrl,
   description,
   tags = [],
-  icon,
   metadata = []
 }: CardProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -168,8 +166,9 @@ export default function Card({
       <ImageModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
-        imageUrl={imageUrl}
-        alt={title}
+        images={[{ src: imageUrl, alt: title }]}
+        currentIndex={0}
+        setCurrentIndex={() => {}}
       />
     </>
   );

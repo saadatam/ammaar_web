@@ -5,9 +5,29 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm';
 
+function useMediaQuery(query: string) {
+  const [matches, setMatches] = useState(false);
+
+  useEffect(() => {
+    const media = window.matchMedia(query);
+    if (media.matches !== matches) {
+      setMatches(media.matches);
+    }
+    const listener = () => {
+      setMatches(media.matches);
+    };
+    media.addEventListener("change", listener);
+    return () => media.removeEventListener("change", listener);
+  }, [matches, query]);
+
+  return matches;
+}
+
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const isDesktop = useMediaQuery('(min-width: 640px)');
+  const isLgDesktop = useMediaQuery('(min-width: 1024px)');
 
   useEffect(() => {
     setIsLoaded(true);
@@ -497,13 +517,10 @@ export default function Home() {
             }}>
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+                gridTemplateColumns: isLgDesktop ? 'repeat(3, minmax(0, 1fr))' : isDesktop ? 'repeat(2, minmax(0, 1fr))' : 'repeat(1, minmax(0, 1fr))',
                 gap: '2rem',
                 justifyContent: 'center',
                 alignItems: 'center',
-                '@media (minWidth: 640px)': {
-                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
-                }
               }}>
                 {projects.map((project, index) => (
                   <motion.div
@@ -644,16 +661,10 @@ export default function Home() {
             }}>
               <div style={{
                 display: 'grid',
-                gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+                gridTemplateColumns: isLgDesktop ? 'repeat(3, minmax(0, 1fr))' : isDesktop ? 'repeat(2, minmax(0, 1fr))' : 'repeat(1, minmax(0, 1fr))',
                 gap: '2rem',
                 justifyContent: 'center',
                 alignItems: 'center',
-                '@media (minWidth: 640px)': {
-                  gridTemplateColumns: 'repeat(2, minmax(0, 1fr))'
-                },
-                '@media (minWidth: 1024px)': {
-                  gridTemplateColumns: 'repeat(3, minmax(0, 1fr))'
-                }
               }}>
                 {skills.map((skillCategory, index) => (
                   <motion.div
