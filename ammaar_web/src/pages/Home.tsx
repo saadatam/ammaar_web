@@ -6,12 +6,12 @@ import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true);
+    // You can add any side effects here if needed in the future
   }, []);
+
   const navItems = [
     { name: 'About Me', path: '/about' },
     { name: 'Fashion', path: '/fashion' },
