@@ -27,3 +27,7 @@ Books:
     2) "The White Moon Rose Over us" by Shaykh Abdullah Waheed. Icon Image: "/book_covers/Seerah.jpg"
 
 
+
+Fashion:
+    1) Vintage
+

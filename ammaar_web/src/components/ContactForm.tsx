@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 // import { EMAILJS_CONFIG } from '../config/emailjs';
 
 export default function ContactForm() {
-  const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,15 +17,6 @@ export default function ContactForm() {
     error: false,
     message: ''
   });
-
-  useEffect(() => {
-    // Set visible after a short delay to ensure proper mounting
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
