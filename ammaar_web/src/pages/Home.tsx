@@ -164,7 +164,7 @@ export default function Home() {
             letterSpacing: '0.05em'
           }}
         >
-          ["Am-Are"]
+          ["ah-m-are"]
         </motion.p>
         <h1 className="text-4xl md:text-6xl font-black mb-6 font-mono">
           <TypeAnimation
@@ -214,7 +214,7 @@ export default function Home() {
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-            className="group relative inline-flex items-center justify-center px-16 py-8 font-black text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[350px] rounded-full font-mono tracking-wide"
+            className="group relative inline-flex items-center justify-center px-8 py-4 sm:px-16 sm:py-8 font-black text-white transition-all duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-yellow-400 min-w-[280px] sm:min-w-[350px] rounded-full font-mono tracking-wide"
               >
                 {/* Glowing background effect */}
                 <span className="absolute inset-0 w-full h-full transition duration-300 ease-out transform translate-x-1 translate-y-1 bg-yellow-400 group-hover:-translate-x-0 group-hover:-translate-y-0 group-hover:shadow-[0_0_15px_rgba(250,204,21,0.4)] rounded-full"></span>
@@ -223,12 +223,12 @@ export default function Home() {
                 <span className="absolute inset-0 w-full h-full bg-gray-900 border-2 border-yellow-400 group-hover:bg-yellow-400 transition-colors duration-300 rounded-full"></span>
                 
                 {/* Button text with icon */}
-                <span className="relative text-yellow-400 group-hover:text-gray-900 flex items-center gap-4">
-              <span className="text-xl sm:text-2xl">Explore My World</span>
+                <span className="relative text-yellow-400 group-hover:text-gray-900 flex items-center gap-2 sm:gap-4">
+              <span className="text-lg sm:text-2xl">Explore My World</span>
                   <motion.span
                 animate={{ rotate: isDropdownOpen ? 180 : 0 }}
                 transition={{ duration: 0.3 }}
-                    className="text-2xl sm:text-3xl"
+                    className="text-xl sm:text-3xl"
                   >
                 ↓
                   </motion.span>
@@ -239,11 +239,11 @@ export default function Home() {
           <AnimatePresence>
             {isDropdownOpen && (
               <motion.div
-                initial={{ opacity: 0, y: -20 }}
+                initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
+                exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.2 }}
-                className="absolute left-1/2 transform -translate-x-1/2 mt-4 w-[350px] bg-gray-900 rounded-2xl border-2 border-yellow-400 overflow-hidden"
+                className="absolute left-0 right-0 mx-auto mt-4 w-[280px] sm:w-[350px] bg-gray-900 rounded-2xl border-2 border-yellow-400 overflow-hidden"
               >
                 <div className="py-2">
                   {navItems.map((item, index) => (
@@ -349,11 +349,7 @@ export default function Home() {
             }}>
               Professional Experience
             </h2>
-            <div style={{
-              maxWidth: '50vw',
-              margin: '0 auto',
-              padding: '0 1rem'
-            }}>
+            <div className="w-full max-w-3xl mx-auto">
               <div style={{
                 display: 'flex',
                 flexDirection: 'column',
@@ -377,11 +373,7 @@ export default function Home() {
                       backdropFilter: 'blur(10px)'
                     }}
                   >
-                    <div style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'flex-start'
-                    }}>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                       {/* Company logo and name */}
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                         {exp.logo && (
@@ -415,9 +407,7 @@ export default function Home() {
                           </p>
                         </div>
                       </div>
-                      <div style={{
-                        textAlign: 'right'
-                      }}>
+                      <div className="mt-4 text-left sm:mt-0 sm:text-right">
                         <p style={{
                           color: '#FFB347',
                           fontSize: '0.875rem',
