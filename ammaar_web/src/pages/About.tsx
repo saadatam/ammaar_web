@@ -1,30 +1,46 @@
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 // import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
+import ImageModal from '../components/ImageModal';
 
 export default function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const funFacts = [
-    "I'm an avid Raspberry-Pi 5 owner and developer. Some projects include a DNS Ad tracking blocker,",
-    "I'm a co-founder at Takhat Cafe, a cultural Ice Cream Shop in Westland MI, where I lead marketing, outreach at events, manage customer relations for catering orders, networked at the University of Michigan to coordinate 4-5 events on-campus with our signature traditional ice cream",
-    "I've grown a 9 year old peach tree",
-    "I love to play volleyball (grass or indoor!) with friends, especially in the Summer :)",
-    "My favorite ice cream flavor is Mint Chocolate Chip",
-    "I love to rock climb in Ann Arbor",
-    "I snowboard in the Winter at Brighton, Michigan.",
-    "I've been jet skiing in Lake Michigan near Traverse City",
-    "Thankfully never had COVID-19",
-    "I've been to 17 US States",
-    "I've hiked in Denver Colorado with walkie talkies, and also visited the top of a 14k foot mountain in the rocky mountains",
-    "I've visited 3 cities in Alaska: Sitka, Juneau, and Skagway (the windy city)",
-    "I've won a Super Smash Bros tournament at the University of Michigan and won a sweater",
-    "I've seen a brown bear, along with a black bear, whale (wagging it's tail), and bald eagle in Alaska",
-    "I'm quad-lingual : English (fluent), Urdu (Fluent), Arabic (Moderate), and Spanish (Moderate, haven't spoke for a while)",
-    "I journal. I love the feeling of writing by pencil and paper. "
+    { text: "I'm an avid Raspberry-Pi 5 owner and developer. Some projects include a DNS Ad tracking blocker.", imageUrl: '/fact_images/computer_rasp.jpeg' },
+    { text: "I'm a co-founder at Takhat Cafe, a cultural Ice Cream Shop in Westland MI, where I lead marketing, outreach at events, manage customer relations for catering orders, and have networked at the University of Michigan to coordinate 4-5 events on-campus with our signature traditional ice cream.", imageUrl: '/fact_images/takhat_cafe.JPG' },
+    { text: "I've grown a 9 year old peach tree.", imageUrl: '/fact_images/peachs.jpeg' },
+    { text: "I love to play volleyball (grass or indoor!) with friends, especially in the Summer :)", imageUrl: '/fact_images/volleyball.png' },
+    { text: "My favorite ice cream flavor is Mint Chocolate Chip.", imageUrl: '/fact_images/mint_chocolate.png' },
+    { text: "I love to rock climb in Ann Arbor.", imageUrl: '/fact_images/rock_climbing_a2.jpeg' },
+    { text: "I snowboard in the Winter at Brighton, Michigan.", imageUrl: '/fact_images/snowboarding.jpeg' },
+    { text: "I've been jet skiing in Lake Michigan near Traverse City.", imageUrl: '/fact_images/jet_ski.png' },
+    { text: "Thankfully, I have never had COVID-19.", imageUrl: '/fact_images/covid_negative.png' },
+    { text: "I've been to 17 US States.", imageUrl: '/fact_images/NYC_Pin.png' },
+    { text: "I've hiked in Denver Colorado with walkie talkies, and also visited the top of a 14k foot mountain in the rocky mountains.", imageUrl: '/fact_images/denver_valley.jpg' },
+    { text: "I've visited 3 cities in Alaska: Sitka, Juneau, and Skagway (the windy city).", imageUrl: '/fact_images/Skagway.jpeg' },
+    { text: "I've won a Super Smash Bros tournament at the University of Michigan and won a sweater.", imageUrl: '/fact_images/sweater_award.jpeg' },
+    { text: "I've seen a brown bear, along with a black bear, a whale (wagging its tail), and a bald eagle in Alaska.", imageUrl: '/fact_images/bear.jpeg' },
+    { text: "I journal. I love the feeling of writing with a pencil on paper.", imageUrl: '/fact_images/writing_aesthetic.png' },
+    { text: "I'm quad-lingual: English (fluent), Urdu (Fluent), Arabic (Moderate), and Spanish (Moderate, haven't spoken for a while).", imageUrl: '/fact_images/quadlingual.png' }
   ];
 
-const interests = [
-  "Volleyball", "Hiking", "Gardening", "Pokemon Go", "Raspberry Pi-5", "Networking"
-];
+  const modalImages = funFacts.map(fact => ({ src: fact.imageUrl, alt: fact.text }));
+
+  const openModal = (index: number) => {
+    setCurrentImageIndex(index);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const interests = [
+    "Volleyball", "Hiking", "Gardening", "Pokemon Go", "Raspberry Pi-5", "Networking"
+  ];
   return (
     <div className="min-h-screen w-full relative overflow-hidden">
       {/* Background Image with Overlay */}
@@ -70,6 +86,22 @@ const interests = [
             About Me
           </motion.h1>
 
+          {/* Personal Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            className="flex justify-center mb-8"
+          >
+            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-full border-4 border-[#FFB347] shadow-lg overflow-hidden">
+              <img
+                src="/Alaska_Ammaar4.jpeg"
+                alt="Ammaar Saadat"
+                className="w-full h-full object-cover transform scale-150"
+              />
+            </div>
+          </motion.div>
+
           {/* Bio Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,17 +134,30 @@ const interests = [
               Fun Facts
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {funFacts.map((fact, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.8 + index * 0.1 }}
-                  className="flex items-start space-x-3 p-4 bg-black bg-opacity-50 rounded-lg border-2 border-[#FFB347]"
-                >
-                  <p className="text-gray-300">{fact}</p>
-                </motion.div>
-              ))}
+              {funFacts.map((fact, index) => {
+                const isImageOnLeft = index % 2 === 1;
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: isImageOnLeft ? 20 : -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.8 + index * 0.1 }}
+                    className={`flex items-center gap-4 p-4 bg-black bg-opacity-50 rounded-lg border-2 border-[#FFB347]`}
+                  >
+                    <div
+                      className={`cursor-pointer ${isImageOnLeft ? 'order-first' : 'order-last'} w-20 h-20 sm:w-24 sm:h-24 flex-shrink-0 rounded-md bg-black/20 flex items-center justify-center overflow-hidden`}
+                      onClick={() => openModal(index)}
+                    >
+                      <img
+                        src={fact.imageUrl}
+                        alt=""
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                    <p className="text-gray-300 flex-grow">{fact.text}</p>
+                  </motion.div>
+                );
+              })}
             </div>
           </motion.div>
 
@@ -163,6 +208,13 @@ const interests = [
         </div>
         <Footer />
       </motion.div>
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        images={modalImages}
+        currentIndex={currentImageIndex}
+        setCurrentIndex={setCurrentImageIndex}
+      />
     </div>
   );
 }

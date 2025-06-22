@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col items-center justify-center">
           {/* Social Media Links */}
-          <div className="flex gap-6 mb-6">
+          <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
             {[
               { name: 'GitHub', icon: '/icons/github_icon.png', link: 'https://github.com/saadatam' },
               { name: 'LinkedIn', icon: '/icons/linkedin_icon.png', link: 'https://www.linkedin.com/in/ammaar-saadat-0867a822a/' },
@@ -30,7 +30,7 @@ export default function Footer() {
                 <img 
                   src={social.icon} 
                   alt={`${social.name} icon`} 
-                  className="w-[100px] h-[100px] object-contain"
+                  className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
                 />
                 <span className="text-sm">{social.name}</span>
               </motion.a>

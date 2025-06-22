@@ -31,3 +31,26 @@ Books:
 Fashion:
     1) Vintage
 
+
+
+About me fact images: within the /fact_images folder
+    1) raspberry pi : "computer_rasp.jpeg"
+    2) peach tree : "peaches.jpeg"
+    3) Takhat Cafe : "takhat_cafe.JPG"
+    4) volleyball : "volleyball.png"
+    5) mint chip ice cream : "mint_chocolate.png"
+    6) rock climbing : "rock_climbing_a2.jpeg"
+    7) jet_ski : "jet_ski.png"
+    8) snowboarding: "snowboarding.jpeg"
+    9) covid negative : "covid_negative.png"
+    10) States visited : "NYC_Pin.png"
+    11) denver colorado : "denver_valley.jpg"
+    12) 3 cities in alaska : "Skagway.jpeg"
+    13) ssbu tournament : "sweater_award.jpeg"
+    14) bear : "bear.jpeg"
+
+    15) quadlingual : "quadlingual.png"
+    16) journal : "writing_aesthetic.png"
+
+
+
