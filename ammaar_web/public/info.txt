@@ -53,4 +53,13 @@ About me fact images: within the /fact_images folder
     16) journal : "writing_aesthetic.png"
 
 
+Featured Projects: 
 
+    1) Vitra - Real Time Voice Transliteration
+        tech: 
+    2) Instagram Clone - Insta485
+        tech:   
+    3) Ammaars.com
+        tech: 
+    4) 
+        tech
