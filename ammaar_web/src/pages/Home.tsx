@@ -95,30 +95,63 @@ export default function Home() {
 
   const skills = [
     {
-      category: "Frontend Development",
+      category: "Languages",
       technologies: [
-        { name: "React", level: "Advanced" },
-        { name: "TypeScript", level: "Advanced" },
-        { name: "Tailwind CSS", level: "Advanced" },
-        { name: "Next.js", level: "Intermediate" }
+        { name: "Python" },
+        { name: "Java" },
+        { name: "C++" },
+        { name: "C" },
+        { name: "JavaScript" },
+        { name: "TypeScript" },
+        { name: "Swift" },
+        { name: "HTML/CSS5" },
+        { name: "Assembly" },
+        { name: "SQL" },
+        { name: "Flutter" }
       ]
     },
     {
-      category: "Backend Development",
+      category: "Developer Tools",
       technologies: [
-        { name: "Node.js", level: "Advanced" },
-        { name: "Python", level: "Intermediate" },
-        { name: "Express.js", level: "Advanced" },
-        { name: "MongoDB", level: "Intermediate" }
+        { name: "VSCode" },
+        { name: "IntelliJ" },
+        { name: "XCode" },
+        { name: "MATLAB" },
+        { name: "GM Studio 2" },
+        { name: "Maven" },
+        { name: "Git" },
+        { name: "Docker" }
       ]
     },
     {
-      category: "DevOps & Tools",
+      category: "Frameworks",
       technologies: [
-        { name: "Git", level: "Advanced" },
-        { name: "Docker", level: "Intermediate" },
-        { name: "AWS", level: "Intermediate" },
-        { name: "CI/CD", level: "Intermediate" }
+        { name: "React.js" },
+        { name: "React Native" },
+        { name: "Flask" },
+        { name: "Django" },
+        { name: "Node.js" },
+        { name: "Express.js" },
+        { name: "Tailwind CSS" },
+        { name: "MySQL" },
+        { name: "PostgreSQL" },
+        { name: "gRPC" },
+        { name: "REST" },
+        { name: "Jinja2" },
+        { name: "WordPress" },
+        { name: "WPBakery" }
+      ]
+    },
+    {
+      category: "Other/Interests",
+      technologies: [
+        { name: "Microsoft Excel" },
+        { name: "Volleyball" },
+        { name: "Hiking" },
+        { name: "Gardening" },
+        { name: "Pokemon Go" },
+        { name: "Raspberry Pi-5" },
+        { name: "Networking" }
       ]
     }
   ];
@@ -554,30 +587,46 @@ export default function Home() {
                       alignItems: 'center',
                       textAlign: 'center',
                       width: '100%',
+                      maxWidth: '100%',
                       boxShadow: '0 0 20px rgba(255, 179, 71, 0.1)',
-                      backdropFilter: 'blur(10px)'
+                      backdropFilter: 'blur(10px)',
+                      overflowX: 'hidden',
+                      wordBreak: 'break-word',
                     }}
+                    className="p-4 sm:p-6 w-full max-w-full"
                   >
-                    <h3 style={{
-                      fontSize: '1.25rem',
-                      fontWeight: 'bold',
-                      color: '#FFB347',
-                      marginBottom: '0.5rem'
-                    }}>
+                    <h3
+                      style={{
+                        fontSize: '1.25rem',
+                        fontWeight: 'bold',
+                        color: '#FFB347',
+                        marginBottom: '0.5rem',
+                        wordBreak: 'break-word'
+                      }}
+                      className="break-words"
+                    >
                       {project.title}
                     </h3>
-                    <p style={{
-                      color: '#d1d5db',
-                      marginBottom: '0.5rem',
-                      fontSize: '0.875rem',
-                      fontStyle: 'italic'
-                    }}>
+                    <p
+                      style={{
+                        color: '#d1d5db',
+                        marginBottom: '0.5rem',
+                        fontSize: '0.875rem',
+                        fontStyle: 'italic',
+                        wordBreak: 'break-word'
+                      }}
+                      className="break-words"
+                    >
                       {project.date}
                     </p>
-                    <p style={{
-                      color: '#d1d5db',
-                      marginBottom: '1rem'
-                    }}>
+                    <p
+                      style={{
+                        color: '#d1d5db',
+                        marginBottom: '1rem',
+                        wordBreak: 'break-word'
+                      }}
+                      className="break-words"
+                    >
                       {project.description}
                     </p>
                     <div style={{
@@ -587,7 +636,7 @@ export default function Home() {
                       justifyContent: 'center'
                     }}>
                       {project.tech.map((tech, techIndex) => (
-                            <span 
+                        <span 
                           key={techIndex}
                           style={{
                             backgroundColor: '#FFB347',
@@ -597,10 +646,10 @@ export default function Home() {
                             fontSize: '0.875rem',
                             fontWeight: 'bold'
                           }}
-                            >
-                              {tech}
-                            </span>
-                          ))}
+                        >
+                          {tech}
+                        </span>
+                      ))}
                     </div>
                   </motion.div>
                 ))}
@@ -732,12 +781,6 @@ export default function Home() {
                           }}>
                             {tech.name}
                           </span>
-                          <span style={{
-                            color: '#d1d5db',
-                            fontSize: '0.875rem'
-                          }}>
-                            {tech.level}
-                            </span>
                         </div>
                       ))}
                     </div>
