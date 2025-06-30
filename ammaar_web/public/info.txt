@@ -56,10 +56,32 @@ About me fact images: within the /fact_images folder
 Featured Projects: 
 
     1) Vitra - Real Time Voice Transliteration
-        tech: 
-    2) Instagram Clone - Insta485
-        tech:   
-    3) Ammaars.com
-        tech: 
-    4) 
-        tech
+        Description: voice translation for patients and healthcare workers to apply the right diagnosis regardless of language. compatible with 12 languages with AI dialect detection. 
+        tech: Google Gemini API 1.5 Pro for AI, Flask for backend, pinecone for vector database, tensorflow lite, torchvision, pytorch, wav2vec2, 
+    2) Ammaars.com
+        Description: Biography of a rlly cool guy
+        tech: Typescript.js, Tailwind.css, Vite, React, Emailjs.  
+    3) MuslimMunch
+        Description: muslims want to find halal certified food near them without searching the entire internet and network. MuslimMunch solves this by connecting a community by 
+                    consolidating  halal options within the grasp of your fingertips
+        tech : Node.js, PostgreSQL, React Native. 
+    4) Multicycle CPU simulator: Assembler, L1 Cache, and Machine Code 
+        Description: Designed an a pipelined CPU assembler, cache, and simulator inspired by ARM64's CPU architecture. Features models include reg instructions (add/nor/store/load/jalr/noop) for assembly in a multicycle processor, 
+        for fetching, hazard optimizations, and arithmetic logic unit (ALU). Caching with an L1 least recently used (LRU) model for speed and memory optimizations by leveraging spacial and temporal locality. 
+        tech : C/C++, assembly, Makefiles, command line UI, .exe 
+    5) Search Engine |  Apr. 2024
+       Description:  Implemented a map-reduce pipeline using Python and SQL databases to develop a scalable search engine similar to Google or Bing using a segmented inverted index
+        Analyzed a database of 2000+ web pages to calculate the term frequency, inverse document frequency, and page priority 
+        to produce an inverted index system after Google’s PageRank model
+        tech: Python, SQL, Jinja2, HTML/CSS5, React
+    6)
+    Insta485 -  instagram Clone | React.js, AWS, Flask, Python, SQL, JavaScript Feb. 2024
+    • Developed a Instagram clone web app hosted on an AWS node using server/client side dynamic pages and REST APIs
+    • Implemented a full-stack web app enabling users to create posts, comments, personalized profiles with a pagination feed
+    by leveraging Flask, Python, React.js, and a SQLite database to support over 1000 users
+    7) Piazza Classifier Machine Learning AI Algorithm | C++, CSV Mar. 2023
+        • Designed a classifier machine that identifies topics of posts on the community web application, Piazza, using the bag of
+        words model and training data
+        • Collaborated with a team to build an accurate algorithm that has a 90% prediction rate with reports of vocable
+        frequencies, intel labeling, and version control system updating
+

@@ -1,16 +1,28 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer'
 import ContactForm from '../components/ContactForm';
 
 export default function Home() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // You can add any side effects here if needed in the future
-  }, []);
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   const navItems = [
     { name: 'About Me', path: '/about' },
@@ -24,17 +36,60 @@ export default function Home() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with real-time inventory management.",
+      title: "Vitra - Real Time Voice Transliteration",
+      description: "Voice translation for patients and healthcare workers to apply the right diagnosis regardless of language. Compatible with 12 languages with AI dialect detection.",
       imageUrl: "/placeholder.png",
-      tech: ["React", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/saadatam" // Add your actual GitHub URL
+      tech: ["Google Gemini API 1.5 Pro", "Flask", "Pinecone", "TensorFlow Lite", "PyTorch", "Wav2Vec2"],
+      githubUrl: "https://github.com/saadatam",
+      date: "April 2024"
     },
     {
-      title: "AI Image Generator",
-      description: "An AI-powered tool that generates unique images based on text prompts.",
-      tech: ["Python", "TensorFlow", "React"],
-      githubUrl: "https://github.com/saadatam" // Add your actual GitHub URL
+      title: "Search Engine",
+      description: "Implemented a map-reduce pipeline using Python and SQL databases to develop a scalable search engine similar to Google or Bing using a segmented inverted index. Analyzed a database of 2000+ web pages to calculate the term frequency, inverse document frequency, and page priority to produce an inverted index system after Google's PageRank model.",
+      imageUrl: "/placeholder.png",
+      tech: ["Python", "SQL", "Jinja2", "HTML/CSS", "React"],
+      githubUrl: "https://github.com/saadatam",
+      date: "April 2024"
+    },
+    {
+      title: "Insta485 - Instagram Clone",
+      description: "Developed an Instagram clone web app hosted on an AWS node using server/client side dynamic pages and REST APIs. Implemented a full-stack web app enabling users to create posts, comments, personalized profiles with a pagination feed by leveraging Flask, Python, React.js, and a SQLite database to support over 1000 users.",
+      imageUrl: "/placeholder.png",
+      tech: ["React.js", "AWS", "Flask", "Python", "SQL", "JavaScript"],
+      githubUrl: "https://github.com/saadatam",
+      date: "February 2024"
+    },
+    {
+      title: "Multicycle CPU Simulator",
+      description: "Designed a pipelined CPU assembler, cache, and simulator inspired by ARM64's CPU architecture. Features models include reg instructions (add/nor/store/load/jalr/noop) for assembly in a multicycle processor, for fetching, hazard optimizations, and arithmetic logic unit (ALU). Caching with an L1 least recently used (LRU) model for speed and memory optimizations by leveraging spacial and temporal locality.",
+      imageUrl: "/placeholder.png",
+      tech: ["C/C++", "Assembly", "Makefiles", "Command Line UI"],
+      githubUrl: "https://github.com/saadatam",
+      date: "January 2024"
+    },
+    {
+      title: "Piazza Classifier Machine Learning AI Algorithm",
+      description: "Designed a classifier machine that identifies topics of posts on the community web application, Piazza, using the bag of words model and training data. Collaborated with a team to build an accurate algorithm that has a 90% prediction rate with reports of vocable frequencies, intel labeling, and version control system updating.",
+      imageUrl: "/placeholder.png",
+      tech: ["C++", "CSV", "Machine Learning", "Bag of Words Model"],
+      githubUrl: "https://github.com/saadatam",
+      date: "March 2023"
+    },
+    {
+      title: "Ammaars.com",
+      description: "Biography of a really cool guy - Personal website showcasing my journey, projects, and interests.",
+      imageUrl: "/placeholder.png",
+      tech: ["TypeScript", "Tailwind CSS", "Vite", "React", "EmailJS"],
+      githubUrl: "https://github.com/saadatam",
+      date: "December 2023"
+    },
+    {
+      title: "MuslimMunch",
+      description: "Muslims want to find halal certified food near them without searching the entire internet and network. MuslimMunch solves this by connecting a community by consolidating halal options within the grasp of your fingertips.",
+      imageUrl: "/placeholder.png",
+      tech: ["Node.js", "PostgreSQL", "React Native"],
+      githubUrl: "https://github.com/saadatam",
+      date: "March 2024"
     }
   ];
 
@@ -205,6 +260,7 @@ export default function Home() {
 
         {/* Navigation Dropdown */}
         <motion.div 
+          ref={dropdownRef}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2 }}
@@ -510,6 +566,14 @@ export default function Home() {
                     }}>
                       {project.title}
                     </h3>
+                    <p style={{
+                      color: '#d1d5db',
+                      marginBottom: '0.5rem',
+                      fontSize: '0.875rem',
+                      fontStyle: 'italic'
+                    }}>
+                      {project.date}
+                    </p>
                     <p style={{
                       color: '#d1d5db',
                       marginBottom: '1rem'
