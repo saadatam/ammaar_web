@@ -26,12 +26,13 @@ export default function Home() {
 
   const navItems = [
     { name: 'About Me', path: '/about' },
-    { name: 'Fashion', path: '/fashion' },
+    // { name: 'Fashion', path: '/fashion' },
     { name: 'Books', path: '/books' },
-    { name: 'Hobbies', path: '/hobbies' },
+    // { name: 'Hobbies', path: '/hobbies' },
     { name: 'My Plants', path: '/plants' },
     { name: 'Travel', path: '/travel' },
-    { name: 'Photography', path: '/photography' },
+    { name: 'RasProjects', path: '/RasProjects' },
+    // { name: 'Photography', path: '/photography' },
   ];
 
   const projects = [

@@ -120,7 +120,14 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
         </div>
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-green-400 mb-2">{project.title}</h3>
+        <h3 className="text-xl font-bold mb-2" style={{
+          background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+        }}>
+          {project.title}
+        </h3>
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
         
         {/* Technologies */}
@@ -144,7 +151,12 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
           <ul className="space-y-1">
             {project.keyFeatures.map((feature, index) => (
               <li key={index} className="text-gray-300 text-sm flex items-start">
-                <span className="text-green-400 mr-2 mt-1">•</span>
+                <span className="mr-2 mt-1" style={{
+                  background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+                }}>•</span>
                 <span>{feature}</span>
               </li>
             ))}

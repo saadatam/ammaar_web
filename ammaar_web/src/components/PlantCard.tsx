@@ -52,7 +52,14 @@ export default function PlantCard({
 
         {/* Plant Info */}
         <div className="p-6 text-center">
-          <h3 className="text-xl font-bold text-green-400 mb-1">{name}</h3>
+          <h3 className="text-xl font-bold mb-1" style={{
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+          }}>
+            {name}
+          </h3>
           <p className="text-gray-400 italic text-sm mb-4">{scientificName}</p>
           
           <div className="space-y-2 mb-4 flex flex-col items-center">

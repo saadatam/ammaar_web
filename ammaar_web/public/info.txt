@@ -85,3 +85,40 @@ Featured Projects:
         • Collaborated with a team to build an accurate algorithm that has a 90% prediction rate with reports of vocable
         frequencies, intel labeling, and version control system updating
 
+Plants 
+    1) Glohaven Peaches
+        image: "/gardening/peaches.jpeg"
+        Description: 9 years old. *insert facts about peaches in Michigan*
+        Scientific Name: Prunus Persica
+        LifeSpan: Perennial
+        Watering: 2 inches of rainfall. Water actively for first year. 
+    2) Concord grapes
+        image: "/gardening/grapes2.jpeg"
+        Description: *insert facts about concord grapes in Michigan*
+        Scientific Name: Vitis labrusca
+        LifeSpan: Perennial
+        Watering: 1-2 inches of rain. or about 1/4 a gallon of water 2x/week. 
+    3) Watermelon
+        image: "/gardening/watermelon.jpeg"
+        Description: *insert facts about watermelon in Michigan*
+        Scientific Name: *insert scientific name of watermelon*
+        Lifespan: yearly
+        Watering: 1-2 inches of rain. or about 1/4 a gallon of water 2x/week. 
+    4) Everbearing Strawberries
+        image: "/gardening/strawberry1.jpeg"
+        Description: *insert facts about watermelon in Michigan*
+        Scientific Name: *insert scientific name of watermelon*
+        LifeSpan: Perennial
+        Watering: 1-2 inches of rain. or about 1/4 a gallon of water 2x/week. 
+
+
+
+
+
+
+
+
+Travel
+
+
+RaspProjects:

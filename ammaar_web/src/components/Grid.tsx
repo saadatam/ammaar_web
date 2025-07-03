@@ -53,12 +53,12 @@ export default function Grid({ children, title, description }: GridProps) {
           <motion.h1
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-green-400 mb-6 sm:mb-8 text-center"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 text-center"
             style={{ 
-              borderColor: '#4ade80',
-              borderWidth: '2px',
-              borderStyle: 'solid',
-              borderRadius: '1rem'
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
             }}
           >
             {title}
@@ -69,12 +69,6 @@ export default function Grid({ children, title, description }: GridProps) {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="text-gray-300 text-center mb-8 sm:mb-10 max-w-2xl mx-auto text-sm sm:text-base"
-            style={{ 
-              borderColor: '#4ade80',
-              borderWidth: '2px',
-              borderStyle: 'solid',
-              borderRadius: '1rem'
-            }}
           >
             {description}
           </motion.p>

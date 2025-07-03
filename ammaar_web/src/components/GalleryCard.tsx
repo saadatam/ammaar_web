@@ -49,7 +49,14 @@ export default function GalleryCard({
           ))}
         </div>
         <div className="p-4 text-center">
-          <h3 className="text-lg font-bold text-green-400 mb-1">{title}</h3>
+          <h3 className="text-lg font-bold mb-1" style={{
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+          }}>
+            {title}
+          </h3>
           {subtitle && <p className="text-gray-400 italic text-sm mb-2">{subtitle}</p>}
           {metadata.length > 0 && (
             <div className="flex flex-col items-center gap-1 mb-2">

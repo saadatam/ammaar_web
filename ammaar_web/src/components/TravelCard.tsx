@@ -74,7 +74,14 @@ export default function TravelCard({
         {/* Location Info */}
         <div className="p-6 text-center">
           <div className="flex flex-col items-center mb-3">
-            <h3 className="text-xl font-bold text-green-400 mb-1">{location}</h3>
+            <h3 className="text-xl font-bold mb-1" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              {location}
+            </h3>
             <p className="text-gray-400 text-sm">{country}</p>
             <div className="flex items-center mt-2">
               <span className="text-yellow-400 text-lg mr-1">★</span>
@@ -86,11 +93,23 @@ export default function TravelCard({
 
           {/* Highlights - Centered list */}
           <div className="space-y-2">
-            <h4 className="text-green-400 font-semibold text-base mb-2">Highlights</h4>
+            <h4 className="font-semibold text-base mb-2" style={{
+              background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+            }}>
+              Highlights
+            </h4>
             <ul className="space-y-1">
               {highlights.map((highlight, index) => (
                 <li key={index} className="flex items-center justify-center text-gray-300 text-sm">
-                  <span className="text-green-400 mr-2">•</span>
+                  <span className="mr-2" style={{
+                    background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+                  }}>•</span>
                   <span>{highlight}</span>
                 </li>
               ))}

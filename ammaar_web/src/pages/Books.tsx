@@ -96,7 +96,14 @@ export default function Books() {
       <Grid title="Books I'm Reading" description="A collection of books that have influenced my thinking and growth.">
         {/* Currently Reading Section */}
         <div className="mb-12 w-full col-span-full">
-          <h2 className="text-2xl font-bold text-yellow-400 mb-6 text-center">Currently Reading</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center" style={{
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+          }}>
+            Currently Reading
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
             {currentlyReading.map((book, idx) => (
               <motion.div
@@ -112,7 +119,14 @@ export default function Books() {
         </div>
         {/* Read Section */}
         <div className="w-full col-span-full">
-          <h2 className="text-2xl font-bold text-green-400 mb-6 text-center">Read</h2>
+          <h2 className="text-2xl font-bold mb-6 text-center" style={{
+            background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+          }}>
+            Read
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
             {readBooks.map((book, idx) => (
               <motion.div
