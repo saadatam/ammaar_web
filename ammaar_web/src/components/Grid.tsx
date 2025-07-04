@@ -6,7 +6,8 @@ import Navbar from './Navbar';
 interface GridProps {
   children: ReactNode;
   title: string;
-  description: string;
+  // description: string;
+   description: ReactNode;
 }
 
 export default function Grid({ children, title, description }: GridProps) {

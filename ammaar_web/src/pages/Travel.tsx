@@ -9,11 +9,14 @@ export default function Travel() {
       country: "MI, USA",
       images: [
         { src: "/photography/miners_beach1.jpeg", alt: "Miners Beach" },
+        { src: "/photography/UP1.jpeg", alt: "Miners Beach" },
         { src: "/photography/miners_hike1.jpeg", alt: "Miners Hike" },
-        { src: "/photography/miners_pond1.jpeg", alt: "Miners Pond" },
-        { src: "/photography/miners_pond2.jpeg", alt: "Miners Pond 2" }
+        // { src: "/photography/miners_pond1.jpeg", alt: "Miners Pond" },
+        { src: "/photography/miners_pond2.jpeg", alt: "Miners Pond 2" },
+        { src: "/photography/UP_lighthouse.jpeg", alt: "Lighthouse sunset" },
+        { src: "/photography/UP_airbnb.jpeg", alt: "UP Airbnb" },
       ],
-      date: "Summer 2022",
+      date: "2025",
       description: "Explored breathtaking waterfalls, forests, and the shores of Lake Superior.",
       highlights: [
         "Pictured Rocks National Lakeshore",
@@ -26,10 +29,21 @@ export default function Travel() {
       location: "New York City",
       country: "NY, USA",
       images: [
-        { src: "/photography/heritage1.jpeg", alt: "Heritage NYC" },
-        { src: "/photography/heritage2.jpeg", alt: "Heritage NYC 2" }
+        { src: "/photography/NYC1.jpeg", alt: "NYC" },
+        { src: "/photography/NYC2.jpeg", alt: "NYC" },
+        { src: "/photography/NYC3.jpeg", alt: "NYC" },
+        // { src: "/photography/NYC4.jpeg", alt: "NYC" },
+        { src: "/photography/NYC5.jpeg", alt: "NYC" },
+        { src: "/photography/NYC6.jpeg", alt: "NYC" },
+        { src: "/photography/NYC7.jpeg", alt: "NYC" },
+        { src: "/photography/NYC8.jpeg", alt: "NYC" },
+        { src: "/photography/NYC9.jpeg", alt: "NYC" },
+        { src: "/photography/NYC10.jpeg", alt: "NYC" },
+        { src: "/photography/NYC11.jpeg", alt: "NYC" },
+        // { src: "/photography/NYC12.jpeg", alt: "NYC" },
+        { src: "/photography/NYC13.jpeg", alt: "NYC" },
       ],
-      date: "Spring 2023",
+      date: "Summer 2024",
       description: "The city that never sleeps, full of iconic sights and vibrant culture.",
       highlights: [
         "Central Park",
@@ -39,15 +53,18 @@ export default function Travel() {
       rating: 4.8
     },
     {
-      location: "Ann Arbor Arb",
+      location: "DT Ann Arbor",
       country: "MI, USA",
       images: [
+        { src: "/photography/NL_law_quad1.jpeg", alt: "Law Quad" },
+        { src: "/photography/NL_law_quad2.jpeg", alt: "Law Quad" },
         { src: "/photography/a2_arb1.jpeg", alt: "Ann Arbor Arb 1" },
         { src: "/photography/a2_arb2.jpeg", alt: "Ann Arbor Arb 2" },
         { src: "/photography/a2_arb3.jpeg", alt: "Ann Arbor Arb 3" },
-        { src: "/photography/a2_arb4.jpeg", alt: "Ann Arbor Arb 4" }
+        { src: "/photography/a2_arb4.jpeg", alt: "Ann Arbor Arb 4" },
+        { src: "/photography/a2_arb5.jpeg", alt: "Ann Arbor Arb 5" }
       ],
-      date: "Fall 2022",
+      date: "2023-2025",
       description: "A peaceful retreat in the heart of Ann Arbor, perfect for walks and nature photography.",
       highlights: [
         "Peony Garden",
@@ -60,11 +77,12 @@ export default function Travel() {
       location: "Denver",
       country: "Colorado, USA",
       images: [
-        { src: "/travel/denver1.jpg", alt: "Red Rocks Amphitheatre" },
-        { src: "/travel/denver2.jpg", alt: "Rocky Mountain National Park" },
-        { src: "/travel/denver3.jpg", alt: "Denver Art Museum" }
+        { src: "/photography/denver1.jpeg", alt: "Denver" },
+        { src: "/photography/denver2.jpeg", alt: "Denver" },
+        { src: "/photography/denver3.jpeg", alt: "Denver" },
+        { src: "/photography/denver4.jpeg", alt: "Denver" }
       ],
-      date: "Winter 2022",
+      date: "Summer 2022",
       description: "Gateway to the Rockies, with a lively downtown and stunning mountain views.",
       highlights: [
         "Red Rocks Amphitheatre",
@@ -129,7 +147,7 @@ export default function Travel() {
       country: "Alaska, USA",
       images: [
         { src: "/photography/Juneau1.jpeg", alt: "Juneau" },
-        { src: "/photography/nugget_falls_glaciar.jpeg", alt: "Nugget Falls Glaciar" }
+        { src: "/photography/nugget_falls_glacier.jpeg", alt: "Nugget Falls Glacier" }
       ],
       date: "Summer 2023",
       description: "Alaska's capital, nestled between mountains and the sea.",
@@ -188,6 +206,37 @@ export default function Travel() {
         "Photography"
       ],
       rating: 5
+    },
+    {
+      location: "Texas",
+      country: "TX, USA",
+      images: [
+        { src: "/photography/texas_farm.jpeg", alt: "Texas Farm" },
+        { src: "/photography/texas_farm2.jpeg", alt: "Texas Farm 2" }
+      ],
+      date: "Summer 2023",
+      description: "A vibrant state with a rich cultural heritage and diverse landscapes.",
+      highlights: [
+        "Austin City Limits",
+        "San Antonio River Walk",
+        "Big Bend National Park"
+      ],
+      rating: 4.7
+    },
+    {
+      location: "Mecca",
+      country: "Saudi Arabia",
+      images: [
+        { src: "/photography/Train_Mecca.jpeg", alt: "Train to Mecca" }
+      ],
+      date: "Summer 2023",
+      description: "The holiest city in Islam, a pilgrimage site for Muslims.",
+      highlights: [
+        "Mount Arafat",
+        "Ka'ba",
+        "Hajj rituals"
+      ],
+      rating: 4.8
     }
   ];
 

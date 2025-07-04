@@ -52,7 +52,6 @@ About me fact images: within the /fact_images folder
     15) quadlingual : "quadlingual.png"
     16) journal : "writing_aesthetic.png"
 
-
 Featured Projects: 
 
     1) Vitra - Real Time Voice Transliteration
@@ -84,6 +83,13 @@ Featured Projects:
         words model and training data
         • Collaborated with a team to build an accurate algorithm that has a 90% prediction rate with reports of vocable
         frequencies, intel labeling, and version control system updating
+
+
+    // future projects to add. tag appropriate as school
+    // (school) network file system
+    // (school) thread library 
+
+
 
 Plants 
     1) Glohaven Peaches
@@ -119,6 +125,8 @@ Plants
 
 
 Travel
+    *previous locations*
+    Update images accordingly to the file names of the public/photography folder
 
 
 RaspProjects:
