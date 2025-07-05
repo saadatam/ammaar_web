@@ -16,89 +16,103 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "Smart Home Automation",
-    description: "A comprehensive home automation system using Raspberry Pi 5 with IoT sensors and automated controls.",
-    imageUrl: "/projects/smart_home.jpg",
+    title: "DNS Server Ad Blocker",
+    description: "Network DNS Server that blocks ads and trackers using Pi-hole and Pi-hole Admin Web Interface. ",
+    imageUrl: "/projects/pihole.png",
     category: "IoT",
-    technologies: ["Raspberry Pi 5", "Python", "MQTT", "Node.js", "React"],
-    githubUrl: "https://github.com/username/smart-home",
+    technologies: ["Raspberry Pi 5", "Pi-hole", "Pi-hole Admin Web Interface"],
+    githubUrl: "https://github.com/saadatam",
     keyFeatures: [
-      "Temperature and humidity monitoring",
-      "Automated lighting control",
-      "Security camera integration",
-      "Mobile app dashboard"
+      "Pi-hole is a DNS sinkhole that blocks ads and trackers.",
+      "Pi-hole Admin Web Interface is a web interface for managing Pi-hole.",
+      "Pi-hole is a DNS sinkhole that blocks ads and trackers.",
+      "Pi-hole Admin Web Interface is a web interface for managing Pi-hole."
     ]
   },
-  {
-    title: "Network Monitoring Tool",
-    description: "Real-time network monitoring and analytics dashboard built with Raspberry Pi.",
-    imageUrl: "/projects/network_monitor.jpg",
-    category: "Networking",
-    technologies: ["Raspberry Pi 5", "Python", "Grafana", "InfluxDB", "Docker"],
-    githubUrl: "https://github.com/username/network-monitor",
-    keyFeatures: [
-      "Real-time network traffic analysis",
-      "Bandwidth monitoring",
-      "Device discovery",
-      "Alert system"
-    ]
-  },
-  {
-    title: "Media Server",
-    description: "Personal media streaming server with transcoding capabilities and remote access.",
-    imageUrl: "/projects/media_server.jpg",
-    category: "Media",
-    technologies: ["Raspberry Pi 5", "Plex", "Docker", "Python", "Shell Scripting"],
-    githubUrl: "https://github.com/username/media-server",
-    keyFeatures: [
-      "4K video transcoding",
-      "Remote streaming access",
-      "Automatic media organization",
-      "Multi-device support"
-    ]
-  },
-  {
-    title: "Weather Station",
-    description: "DIY weather station with environmental sensors and data logging capabilities.",
-    imageUrl: "/projects/weather_station.jpg",
-    category: "Environmental",
-    technologies: ["Raspberry Pi 5", "Python", "SQLite", "Chart.js", "HTML/CSS"],
-    githubUrl: "https://github.com/username/weather-station",
-    keyFeatures: [
-      "Temperature, humidity, pressure sensors",
-      "Data logging and visualization",
-      "Weather forecasting",
-      "Historical data analysis"
-    ]
-  },
-  {
-    title: "Security Camera System",
-    description: "Multi-camera security system with motion detection and cloud storage.",
-    imageUrl: "/projects/security_camera.jpg",
-    category: "Security",
-    technologies: ["Raspberry Pi 5", "OpenCV", "Python", "AWS S3", "WebRTC"],
-    githubUrl: "https://github.com/username/security-camera",
-    keyFeatures: [
-      "Motion detection and alerts",
-      "Cloud video storage",
-      "Mobile app access",
-      "Night vision support"
-    ]
-  },
-  {
-    title: "Retro Gaming Console",
-    description: "Classic gaming emulator with custom controller support and game library management.",
-    imageUrl: "/projects/retro_gaming.jpg",
-    category: "Gaming",
-    technologies: ["Raspberry Pi 5", "RetroArch", "Python", "GPIO", "Shell Scripting"],
-    githubUrl: "https://github.com/username/retro-gaming",
-    keyFeatures: [
-      "Multiple console emulation",
-      "Custom controller support",
-      "Game library management",
-      "HDMI output optimization"
-    ]
-  }
+  // {
+  //   title: "Smart Home Automation",
+  //   description: "A comprehensive home automation system using Raspberry Pi 5 with IoT sensors and automated controls.",
+  //   imageUrl: "/projects/smart_home.jpg",
+  //   category: "IoT",
+  //   technologies: ["Raspberry Pi 5", "Python", "MQTT", "Node.js", "React"],
+  //   githubUrl: "https://github.com/username/smart-home",
+  //   keyFeatures: [
+  //     "Temperature and humidity monitoring",
+  //     "Automated lighting control",
+  //     "Security camera integration",
+  //     "Mobile app dashboard"
+  //   ]
+  // },
+  // {
+  //   title: "Network Monitoring Tool",
+  //   description: "Real-time network monitoring and analytics dashboard built with Raspberry Pi.",
+  //   imageUrl: "/projects/network_monitor.jpg",
+  //   category: "Networking",
+  //   technologies: ["Raspberry Pi 5", "Python", "Grafana", "InfluxDB", "Docker"],
+  //   githubUrl: "https://github.com/username/network-monitor",
+  //   keyFeatures: [
+  //     "Real-time network traffic analysis",
+  //     "Bandwidth monitoring",
+  //     "Device discovery",
+  //     "Alert system"
+  //   ]
+  // },
+  // {
+  //   title: "Media Server",
+  //   description: "Personal media streaming server with transcoding capabilities and remote access.",
+  //   imageUrl: "/projects/media_server.jpg",
+  //   category: "Media",
+  //   technologies: ["Raspberry Pi 5", "Plex", "Docker", "Python", "Shell Scripting"],
+  //   githubUrl: "https://github.com/username/media-server",
+  //   keyFeatures: [
+  //     "4K video transcoding",
+  //     "Remote streaming access",
+  //     "Automatic media organization",
+  //     "Multi-device support"
+  //   ]
+  // },
+  // {
+  //   title: "Weather Station",
+  //   description: "DIY weather station with environmental sensors and data logging capabilities.",
+  //   imageUrl: "/projects/weather_station.jpg",
+  //   category: "Environmental",
+  //   technologies: ["Raspberry Pi 5", "Python", "SQLite", "Chart.js", "HTML/CSS"],
+  //   githubUrl: "https://github.com/username/weather-station",
+  //   keyFeatures: [
+  //     "Temperature, humidity, pressure sensors",
+  //     "Data logging and visualization",
+  //     "Weather forecasting",
+  //     "Historical data analysis"
+  //   ]
+  // },
+  // {
+  //   title: "Security Camera System",
+  //   description: "Multi-camera security system with motion detection and cloud storage.",
+  //   imageUrl: "/projects/security_camera.jpg",
+  //   category: "Security",
+  //   technologies: ["Raspberry Pi 5", "OpenCV", "Python", "AWS S3", "WebRTC"],
+  //   githubUrl: "https://github.com/username/security-camera",
+  //   keyFeatures: [
+  //     "Motion detection and alerts",
+  //     "Cloud video storage",
+  //     "Mobile app access",
+  //     "Night vision support"
+  //   ]
+  // },
+  // {
+  //   title: "Retro Gaming Console",
+  //   description: "Classic gaming emulator with custom controller support and game library management.",
+  //   imageUrl: "/projects/retro_gaming.jpg",
+  //   category: "Gaming",
+  //   technologies: ["Raspberry Pi 5", "RetroArch", "Python", "GPIO", "Shell Scripting"],
+  //   githubUrl: "https://github.com/username/retro-gaming",
+  //   keyFeatures: [
+  //     "Multiple console emulation",
+  //     "Custom controller support",
+  //     "Game library management",
+  //     "HDMI output optimization"
+  //   ]
+  // }
 ];
 
 const raspberryPiImages = [
