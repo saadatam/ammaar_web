@@ -334,10 +334,10 @@ export default function RasProjects() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
+  // const openModal = (project: Project) => {
+  //   setSelectedProject(project);
+  //   setIsModalOpen(true);
+  // };
 
   const closeModal = () => {
     setIsModalOpen(false);
