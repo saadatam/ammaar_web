@@ -1,7 +1,7 @@
 
 Fun Facts:
-
 1) I have a 9 year old peach tree. 
+
 2) I love to play grass volleyball with friends, especially in the summer :) 
 3) My favorite ice cream flavor is Mint Chocolate Chip
 ***4) I've attended 3 hackathons.
@@ -126,7 +126,14 @@ Plants
 
 Travel
     *previous locations*
-    Update images accordingly to the file names of the public/photography folder
+    keep existing
+    1) skagway : images:
+        /photography/skagway1.jpeg
+        /photography/skagway2.jpeg
+        /photography/skagway3.jpeg
+        /photography/skagway4.jpeg
+        /photography/skagway5.jpeg
+        /photography/skagway6.jpeg
 
 
 RaspProjects:

@@ -158,43 +158,43 @@ export default function Travel() {
       ],
       rating: 4.9
     },
-    {
-      location: "British Columbia",
-      country: "Canada",
-      images: [
-        { src: "/travel/british-columbia1.jpg", alt: "Stanley Park" },
-        { src: "/travel/british-columbia2.jpg", alt: "Capilano Suspension Bridge" },
-        { src: "/travel/british-columbia3.jpg", alt: "Sea-to-Sky Highway" }
-      ],
-      date: "Fall 2021",
-      description: "A province of wild beauty, from Vancouver to the Rockies.",
-      highlights: [
-        "Stanley Park",
-        "Capilano Suspension Bridge",
-        "Sea-to-Sky Highway"
-      ],
-      rating: 4.8
-    },
-    {
-      location: "Sitka",
-      country: "Alaska, USA",
-      images: [
-        { src: "/travel/sitka1.jpg", alt: "Sitka National Historical Park" },
-        { src: "/travel/sitka2.jpg", alt: "Wildlife boat tours" },
-        { src: "/travel/sitka3.jpg", alt: "Russian Bishop's House" }
-      ],
-      date: "Summer 2023",
-      description: "A charming coastal town with rich history and wildlife.",
-      highlights: [
-        "Sitka National Historical Park",
-        "Wildlife boat tours",
-        "Russian Bishop's House"
-      ],
-      rating: 4.7
-    },
+    // {
+    //   location: "British Columbia",
+    //   country: "Canada",
+    //   images: [
+    //     { src: "/travel/british-columbia1.jpg", alt: "Stanley Park" },
+    //     { src: "/travel/british-columbia2.jpg", alt: "Capilano Suspension Bridge" },
+    //     { src: "/travel/british-columbia3.jpg", alt: "Sea-to-Sky Highway" }
+    //   ],
+    //   date: "Fall 2021",
+    //   description: "A province of wild beauty, from Vancouver to the Rockies.",
+    //   highlights: [
+    //     "Stanley Park",
+    //     "Capilano Suspension Bridge",
+    //     "Sea-to-Sky Highway"
+    //   ],
+    //   rating: 4.8
+    // },
+    // {
+    //   location: "Sitka",
+    //   country: "Alaska, USA",
+    //   images: [
+    //     { src: "/travel/sitka1.jpg", alt: "Sitka National Historical Park" },
+    //     { src: "/travel/sitka2.jpg", alt: "Wildlife boat tours" },
+    //     { src: "/travel/sitka3.jpg", alt: "Russian Bishop's House" }
+    //   ],
+    //   date: "Summer 2023",
+    //   description: "A charming coastal town with rich history and wildlife.",
+    //   highlights: [
+    //     "Sitka National Historical Park",
+    //     "Wildlife boat tours",
+    //     "Russian Bishop's House"
+    //   ],
+    //   rating: 4.7
+    // },
     {
       location: "Northern Lights",
-      country: "Alaska, USA",
+      country: "Michigan, USA",
       images: [
         { src: "/photography/Northern_Lights1.jpeg", alt: "Northern Lights" }
       ],
@@ -206,22 +206,6 @@ export default function Travel() {
         "Photography"
       ],
       rating: 5
-    },
-    {
-      location: "Texas",
-      country: "TX, USA",
-      images: [
-        { src: "/photography/texas_farm.jpeg", alt: "Texas Farm" },
-        { src: "/photography/texas_farm2.jpeg", alt: "Texas Farm 2" }
-      ],
-      date: "Summer 2023",
-      description: "A vibrant state with a rich cultural heritage and diverse landscapes.",
-      highlights: [
-        "Austin City Limits",
-        "San Antonio River Walk",
-        "Big Bend National Park"
-      ],
-      rating: 4.7
     },
     {
       location: "Mecca",

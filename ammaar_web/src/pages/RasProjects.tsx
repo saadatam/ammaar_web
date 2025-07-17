@@ -6,7 +6,7 @@ import ImageModal from '../components/ImageModal';
 interface Project {
   title: string;
   description: string;
-  imageUrl: string;
+  images: { src: string; alt: string }[];
   category: string;
   technologies: string[];
   githubUrl?: string;
@@ -18,7 +18,9 @@ const projects: Project[] = [
   {
     title: "DNS Server Ad Blocker",
     description: "Network DNS Server that blocks ads and trackers using Pi-hole and Pi-hole Admin Web Interface. ",
-    imageUrl: "/projects/pihole.png",
+    images: [
+      { src: "/rasp_projects/rasp0.jpeg", alt: "DNS Server Ad Blocker" }
+    ],
     category: "IoT",
     technologies: ["Raspberry Pi 5", "Pi-hole", "Pi-hole Admin Web Interface"],
     githubUrl: "https://github.com/saadatam",
@@ -27,6 +29,24 @@ const projects: Project[] = [
       "Pi-hole Admin Web Interface is a web interface for managing Pi-hole.",
       "Pi-hole is a DNS sinkhole that blocks ads and trackers.",
       "Pi-hole Admin Web Interface is a web interface for managing Pi-hole."
+    ]
+  },
+  {
+    title: "Video Live Streaming Web App",
+    description: "A comprehensive real-time video streaming and system monitoring dashboard built for Raspberry Pi 5, featuring high-performance camera streaming, system monitoring, and gesture recognition capabilities. Utilized network byte chunking to stream data from my Raspberry Pi 5 camera module to a web app interface",
+    images: [
+      { src: "/rasp_projects/livestream_app2.png", alt: "Video Live Streaming Web App" },
+      { src: "/rasp_projects/livestream_app1.png", alt: "Video Live Streaming Web App" },
+      { src: "/rasp_projects/livestream_app3.png", alt: "Video Live Streaming Web App" }
+    ],
+    category: "Network",
+    technologies: ["FastAPI", "OpenCV", "Python 3.8", "vcgencmd"],
+    githubUrl: "https://github.com/saadatam/Gesture_App",
+    keyFeatures: [
+      "Display Images using MJEPG formating",
+      "📹 High-performance video streaming (60+ FPS) from Raspberry Pi camera",
+      "Configurable stream settings (resolution, FPS, quality)",
+      "Modern Next.js interface with responsive design",
     ]
   },
   // {
@@ -117,10 +137,10 @@ const projects: Project[] = [
 
 const raspberryPiImages = [
   { src: "/computer_rasp.jpeg", alt: "Raspberry Pi 5 - Main" },
-  { src: "/Warm_Tech.png", alt: "Raspberry Pi 5 - Warm Tech" },
-  { src: "/Warm_Tech2.png", alt: "Raspberry Pi 5 - Warm Tech 2" },
-  { src: "/Warm_Tech3.png", alt: "Raspberry Pi 5 - Warm Tech 3" },
-  { src: "/Warm_Tech4.png", alt: "Raspberry Pi 5 - Warm Tech 4" }
+  // { src: "/Warm_Tech.png", alt: "Raspberry Pi 5 - Warm Tech" },
+  // { src: "/Warm_Tech2.png", alt: "Raspberry Pi 5 - Warm Tech 2" },
+  // { src: "/Warm_Tech3.png", alt: "Raspberry Pi 5 - Warm Tech 3" },
+  // { src: "/Warm_Tech4.png", alt: "Raspberry Pi 5 - Warm Tech 4" }
 ];
 
 function RaspberryPi5SpecsSlideshow() {
@@ -161,7 +181,7 @@ function RaspberryPi5SpecsSlideshow() {
           </div>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-2xl font-extrabold text-yellow-300 drop-shadow-lg">Raspberry Pi 5</span>
-            <span className="inline-block bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full shadow">NEW</span>
+            {/* <span className="inline-block bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded-full shadow">NEW</span> */}
             <span className="ml-2 text-yellow-200 text-lg">⚡</span>
           </div>
           <p className="text-yellow-100 text-sm font-medium text-center mb-2">
@@ -197,23 +217,41 @@ function RaspberryPi5SpecsSlideshow() {
   );
 }
 
-function ProjectCard({ project, onImageClick }: { project: Project; onImageClick: () => void }) {
+function ProjectCard({ project }: { project: Project }) {
+  const [selectedIdx, setSelectedIdx] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="bg-gray-900 rounded-2xl overflow-hidden shadow-lg border-2 border-green-400" style={{ width: '350px' }}>
-      <div className="relative h-48 w-full">
+      {/* Slideshow Main Image */}
+      <div
+        className="relative h-48 w-full cursor-pointer"
+        onClick={() => setIsModalOpen(true)}
+      >
         <img
-          src={project.imageUrl}
-          alt={project.title}
-          className="w-full h-full object-cover cursor-pointer transition-transform duration-200 hover:scale-105"
-          onClick={onImageClick}
+          src={project.images[selectedIdx].src}
+          alt={project.images[selectedIdx].alt}
+          className="w-full h-full object-cover rounded-xl border-2 border-green-400 shadow-lg transition-transform duration-200 hover:scale-105"
         />
-        {/* Click indicator */}
         <div className="absolute top-2 left-2 bg-[#FFB347] bg-opacity-80 text-gray-900 px-2 py-1 rounded text-xs font-bold opacity-0 hover:opacity-100 transition-opacity duration-200">
           Click to expand
         </div>
         <div className="absolute top-3 right-3 bg-green-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
           {project.category}
         </div>
+      </div>
+      {/* Thumbnails */}
+      <div className="flex justify-center gap-2 mt-2 mb-2">
+        {project.images.map((img, idx) => (
+          <img
+            key={img.src}
+            src={img.src}
+            alt={img.alt}
+            className={`w-10 h-10 object-cover rounded cursor-pointer border-2 ${selectedIdx === idx ? 'border-yellow-400' : 'border-transparent'}`}
+            onClick={() => setSelectedIdx(idx)}
+            style={{ opacity: selectedIdx === idx ? 1 : 0.7 }}
+          />
+        ))}
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2" style={{
@@ -225,7 +263,6 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
           {project.title}
         </h3>
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">{project.description}</p>
-        
         {/* Technologies */}
         <div className="mb-4">
           <h4 className="text-yellow-400 font-semibold text-sm mb-2">Technologies</h4>
@@ -240,7 +277,6 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
             ))}
           </div>
         </div>
-
         {/* Key Features */}
         <div className="mb-4">
           <h4 className="text-yellow-400 font-semibold text-sm mb-2">Key Features</h4>
@@ -258,7 +294,6 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
             ))}
           </ul>
         </div>
-
         {/* Links */}
         <div className="flex gap-3">
           {project.githubUrl && (
@@ -283,6 +318,14 @@ function ProjectCard({ project, onImageClick }: { project: Project; onImageClick
           )}
         </div>
       </div>
+      {/* Modal for full-size slideshow */}
+      <ImageModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        images={project.images}
+        currentIndex={selectedIdx}
+        setCurrentIndex={setSelectedIdx}
+      />
     </div>
   );
 }
@@ -316,7 +359,7 @@ export default function RasProjects() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <ProjectCard project={project} onImageClick={() => openModal(project)} />
+                <ProjectCard project={project} />
               </motion.div>
             ))}
           </div>
@@ -328,7 +371,7 @@ export default function RasProjects() {
         <ImageModal
           isOpen={isModalOpen}
           onClose={closeModal}
-          images={[{ src: selectedProject.imageUrl, alt: selectedProject.title }]}
+          images={selectedProject.images}
           currentIndex={0}
           setCurrentIndex={() => {}}
         />
