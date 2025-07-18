@@ -19,7 +19,6 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      {/* <Route path="/ExampleComponent" element={<ExampleComponent />}/> */}
       <Route path="/plants" element={<Plants />} />
       <Route path="/travel" element={<Travel />} />
       <Route path="/fashion" element={<Fashion />} />

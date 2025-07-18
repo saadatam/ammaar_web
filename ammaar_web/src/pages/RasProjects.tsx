@@ -137,10 +137,6 @@ const projects: Project[] = [
 
 const raspberryPiImages = [
   { src: "/computer_rasp.jpeg", alt: "Raspberry Pi 5 - Main" },
-  // { src: "/Warm_Tech.png", alt: "Raspberry Pi 5 - Warm Tech" },
-  // { src: "/Warm_Tech2.png", alt: "Raspberry Pi 5 - Warm Tech 2" },
-  // { src: "/Warm_Tech3.png", alt: "Raspberry Pi 5 - Warm Tech 3" },
-  // { src: "/Warm_Tech4.png", alt: "Raspberry Pi 5 - Warm Tech 4" }
 ];
 
 function RaspberryPi5SpecsSlideshow() {
