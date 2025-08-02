@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import FalseComponent from './FalseComponent';
 import TrueComponent from './TrueComponent';
@@ -13,7 +13,7 @@ function SampleComponent(){
     // state variable. in this case, int of 0 is initialized for the state variable of "count"
     // setCount is the update function. you pass in the new value you want to set the state variable to
     const [count, setCount] = useState(0); // init to 0, can be either a string or other ADT
-    const [incount, setIncount] = useState(0); // init to 0, can be either a string or other ADT
+    const [incount, setIncount] = useState(0);
     // state variables are hooks 
     // anything usages starting with "use" are called hooks. Can create own hooks by using existing one
     // always call state variables outside of scope. aka at the top of components
@@ -85,16 +85,18 @@ function SampleComponent(){
                 }}
             />
 
+            <h2> independent shared state</h2>
             {/* independent shared state */}
             {cond}
             {cond}
 
-            
+            <h2> terinary conditional rendering</h2>
             {flag ? 
             (<TrueComponent/>) : 
             (<FalseComponent/>)
             }
 
+            <h2>inline conditional</h2>
             <div id='inlineConditional'>
                 {flag && <h1>true</h1>}
             </div>

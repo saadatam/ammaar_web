@@ -75,6 +75,7 @@
 
 # System Files
 /ammaar_web/.DS_Store
+/ammaar_web/public/.DS_Store
 /ammaar_web/.DS_Store?
 /ammaar_web/._*
 /ammaar_web/.Spotlight-V100
@@ -89,5 +90,5 @@
 
 /ammaar_web/.env
 .DS_Store
-/ammaar_web/src/vite-env.d.ts
+/ammaar_web/src/vite*
 /ammaar_web/public/info.txt
