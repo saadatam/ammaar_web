@@ -11,7 +11,8 @@ import Hobbies from './pages/Hobbies'
 import RasProjects from './pages/RasProjects'
 import Navbar from './components/Navbar'
 import Sample from './pages/Sample'
-import Tictactoe from './pages/tictactoe'
+import Tictactoe from './pages/Tictactoe'
+import Rag from './pages/Rag'
 
 
 export default function App() {
@@ -29,6 +30,7 @@ export default function App() {
       <Route path="/rasprojects" element={<RasProjects />} />
       <Route path="/sample" element={<Sample />} />
       <Route path="/tictactoe" element={<Tictactoe />} />
+      <Route path="/rag" element={<Rag />} />
       <Route path="*" element={<Error />}/>
       
     </Routes>
