@@ -37,12 +37,28 @@ export default function Home() {
 
   const projects = [
     {
+      title: "Multi-Threaded Network File Server",
+      description: "Built a scalable thread-per-request file server supporting 4 network commands and 95% protocol data validation compliance with client requests by introducing per-file locking and hand-over-hand traversal for safe parallel access to shared file system state. Handled 1,000+ concurrent client requests test programs avoiding race conditions or memory leaks and verified via stress tests and edge-case validations for malformed inputs and I/O failures.",
+      imageUrl: "/placeholder.png",
+      tech: ["C++", "Networking", "File Systems", "Threads"],
+      githubUrl: "https://github.com/saadatam",
+      date: "April 2025"
+    },
+    {
       title: "Vitra - Real Time Voice Transliteration",
-      description: "Voice translation for patients and healthcare workers to apply the right diagnosis regardless of language. Compatible with 12 languages with AI dialect detection.",
+      description: "Voice translation for patients and healthcare workers to apply the right diagnosis regardless of language. Compatible with 40+ languages with AI dialect detection for real-time communication.",
       imageUrl: "/placeholder.png",
       tech: ["Google Gemini API 1.5 Pro", "Flask", "Pinecone", "TensorFlow Lite", "PyTorch", "Wav2Vec2"],
       githubUrl: "https://github.com/saadatam",
-      date: "April 2024"
+      date: "May 2025 - Present"
+    },
+    {
+      title: "Takhat Cafe",
+      description: "Co-founded Takhat Cafe, a cultural ice cream shop in Westland, MI. Led marketing team by advertising on social media, community events, and designing flyers to reach 5k unique accounts in 3 months, resulting in 1000+ sales. Collaborated with 7 organizations across Michigan to partner events, reaching over 800 customers satisfied. Secured 10+ clients by pitching services and adjusting based on clientele feedback, resulting in 1.2k units sold in 6+ cities.",
+      imageUrl: "/placeholder.png",
+      tech: ["Project Management", "Leadership", "Marketing", "Business Development"],
+      githubUrl: "https://github.com/saadatam",
+      date: "March 2025 - Present"
     },
     {
       title: "Search Engine",
@@ -62,11 +78,11 @@ export default function Home() {
     },
     {
       title: "Multicycle CPU Simulator",
-      description: "Designed a pipelined CPU assembler, cache, and simulator inspired by ARM64's CPU architecture. Features models include reg instructions (add/nor/store/load/jalr/noop) for assembly in a multicycle processor, for fetching, hazard optimizations, and arithmetic logic unit (ALU). Caching with an L1 least recently used (LRU) model for speed and memory optimizations by leveraging spacial and temporal locality.",
+      description: "Developed a multicycle CPU and unified L2 cache simulator in C for the LC2K architecture, implementing configurable block size, set associativity, and LRU replacement. Supported write-back and write-allocate policies, achieving optimizations across 20+ assembly test programs with detailed memory transfer tracking, and hazard optimizations.",
       imageUrl: "/placeholder.png",
-      tech: ["C/C++", "Assembly", "Makefiles", "Command Line UI"],
+      tech: ["C", "Assembly", "LC2k", "ARM"],
       githubUrl: "https://github.com/saadatam",
-      date: "January 2024"
+      date: "April 2024"
     },
     {
       title: "Piazza Classifier Machine Learning AI Algorithm",
@@ -127,19 +143,23 @@ export default function Home() {
     {
       category: "Frameworks",
       technologies: [
-        { name: "React.js" },
-        { name: "React Native" },
+        { name: "React" },
+        { name: "TypeScript" },
+        { name: "Tailwind" },
+        { name: "gRPC" },
+        { name: "Next.js" },
         { name: "Flask" },
+        { name: "SQL" },
+        { name: "Excel" },
+        { name: "WordPress" },
+        { name: "React Native" },
         { name: "Django" },
         { name: "Node.js" },
         { name: "Express.js" },
-        { name: "Tailwind CSS" },
         { name: "MySQL" },
         { name: "PostgreSQL" },
-        { name: "gRPC" },
         { name: "REST" },
         { name: "Jinja2" },
-        { name: "WordPress" },
         { name: "WPBakery" }
       ]
     },
@@ -159,39 +179,50 @@ export default function Home() {
 
   const experiences = [
     {
+      company: "Sarf (Sarf Space)",
+      role: "Software Engineer",
+      duration: "August 2025 - Present",
+      location: "Remote (New York, NY)",
+      tech: ["Next.js", "React", "Expo", "Express.js", "Supabase"],
+      logo: "/icons/Sarf.png",
+      description: [
+        "Built a cross-platform interest-free P2P finance app (iOS, Android, Web) using Next.js, React, Expo, Supabase, and Express.js. Implemented authentication, user accounts, contract creation, payment simulation, transaction history, a full ledger system, and integrated live market-data APIs for real-time financial context.",
+        "Raised up to $200,000 by developing the marketing site, configured Cloudflare+ Google App Scripts, drove 50+ early signups and 5 investor pitches, and moved product toward patent-pending status."
+      ]
+    },
+    {
+      company: "Vitra.AI",
+      role: "Software Engineer",
+      duration: "May 2025 - Present",
+      location: "University of Michigan",
+      tech: ["Gemini", "Python", "Flask", "React"],
+      logo: "/icons/Google.png",
+      description: [
+        "Co-founded Vitra, a non-profit AI transliteration app to reduce diagnosis time and increase accuracy of patients with different language barriers via 40+ languages for real-time communication.",
+        "Scaled ideation to an MVP with demos of 2+ clinics by assembling and managing a team of undergraduate engineers using agile workflows, Gantt charts, and phased prototyping to demo."
+      ]
+    },
+    {
       company: "KLA",
       role: "Software Engineering Intern",
       duration: "May 2024 - Aug. 2024",
       location: "Ann Arbor, Michigan",
-      tech: ["Java", "gRPC", "DevOps", "REST", "protobuf", "CI/CD"],
+      tech: ["Java", "gRPC", "GitHub", "Postman", "Semiconductors"],
       logo: "/icons/KLA.png",
       description: [
-        "Developed a scalable API web app that integrates hardware controllers using a microservice and plug-in based architecture.",
-        "Introduced automation by utilizing gRPC, Java, and protobuf to decrease tool interface development time by 50% across company 3+ divisions."
+        "Developed a scalable internal app to reduce semiconductor tool interaction time by 30% across 2 divisions by integrating remote machine controllers using a microservice/plug-in based API architecture for global labs.",
+        "Designed 8+ automation API endpoints for remote access to company tools via global deployment across offices."
       ]
     },
     {
       company: "MIDAS, University of Michigan Institute of Data Science",
       role: "Web Intern",
       duration: "Nov. 2023 - May 2024",
-      location: "Ann Arbor, Michigan",
-      tech: ["HTML", "CSS", "WordPress", "AwesomeTables", "WPBakery"],
+      location: "University of Michigan",
+      tech: ["WordPress", "HTML/CSS5", "AwesomeTables", "WPBakery"],
       logo: "/icons/UofM.png",
       description: [
-        "Collaborated with MIDAS team to continuously integrate feedback onto web pages catered to UofM's Institute of Data Science to automate and enhance user interface experience.",
-        "Improved the website's traffic flow by optimizing 12+ web pages during the F23/W24 semesters."
-      ]
-    },
-    {
-      company: "Vitra - Google × MHacks",
-      role: "Web App Developer",
-      duration: "April. 2024",
-      location: "University of Michigan",
-      tech: ["Gemini Pro 1.5", "Python", "Flask", "React.js"],
-      logo: "/icons/Google.png",
-      description: [
-        "Developed Vitra, a real-time voice transliteration mobile/web app using Python, Flask, and Vite React.js along with Google's Gemini Pro 1.5 model to support over 40 languages.",
-        "Proactively collaborated under 24 hour constraints to deliver MVP of app for healthcare professionals that reduces miscommunication to minorities."
+        "Designed MIDAS websites to improve university-wide marketing of 5+ AI events, incorporating real-time feedback to increase web traffic during the F23/W24 semesters across WordPress and the University of Michigan database."
       ]
     }
   ];
@@ -259,21 +290,21 @@ export default function Home() {
           <TypeAnimation
             sequence={[
               '', 3000,
-              'Software Engineer..',
+              'Software Engineer.',
               1500,
-              'Problem Solver..',
+              'Problem Solver.',
               1500,
-              'Garden Enthusiast..',
+              'Garden Enthusiast.',
               1500,
-              'Adventurous Traveler..',
+              'Adventurous Traveler.',
               1500,
-              'Volleyball Player..',
+              'Volleyball Player.',
               1500,
-              'Food Photographer..',
+              'Food Photographer.',
               1500,
-              'Fashion Inspirer..',
+              'Fashion Inspirer.',
               1500,
-              'Photography Learner..',
+              'Photography Learner.',
               1500,
             ]}
             wrapper="span"
@@ -379,7 +410,7 @@ export default function Home() {
               }}
             >
               <img
-                src="/Alaska_Ammaar3.JPG"
+                src="/Grad_Ammaar.jpeg"
                 alt="Ammaar Saadat"
                 className="w-full h-full object-cover"
               />
