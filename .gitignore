@@ -92,3 +92,7 @@
 .DS_Store
 /ammaar_web/src/vite*
 /ammaar_web/public/info.txt
+/rag_test/
+/ammaar_web/src/pages/Rag.tsx
+prompt.txt
+
