@@ -183,6 +183,19 @@ export default function Home() {
       ]
     },
     {
+      company: "Takhat Cafe",
+      role: "Co-Founder",
+      duration: "March 2025 - Present",
+      location: "Westland, MI",
+      tech: ["Project Management", "Leadership", "Marketing"],
+      logo: "/icons/takhat_cafe_logo.png",
+      description: [
+        "Led marketing team by advertising on social media, community events, and designing flyers to reach 5k unique accounts in 3 months, resulting in 1000+ sales.",
+        "Collaborated with 10 organizations across Michigan to partner events, reaching over 800 customers satisfied.",
+        "Secured 10+ clients by pitching services and adjusting based on clientele feedback, resulting in 1.2k units sold in 6+ cities."
+      ]
+    },
+    {
       company: "Vitra.AI",
       role: "Co-founder",
       duration: "May 2025 - Present",
@@ -206,19 +219,6 @@ export default function Home() {
         "Designed MIDAS websites to improve university-wide marketing of 5+ AI events, incorporating real-time feedback to increase web traffic during the F23/W24 semesters across WordPress and the University of Michigan database."
       ]
     },
-    {
-      company: "Takhat Cafe",
-      role: "Co-Founder",
-      duration: "March 2025 - Present",
-      location: "Westland, MI",
-      tech: ["Project Management", "Leadership", "Marketing"],
-      logo: "/icons/takhat_cafe_logo.png",
-      description: [
-        "Led marketing team by advertising on social media, community events, and designing flyers to reach 5k unique accounts in 3 months, resulting in 1000+ sales.",
-        "Collaborated with 10 organizations across Michigan to partner events, reaching over 800 customers satisfied.",
-        "Secured 10+ clients by pitching services and adjusting based on clientele feedback, resulting in 1.2k units sold in 6+ cities."
-      ]
-    }
   ];
 
   return (
