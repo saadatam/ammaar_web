@@ -277,7 +277,7 @@ export default function Home() {
             letterSpacing: '0.05em'
           }}
         >
-          ["ah-m-are"]
+          ["aa-m-ar"]
         </motion.p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 font-mono">
           <TypeAnimation
