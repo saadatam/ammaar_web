@@ -354,10 +354,12 @@ export default function Home() {
               About Me
             </h2>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto sm:mx-0">
-              I'm a passionate software engineer and AI enthusiast based in Ann Arbor, Michigan.
+            I'm a new grad software engineer from the University of Michigan with a Bachelor's Degree of Engineering. I've worked on scaling microservices as an software intern at KLA for developer semiconductor analysis, 
+            and have worked as a founding software engineer at Sarf, where I raised up to $200k within 5 months by developing the platform via implementing Next.js, Typescript, and AI prototypes  demoing to partners. I'm looking for a fulltime role. 
+              {/* I'm a passionate software engineer and AI enthusiast based in Ann Arbor, Michigan.
               With a strong foundation in computer science and a keen interest in emerging technologies,
               I specialize in building innovative solutions that push the boundaries of what's possible.
-              I love collaborating on projects that blend creativity, technology, and real-world impact.
+              I love collaborating on projects that blend creativity, technology, and real-world impact. */}
             </p>
           </div>
 
