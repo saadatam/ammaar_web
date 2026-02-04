@@ -297,8 +297,6 @@ export default function Home() {
               1500,
               'Fashion Inspirer.',
               1500,
-              'Photography Learner.',
-              1500,
             ]}
             wrapper="span"
             speed={55}
