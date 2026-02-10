@@ -13,8 +13,6 @@ export default function Navbar() {
     { name: 'My Plants', path: '/plants' },
     { name: 'Travel', path: '/travel' },
     { name: 'Books', path: '/books' },
-    
-    
   ];
 
   const socialLinks = [
