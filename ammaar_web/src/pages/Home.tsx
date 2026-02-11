@@ -20,7 +20,7 @@ export default function Home() {
   const projects = [
     {
       title: "Multi-Threaded Network File Server",
-      description: "Built a scalable thread-per-request file server supporting 4 network commands and 95% protocol data validation compliance with client requests by introducing per-file locking and hand-over-hand traversal for safe parallel access to shared file system state. Handled 1,000+ concurrent client requests test programs avoiding race conditions or memory leaks and verified via stress tests and edge-case validations for malformed inputs and I/O failures.",
+      description: "Designed a thread-per-request file server by introducing per-file locking and hand-over-hand traversal for safe parallel access to shared file system state across concurrent TCP client connections, leading to 95% data validation compliance. Ensured fault tolerance of 1,000+ concurrent client commands by implementing sanitization of malformed input, preventing race conditions with synchronization, and enabling disk crash consistency, verified through stress tests and I/O failure edge-case analysis.",
       imageUrl: "/placeholder.png",
       tech: ["C++", "Networking", "File Systems", "Threads"],
       githubUrl: "https://github.com/saadatam",
@@ -81,18 +81,15 @@ export default function Home() {
       category: "Languages",
       technologies: [
         { name: "Python" },
-        { name: "Java" },
         { name: "C++" },
+        { name: "Bash" },
+        { name: "Java" },
         { name: "C" },
         { name: "JavaScript" },
         { name: "Swift" },
         { name: "Flutter" },
-        { name: "HTML/CSS5" }
-      ]
-    },
-    {
-      category: "Developer Tools",
-      technologies: [
+        { name: "HTML/CSS5" }, 
+        { name: "------- Developer Tools------- " }, 
         { name: "VSCode" },
         { name: "IntelliJ" },
         { name: "XCode" },
@@ -106,9 +103,12 @@ export default function Home() {
     {
       category: "Frameworks",
       technologies: [
-        { name: "React" },
         { name: "TypeScript" },
-        { name: "Tailwind" },
+        { name: "Gemini" },
+        { name: "OpenAI" },
+        { name: "Pinecone" },
+        { name: "React" },
+        { name: "SQL" },
         { name: "gRPC" },
         { name: "Next.js" },
         { name: "Flask" },
@@ -129,13 +129,12 @@ export default function Home() {
     {
       category: "Interests",
       technologies: [
+        { name: "Raspberry Pi" },
         { name: "Volleyball" },
+        { name: "Marketing" },
         { name: "Hiking" },
         { name: "Gardening" },
-        { name: "Pokemon Go" },
-        { name: "Raspberry Pi-5" },
-        { name: "Networking" },
-        { name: "Cafe Business" }
+        { name: "Pokemon Go" }
       ]
     }
   ];
@@ -152,53 +151,52 @@ export default function Home() {
       school: "Michigander Scholars in Semiconductors Scholarship - KLA",
       degree: "Awarded $5,000 for academic excellence to Michigan's semiconductor industry",
       distinction: undefined,
-      expected: "January 2025",
+      expected: "Jan. 2025",
       location: "Ann Arbor, Michigan"
     }
   ];
 
   const experiences = [
     {
-      company: "KLA",
-      role: "Software Engineering Intern",
-      duration: "May - August 2024",
-      location: "Ann Arbor, Michigan",
-      tech: ["Semiconductors", "Java", "gRPC", "GitHub", "Postman"],
-      logo: "/icons/KLA.png",
+      company: "Sarf",
+      role: "Software Engineer",
+      duration: "Aug. - Dec. 2025",
+      location: "New York City, New York",
+      tech: ["Next.js", "React", "iOS", "Android", "SupabaseSQL"],
+      logo: "/icons/Sarf.png",
       description: [
-        "Developed a scalable internal app across 2+ divisions by integrating remote machine controllers using a microservice/plug-in based API architecture for global labs, reducing internal tool interaction time by 30%.",
-        "Designed 8+ automation API endpoints for remote access to internal tools via global deployment across offices, standardizing interactions across California and Michigan offices."
+        "Designed a scalable platform using SQL database models with row-level security policies, client/server state synchronization for dynamic rendering, and auth middleware for verification, resulting in up to $200,000 funds raised, 50+ early sign-ups, 5 investor pitches, and moved product toward patent-pending status.",
+        "Developed core product infrastructure such as user accounts, live market data ingestion pipelines, AI itinerary processing chain, payment flow, and a ledger system."
       ]
     },
     {
-      company: "Sarf",
-      role: "Software Engineer",
-      duration: "August - December 2025",
-      location: "New York City, New York",
-      tech: ["Next.js", "React", "iOS", "Android", "Supabase"],
-      logo: "/icons/Sarf.png",
+      company: "KLA",
+      role: "Software Engineering Intern",
+      duration: "May - Aug. 2024",
+      location: "Ann Arbor, Michigan",
+      tech: ["gRPC", "Protobuf", "Java", "SpringBoot"],
+      logo: "/icons/KLA.png",
       description: [
-        "Raised up to $200,000 by developing the marketing site and demoing the platform to partners, leading to 50+ early sign-ups, 5 investor pitches, and moved product toward patent-pending status.",
-        "Developed an interest-free AI finance platform using Next.js, React, Expo, and Supabase — implementing user accounts, authentication, AI itinerary generation prototyping, payment flow, ledger system, and integrating live market-data APIs for real-time financial context."
+        "Developed a scalable layered architecture by integrating a gRPC microservice for remote internal tool access, reducing internal tool interaction time by 85% across 2+ engineering divisions.",
+        "Designed 8+ low-latency RPC endpoints with Protobuf serialization and client/server stub dependency generation for decoupling integrations — standardizing plug-in interfaces and enabling global deployment in international labs."
       ]
     },
     {
       company: "Takhat Cafe",
-      role: "Co-Founder",
-      duration: "March 2025 - Present",
+      role: "Co-Founder | Project Management, Leadership",
+      duration: "Mar. 2025 - Present",
       location: "Westland, MI",
       tech: ["Project Management", "Leadership", "Marketing"],
       logo: "/icons/takhat_cafe_logo.png",
       description: [
         "Led marketing team by advertising on social media, community events, and designing flyers to reach 5k unique accounts in 3 months, resulting in 1000+ sales.",
-        "Collaborated with 10 organizations across Michigan to partner events, reaching over 800 customers satisfied.",
         "Secured 10+ clients by pitching services and adjusting based on clientele feedback, resulting in 1.2k units sold in 6+ cities."
       ]
     },
     {
-      company: "Vitra.AI",
-      role: "Co-founder",
-      duration: "May 2025 - Present",
+      company: "Vitra.ai",
+      role: "Co-Founder | Gemini, Python, Flask, React, Project Management",
+      duration: "May 2025",
       location: "University of Michigan",
       tech: ["Gemini", "Python", "Flask", "React"],
       logo: "/icons/Google.png",
@@ -207,7 +205,7 @@ export default function Home() {
         "Scaled ideation to an MVP with demos of 2 clinics by assembling and managing a team of undergraduate engineers using agile workflows, Gantt charts, and phased prototyping to demo."
       ]
     },
-    
+    // comment out for focused experience
     {
       company: "University of Michigan - MIDAS",
       role: "Web Intern",
@@ -352,8 +350,7 @@ export default function Home() {
               About Me
             </h2>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto sm:mx-0">
-            I'm a new grad software engineer from the University of Michigan with a Bachelor's Degree of Engineering. I've worked on scaling microservices as an software intern at KLA for developer semiconductor analysis, 
-            and have worked as a founding software engineer at Sarf, where I raised up to $200k within 5 months by developing the platform via implementing Next.js, Typescript, and AI prototypes  demoing to partners. I'm looking for a fulltime role. 
+            I'm a new grad software engineer from the University of Michigan with a Bachelor of Engineering in Computer Science and Engineering. At KLA I developed a scalable gRPC microservice that reduced internal tool interaction time by 85% across 2+ engineering divisions. As a software engineer at Sarf I designed a scalable platform with SQL and row-level security, client/server state sync, and auth middleware—resulting in up to $200k raised, 50+ early sign-ups, and 5 investor pitches toward patent-pending status. I built core infrastructure including user accounts, live market data pipelines, AI itinerary processing, payment flow, and a ledger system. I'm looking for a full-time role. 
               {/* I'm a passionate software engineer and AI enthusiast based in Ann Arbor, Michigan.
               With a strong foundation in computer science and a keen interest in emerging technologies,
               I specialize in building innovative solutions that push the boundaries of what's possible.
@@ -588,7 +585,7 @@ export default function Home() {
                 ))}
               </ul>
               <p className="text-gray-400 text-xs mt-3 pt-2 border-t border-[#FFB347]/30">
-                <span className="text-[#FFB347] font-medium">Relevant Coursework:</span> Operating Systems, Web Systems, Computer Security, User Interface Development, Computer Architecture, Info Retrieval, Human-Centered Software, Data Driven Software, Linear Algebra, Calc I–III
+                <span className="text-[#FFB347] font-medium">Relevant Coursework:</span> Operating Systems, Linear Algebra, Computer Security, User Interface Development, Web Systems, Computer Architecture, Info Retrieval, Human-Centered Software, Data Driven Software, Calc I–III
               </p>
             </div>
           </motion.div>
@@ -608,7 +605,7 @@ export default function Home() {
               Technical Skills
             </h2>
             <div className="w-full max-w-5xl mx-auto px-2 sm:px-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
                 {skills.map((skillCategory, index) => (
                   <motion.div
                     key={skillCategory.category}
