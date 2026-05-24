@@ -19,10 +19,34 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Multi-Threaded Network File Server",
-      description: "Designed a thread-per-request file server by introducing per-file locking and hand-over-hand traversal for safe parallel access to shared file system state across concurrent TCP client connections, leading to 95% data validation compliance. Ensured fault tolerance of 1,000+ concurrent client commands by implementing sanitization of malformed input, preventing race conditions with synchronization, and enabling disk crash consistency, verified through stress tests and I/O failure edge-case analysis.",
+      title: "Vitra.AI Health",
+      description: "Founded a real-time AI-powered speech translation platform supporting 40+ languages using Gemini for clinical communication. Optimized inference performance through deployments with 2 clinics.",
       imageUrl: "/placeholder.png",
-      tech: ["C++", "Networking", "File Systems", "Threads"],
+      tech: ["Gemini", "AI", "Python", "Flask", "React"],
+      githubUrl: "https://github.com/saadatam",
+      date: "May 2025"
+    },
+    {
+      title: "Cat-thusiast - AI-Agent",
+      description: "Developed a conversational AI-Agent in Python using Retrieval Augmented Generation (RAG) to communicate cat facts. Utilized Ollama-3 and HuggingFace models with a Pinecone vector database.",
+      imageUrl: "/placeholder.png",
+      tech: ["Pinecone", "Ollama", "HuggingFace", "RAG", "Python"],
+      githubUrl: "https://github.com/saadatam",
+      date: "March 2025"
+    },
+    {
+      title: "Raspberry Pi 5 Video Streaming System",
+      description: "Built a video streaming pipeline on a Raspberry Pi 5 using FastAPI and Picamera2. Automated full-stack deployment using Bash scripts for process orchestration and logging.",
+      imageUrl: "/placeholder.png",
+      tech: ["Python", "FastAPI", "React", "Next.js"],
+      githubUrl: "https://github.com/saadatam",
+      date: "Present"
+    },
+    {
+      title: "Multi-Threaded Network File Server",
+      description: "Designed a multi-threaded TCP file server in C++ supporting 1,000+ concurrent client requests. Implemented sanitization, synchronization to prevent race conditions, and disk crash consistency.",
+      imageUrl: "/placeholder.png",
+      tech: ["C++", "Networking", "Operating Systems", "Threads"],
       githubUrl: "https://github.com/saadatam",
       date: "April 2025"
     },
@@ -81,15 +105,15 @@ export default function Home() {
       category: "Languages",
       technologies: [
         { name: "Python" },
-        { name: "C++" },
-        { name: "Bash" },
-        { name: "Java" },
-        { name: "C" },
         { name: "JavaScript" },
+        { name: "C++" },
+        { name: "Java (SpringBoot)" },
+        { name: "C" },
+        { name: "Bash" },
+        { name: "HTML/CSS5" },
         { name: "Swift" },
         { name: "Flutter" },
-        { name: "HTML/CSS5" }, 
-        { name: "------- Developer Tools------- " }, 
+        { name: "------- Developer Tools------- " },
         { name: "VSCode" },
         { name: "IntelliJ" },
         { name: "XCode" },
@@ -101,14 +125,16 @@ export default function Home() {
       ]
     },
     {
-      category: "Frameworks",
+      category: "Frameworks & Backend",
       technologies: [
         { name: "TypeScript" },
-        { name: "Gemini" },
-        { name: "OpenAI" },
-        { name: "Pinecone" },
-        { name: "React" },
+        { name: "Next.js" },
         { name: "SQL" },
+        { name: "Flask" },
+        { name: "SpringBoot" },
+        { name: "Microservices" },
+        { name: "REST APIs" },
+        { name: "React" },
         { name: "gRPC" },
         { name: "Next.js" },
         { name: "Flask" },
@@ -121,9 +147,18 @@ export default function Home() {
         { name: "Express.js" },
         { name: "MySQL" },
         { name: "PostgreSQL" },
-        { name: "REST" },
         { name: "Jinja2" },
         { name: "WPBakery" }
+      ]
+    },
+    {
+      category: "AI / APIs",
+      technologies: [
+        { name: "OpenAI" },
+        { name: "Gemini" },
+        { name: "Pinecone" },
+        { name: "Ollama-3" },
+        { name: "gRPC" }
       ]
     },
     {
@@ -143,13 +178,13 @@ export default function Home() {
     {
       school: "University of Michigan - Ann Arbor",
       degree: "Bachelor of Engineering - Computer Science and Engineering",
-      distinction: "Dean's List - Honors Recognition",
+      distinction: "Dean's Honors List",
       expected: "May 2025",
       location: "Ann Arbor, Michigan"
     },
     {
       school: "Michigander Scholars in Semiconductors Scholarship - KLA",
-      degree: "Awarded $5,000 for academic excellence to Michigan's semiconductor industry",
+      degree: "Selected for a $5,000 merit scholarship following a semiconductor internship with KLA",
       distinction: undefined,
       expected: "Jan. 2025",
       location: "Ann Arbor, Michigan"
@@ -159,26 +194,26 @@ export default function Home() {
   const experiences = [
     {
       company: "Sarf",
-      role: "Software Engineer",
+      role: "Founding Software Engineer",
       duration: "Aug. - Dec. 2025",
       location: "New York City, New York",
-      tech: ["Next.js", "React", "iOS", "Android", "SupabaseSQL"],
+      tech: ["TypeScript", "Next.js", "React", "SQL", "iOS", "Android"],
       logo: "/icons/Sarf.png",
       description: [
-        "Designed a scalable platform using SQL database models with row-level security policies, client/server state synchronization for dynamic rendering, and auth middleware for verification, resulting in up to $200,000 funds raised, 50+ early sign-ups, 5 investor pitches, and moved product toward patent-pending status.",
-        "Developed core product infrastructure such as user accounts, live market data ingestion pipelines, AI itinerary processing chain, payment flow, and a ledger system."
+        "Led end-to-end development of a scalable full-stack platform using TypeScript, SQL data models, and live market-data APIs, helping raise up to $200,000 within 5 months.",
+        "Implemented client-facing features and backend logic including user authentication, AI context workflows, and contract agreement pipelines."
       ]
     },
     {
       company: "KLA",
-      role: "Software Engineering Intern",
+      role: "Software Engineer - Infrastructure Intern",
       duration: "May - Aug. 2024",
       location: "Ann Arbor, Michigan",
-      tech: ["gRPC", "Protobuf", "Java", "SpringBoot"],
+      tech: ["gRPC", "RESTful APIs", "Protobuf", "Java", "SpringBoot"],
       logo: "/icons/KLA.png",
       description: [
-        "Developed a scalable layered architecture by integrating a gRPC microservice for remote internal tool access, reducing internal tool interaction time by 85% across 2+ engineering divisions.",
-        "Designed 8+ low-latency RPC endpoints with Protobuf serialization and client/server stub dependency generation for decoupling integrations — standardizing plug-in interfaces and enabling global deployment in international labs."
+        "Developed semiconductor inspection infrastructure for standardized tool access by integrating gRPC, SpringBoot, and protobuf; reduced infrastructure latency by 85%.",
+        "Engineered a SpringBoot microservice with 8+ low-latency RPC service endpoints by updating legacy distributed systems code."
       ]
     },
     {
@@ -198,22 +233,23 @@ export default function Home() {
       role: "Co-Founder | Gemini, Python, Flask, React, Project Management",
       duration: "May 2025",
       location: "University of Michigan",
-      tech: ["Gemini", "Python", "Flask", "React"],
+      tech: ["Gemini", "AI", "Python", "Flask", "React"],
       logo: "/icons/Google.png",
       description: [
-        "Co-founded Vitra, a non-profit AI transliteration app to reduce diagnosis time and increase accuracy for patients with different language barriers via 40+ languages for real-time communication.",
-        "Scaled ideation to an MVP with demos of 2 clinics by assembling and managing a team of undergraduate engineers using agile workflows, Gantt charts, and phased prototyping to demo."
+        "Founded a real-time AI-powered speech translation platform supporting 40+ languages using Gemini for clinical communication.",
+        "Optimized inference performance through deployments with 2 clinics."
       ]
     },
     // comment out for focused experience
     {
-      company: "University of Michigan - MIDAS",
-      role: "Web Intern",
+      company: "Michigan Institute of Data Science and AI",
+      role: "Web Developer",
       duration: "Nov. 2023 - May 2024",
-      location: "University of Michigan",
-      tech: ["WordPress", "HTML/CSS5", "AwesomeTables", "WPBakery"],
+      location: "Ann Arbor, Michigan",
+      tech: ["WordPress", "AwesomeTables", "HTML/CSS5", "WPBakery"],
       logo: "/icons/UofM.png",
       description: [
+        "Engineered web pages for guest speakers and professors for upcoming educational seminars.",
         "Designed MIDAS websites to improve university-wide marketing of 5+ AI events, incorporating real-time feedback to increase web traffic during the F23/W24 semesters across WordPress and the University of Michigan database."
       ]
     },
@@ -275,7 +311,7 @@ export default function Home() {
             letterSpacing: '0.05em'
           }}
         >
-          ["aa-m-ar"]
+          ["am-ar"]
         </motion.p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-2 sm:mb-3 font-mono">
           <TypeAnimation
@@ -349,13 +385,13 @@ export default function Home() {
             >
               About Me
             </h2>
-            <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto sm:mx-0">
-            I'm a new grad software engineer from the University of Michigan with a Bachelor of Engineering in Computer Science and Engineering. At KLA I developed a scalable gRPC microservice that reduced internal tool interaction time by 85% across 2+ engineering divisions. As a software engineer at Sarf I designed a scalable platform with SQL and row-level security, client/server state sync, and auth middleware—resulting in up to $200k raised, 50+ early sign-ups, and 5 investor pitches toward patent-pending status. I built core infrastructure including user accounts, live market data pipelines, AI itinerary processing, payment flow, and a ledger system. I'm looking for a full-time role. 
-              {/* I'm a passionate software engineer and AI enthusiast based in Ann Arbor, Michigan.
-              With a strong foundation in computer science and a keen interest in emerging technologies,
-              I specialize in building innovative solutions that push the boundaries of what's possible.
-              I love collaborating on projects that blend creativity, technology, and real-world impact. */}
-            </p>
+            <ul className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto sm:mx-0 list-disc ml-4 sm:ml-5 space-y-1.5 text-left">
+              <li>New grad software engineer from the University of Michigan with a B.E. in Computer Science and Engineering.</li>
+              <li><span className="text-[#FFB347] font-medium">KLA</span> — Developed semiconductor inspection infrastructure integrating gRPC and SpringBoot; reduced infrastructure latency by 85%.</li>
+              <li><span className="text-[#FFB347] font-medium">Sarf</span> — Led end-to-end full-stack development with TypeScript, SQL, and live market-data APIs; helped raise up to $200k within 5 months.</li>
+              <li><span className="text-[#FFB347] font-medium">Projects</span> — Built AI-powered tools including Vitra.AI Health (40+ language clinical translation) and RAG-based agents.</li>
+              <li>Looking for a full-time software engineering role.</li>
+            </ul>
           </div>
 
           {/* Right: Resume, GitHub, LinkedIn buttons */}
@@ -398,6 +434,73 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
+
+      {/* Education - from resume */}
+      <div className="relative z-10 w-full py-4 sm:py-5 pointer-events-auto">
+        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.35 }}
+            viewport={{ once: true }}
+          >
+            <div
+              className="rounded-lg border-2 border-[#FFB347] p-3 sm:p-4"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.06)',
+                boxShadow: '0 0 12px rgba(255, 179, 71, 0.08)',
+                backdropFilter: 'blur(8px)'
+              }}
+            >
+              <h2
+                className="text-base sm:text-lg font-bold mb-3 pb-2 border-b-2 border-[#FFB347]"
+                style={{
+                  background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent'
+                }}
+              >
+                Education & Awards
+              </h2>
+              <ul className="space-y-3 list-none p-0 m-0">
+                {education.map((ed) => (
+                  <li key={ed.school} className="text-gray-300 text-sm">
+                    <p className="text-[#FFB347] font-bold">{ed.school}</p>
+                    <p className="text-gray-300">{ed.degree}</p>
+                    {ed.distinction && <p className="text-gray-400 text-xs italic">{ed.distinction}</p>}
+                    <p className="text-gray-400 text-xs mt-0.5">{ed.expected} · {ed.location}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-gray-400 text-xs mt-3 pt-2 border-t border-[#FFB347]/30">
+                <span className="text-[#FFB347] font-medium">Relevant Coursework:</span> Operating Systems, Linear Algebra, Web Systems, Computer Architecture, UI Development, Computer Security, IR Systems, Data Structures and Algorithms, Info Retrieval, Human-Centered Software, Data Driven Software, Calc I–III
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Contact Section - compact */}
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.35 }}
+        viewport={{ once: true }}
+        className="text-center mb-6 sm:mb-8"
+      >
+        <h2 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-center" style={{
+          background: 'linear-gradient(to right, #FFB347, #FFCC33)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
+        }}>
+          Contact Me
+        </h2>
+        <div className="w-full max-w-3xl mx-auto px-4">
+          <ContactForm />
+        </div>
+      </motion.div>
+
 
       {/* Experience (left) + Projects (right) — one card each, underlined titles */}
       <div className="relative z-10 w-full py-4 sm:py-5 pointer-events-auto">
@@ -547,51 +650,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Education - from resume */}
-      <div className="relative z-10 w-full py-4 sm:py-5 pointer-events-auto">
-        <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-            viewport={{ once: true }}
-          >
-            <div
-              className="rounded-lg border-2 border-[#FFB347] p-3 sm:p-4"
-              style={{
-                backgroundColor: 'rgba(255,255,255,0.06)',
-                boxShadow: '0 0 12px rgba(255, 179, 71, 0.08)',
-                backdropFilter: 'blur(8px)'
-              }}
-            >
-              <h2
-                className="text-base sm:text-lg font-bold mb-3 pb-2 border-b-2 border-[#FFB347]"
-                style={{
-                  background: 'linear-gradient(to right, #FFB347, #FFCC33)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent'
-                }}
-              >
-                Education & Awards
-              </h2>
-              <ul className="space-y-3 list-none p-0 m-0">
-                {education.map((ed) => (
-                  <li key={ed.school} className="text-gray-300 text-sm">
-                    <p className="text-[#FFB347] font-bold">{ed.school}</p>
-                    <p className="text-gray-300">{ed.degree}</p>
-                    {ed.distinction && <p className="text-gray-400 text-xs italic">{ed.distinction}</p>}
-                    <p className="text-gray-400 text-xs mt-0.5">{ed.expected} · {ed.location}</p>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-gray-400 text-xs mt-3 pt-2 border-t border-[#FFB347]/30">
-                <span className="text-[#FFB347] font-medium">Relevant Coursework:</span> Operating Systems, Linear Algebra, Computer Security, User Interface Development, Web Systems, Computer Architecture, Info Retrieval, Human-Centered Software, Data Driven Software, Calc I–III
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+      
 
+      
       {/* Skills Section - compact */}
       <div className="relative z-10 w-full py-4 sm:py-6 pointer-events-auto">
         <div className="container mx-auto px-4 sm:px-6">
@@ -605,7 +666,7 @@ export default function Home() {
               Technical Skills
             </h2>
             <div className="w-full max-w-5xl mx-auto px-2 sm:px-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                 {skills.map((skillCategory, index) => (
                   <motion.div
                     key={skillCategory.category}
@@ -636,26 +697,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Contact Section - compact */}
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35 }}
-        viewport={{ once: true }}
-        className="text-center mb-6 sm:mb-8"
-      >
-        <h2 className="text-base sm:text-lg font-bold mb-3 sm:mb-4 text-center" style={{
-          background: 'linear-gradient(to right, #FFB347, #FFCC33)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          textShadow: '0 0 20px rgba(255, 179, 71, 0.3)'
-        }}>
-          Contact Me
-        </h2>
-        <div className="w-full max-w-3xl mx-auto px-4">
-          <ContactForm />
-        </div>
-      </motion.div>
+      
 
           {/* Footer */}
           <Footer/>

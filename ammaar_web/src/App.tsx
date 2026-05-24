@@ -19,21 +19,21 @@ export default function App() {
   return (
     <>
     <Navbar/>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/plants" element={<Plants />} />
-      <Route path="/travel" element={<Travel />} />
-      <Route path="/fashion" element={<Fashion />} />
-      <Route path="/Books" element={<Books />} />
-      <Route path="/Hobbies" element={<Hobbies />} />
-      <Route path="/rasprojects" element={<RasProjects />} />
-      <Route path="/sample" element={<Sample />} />
-      <Route path="/tictactoe" element={<Tictactoe />} />
-      {/* <Route path="/rag" element={<Rag />} /> */}
-      <Route path="*" element={<Error />}/>
-      
-    </Routes>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/about" element={<About />} /> */}
+        <Route path="/plants" element={<Plants />} />
+        <Route path="/travel" element={<Travel />} />
+        <Route path="/fashion" element={<Fashion />} />
+        <Route path="/Books" element={<Books />} />
+        <Route path="/Hobbies" element={<Hobbies />} />
+        <Route path="/rasprojects" element={<RasProjects />} />
+        <Route path="/sample" element={<Sample />} />
+        <Route path="/tictactoe" element={<Tictactoe />} />
+        {/* <Route path="/rag" element={<Rag />} /> */}
+        <Route path="*" element={<Error />}/>
+        
+      </Routes>
     </>
   )
 }

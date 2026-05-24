@@ -8,7 +8,7 @@ export default function Navbar() {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About Me', path: '/about' },
+    // { name: 'About Me', path: '/about' },
     { name: 'RasProjects', path: '/rasprojects' },
     { name: 'My Plants', path: '/plants' },
     { name: 'Travel', path: '/travel' },
