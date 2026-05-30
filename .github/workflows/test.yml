@@ -1,0 +1,16 @@
+name : Checking for Style Errors
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs: 
+  test: 
+    runs-on: ubuntu
+    container:
+      image: node:20
+    steps: 
+      - uses: actions/checkout@v3
+        with: 
+          node-version: 20
