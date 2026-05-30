@@ -90,17 +90,9 @@
 
 /ammaar_web/.env
 .DS_Store
-/ammaar_web/src/vite*
 /ammaar_web/public/info.txt
 /rag_test/
 /ammaar_web/src/pages/Rag.tsx
 prompt.txt
-/ammaar_web/src/vite-env.d.ts
-
-ammaar_web/src/vite-env.d.ts
 ammaar_web/public/.DS_Store
-ammaar_web/src/vite-env.d.ts
 ammaar_web/src/info*
-
-ammaar_web/src/vite-env.d.ts
-ammaar_web/public/.DS_Store

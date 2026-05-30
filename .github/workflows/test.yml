@@ -1,16 +1,24 @@
-name : Checking for Style Errors
+name: Checking for Style Errors
 
 on: 
   push:
     branches:
       - main
 
+defaults:
+  run:
+    working-directory: ammaar_web
+
 jobs: 
   test: 
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     container:
       image: node:20
     steps: 
       - uses: actions/checkout@v3
         with: 
           node-version: 20
+# now think of steps you'd take if testing code manually. 
+      - run: npm ci # run a clean install
+      - run: npm test # any testing library 
+      - run: npm run build # compiles the project. 
