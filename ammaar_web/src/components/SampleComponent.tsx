@@ -8,7 +8,7 @@ import SharedButton from './SharedButton';
 function SampleComponent(){
     const now = new Date();
     const currentTime = now.toLocaleTimeString();
-    let flag = true; 
+    const flag = true; // previously "let"
 
     // state variable. in this case, int of 0 is initialized for the state variable of "count"
     // setCount is the update function. you pass in the new value you want to set the state variable to
@@ -31,12 +31,12 @@ function SampleComponent(){
         // alert("you clicked me!");
         // updates respective components state variables
         setCount(count + 2);
-    };
+    }
     function handleInCount(){
         // alert("you clicked me!");
         // updates respective components state variables
         setIncount(incount + 2);
-    };
+    }
 
     const MySpots = [
         {name: "Cherry Hill Village", location: "Canton MI", id: 1, isFavorite: true},

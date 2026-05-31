@@ -1,24 +1,56 @@
-name: Checking for Style Errors
+name: CI / CD Testing
 
 on: 
   push:
     branches:
       - main
+  pull_request: # name for the event trigger
+    branches: 
+      - main
 
-defaults:
-  run:
-    working-directory: ammaar_web
+
 
 jobs: 
-  test: 
-    runs-on: ubuntu-latest
-    container:
-      image: node:20
+  build: # job name is build, you can have multiple, such as test, deploy, etc.
+    runs-on: ubuntu-latest # creates a fresh virtual machine for the job
+    # container:
+    #   image: node:20
+
+    defaults:
+      run:
+        working-directory: ammaar_web
+
     steps: 
-      - uses: actions/checkout@v3
-        with: 
+      - name: Checkout # downloads the repository 
+        uses: actions/checkout@v4
+
+      - name: Set Up node
+        uses: actions/setup-node@v4
+        with:
           node-version: 20
-# now think of steps you'd take if testing code manually. 
-      - run: npm ci # run a clean install
-      - run: npm test # any testing library 
-      - run: npm run build # compiles the project. 
+          cache: npm
+          cache-dependency-path: ammaar_web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint Checking
+        run: npm run lint
+
+      - name: Building Application
+        run: npm run build
+
+
+# jobs: 
+#   test: 
+#     runs-on: ubuntu-latest
+#     container:
+#       image: node:20
+#     steps: 
+#       - uses: actions/checkout@v3
+#         with: 
+#           node-version: 20
+# # now think of steps you'd take if testing code manually. 
+#       - run: npm ci # run a clean install
+#       - run: npm test # any testing library 
+#       - run: npm run build # compiles the project. 

@@ -1,6 +1,4 @@
-
 // import React from "react";
-
 export default function SampleCard(){
     return(
 
@@ -15,4 +13,4 @@ export default function SampleCard(){
             <p>I'm looking for a job</p>
         </div>
     );
-};
+}

@@ -11,7 +11,7 @@ function TrueComponent(){
         // alert("you clicked the true button!");
         // set update to + 2 to the count
         setCount(count + 2);
-    };
+    }
     // const flag = false; 
     return (
         <>
