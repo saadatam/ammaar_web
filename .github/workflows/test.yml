@@ -34,17 +34,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # install play right. 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
       # style checking
       - name: Lint Checking
         run: npm run lint
 
       # run build 
       - name: Building Application
-        run: npm run build
-      
-      # install play right. 
-      - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: npm run build      
 
       # start the site. default port for vite is 4173
       - name: Start Site
@@ -52,7 +52,7 @@ jobs:
 
       # wait for the site to load. 
       - name: Wait for Site
-        run: npx wait-on http://localhost:4173
+        run: npx wait-on http://localhost:4173 --timeout 30000
 
       # run the playright tests. 
       - name: Playwright Tests
