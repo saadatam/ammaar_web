@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test:e2e": "npm playwright test"
+    "test:e2e": "npx playwright test"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
