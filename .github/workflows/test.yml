@@ -9,7 +9,6 @@ on:
       - main
 
 
-
 jobs: 
   build: # job name is build, you can have multiple, such as test, deploy, etc.
     runs-on: ubuntu-latest # creates a fresh virtual machine for the job
@@ -24,21 +23,40 @@ jobs:
       - name: Checkout # downloads the repository 
         uses: actions/checkout@v4
 
-      - name: Set Up node
+      - name: Set Up node # installs node.js on the server so it can run the build commands. If you want to run other drivers, install them.
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
           cache-dependency-path: ammaar_web/package-lock.json
 
+      # clean install
       - name: Install dependencies
         run: npm ci
 
+      # style checking
       - name: Lint Checking
         run: npm run lint
 
+      # run build 
       - name: Building Application
         run: npm run build
+      
+      # install play right. 
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      # start the site. default port for vite is 4173
+      - name: Start Site
+        run: npm run preview -- --host 0.0.0.0 &
+
+      # wait for the site to load. 
+      - name: Wait for Site
+        run: npx wait-on http://localhost:4173
+
+      # run the playright tests. 
+      - name: Playwright Tests
+        run: npm run test:e2e
 
 
 # jobs: 
