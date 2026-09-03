@@ -48,12 +48,19 @@ ammaar_web/*.tgz
 
 # --- Batch 4: local source media & prompts (not deployed) ---
 # Commit generated assets instead: ammaar_web/public/batch4/ + src/data/batch4*.ts
+# Keep TS app code (e.g. Batch4ThemeContext) outside this folder.
 ammaar_web/src/context/
+ammaar_web/.env.example
 
 # Oversized handwritten notes — linked from Google Drive instead of committed
 ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).pdf
 ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).compressed.pdf
 ammaar_web/public/batch4/Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Review (lejla).pdf
+
+# Full-resolution PDF backups (deploy the compressed .pdf siblings instead)
+ammaar_web/public/batch4/**/*.original.pdf
+**/ANSWERS Mock Exam Uloom Al Hadith (Amayra).original.pdf
+**/Surah Yusuf self questions (Amayra) .original.pdf
 
 # --- Legacy / experimental ---
 rag_test/

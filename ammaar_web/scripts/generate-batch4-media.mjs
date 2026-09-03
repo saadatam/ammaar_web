@@ -189,7 +189,13 @@ function copyRecursive(src, dst, relBase = '') {
     if (entry.isDirectory()) {
       copyRecursive(srcPath, path.join(dst, entry.name), srcRel);
     } else {
-      if (EXTERNAL_FILE_LINKS[srcRel] || entry.name.endsWith('.compressed.pdf')) continue;
+      if (
+        EXTERNAL_FILE_LINKS[srcRel] ||
+        entry.name.endsWith('.compressed.pdf') ||
+        entry.name.endsWith('.original.pdf')
+      ) {
+        continue;
+      }
       const dstName = publicFilename(entry.name);
       const dstRel = relBase ? `${relBase}/${dstName}` : dstName;
       publicRelMap.set(srcRel, dstRel);
@@ -202,7 +208,13 @@ function namesInFolder(dir, folderRel) {
   const names = new Set();
   if (fs.existsSync(dir)) {
     for (const f of fs.readdirSync(dir)) {
-      if (f.startsWith('.') || f.endsWith('.compressed.pdf')) continue;
+      if (
+        f.startsWith('.') ||
+        f.endsWith('.compressed.pdf') ||
+        f.endsWith('.original.pdf')
+      ) {
+        continue;
+      }
       names.add(f);
     }
   }
