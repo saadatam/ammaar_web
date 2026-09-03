@@ -2,7 +2,7 @@ import {
   useBatch4Theme,
   BATCH4_THEME_LABELS,
   BATCH4_THEMES,
-} from '../../context/Batch4ThemeContext';
+} from '../../contexts/Batch4ThemeContext';
 
 const THEME_SWATCH = {
   default: 'linear-gradient(135deg, #030712 50%, #4ade80 50%)',

@@ -6,7 +6,7 @@ import Batch4ResourcesLayout, {
   Batch4ResourcesLayoutMobile,
 } from '../components/batch4/Batch4ResourcesLayout';
 import Batch4ThemeToggle from '../components/batch4/Batch4ThemeToggle';
-import { Batch4ThemeProvider } from '../context/Batch4ThemeContext';
+import { Batch4ThemeProvider } from '../contexts/Batch4ThemeContext';
 import { useBatch4Auth } from '../hooks/useBatch4Auth';
 import {
   batch4Days,
