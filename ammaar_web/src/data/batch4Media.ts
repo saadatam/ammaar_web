@@ -1375,6 +1375,15 @@ export const batch4MediaTree: MediaSection[] = [
             "type": "link",
             "url": "https://islamic-relief.org/zakat-calculator/",
             "classTags": []
+          },
+          {
+            "id": "link_5_Entire_Quran_Line_by_Line_Worksheets",
+            "name": "Entire Quran Line-by-Line Worksheets",
+            "displayName": "Entire Quran Line-by-Line Worksheets",
+            "path": "http://loveforallah.net/Post/TheNobleQur%E2%80%99an/QuraninWorksheets/50/104",
+            "type": "link",
+            "url": "http://loveforallah.net/Post/TheNobleQur%E2%80%99an/QuraninWorksheets/50/104",
+            "classTags": []
           }
         ]
       }
@@ -1548,6 +1557,15 @@ export const batch4Quicklinks: MediaSection[] = [
         "displayName": "Verb Scale worksheet",
         "path": "/batch4/Classmate_Notes/Worksheets_and_templates/Verb%20Scale%20worksheet%20(Amayra)%20%20.pdf",
         "type": "pdf"
+      },
+      {
+        "id": "link_300_Entire_Quran_Line_by_Line_Worksheets",
+        "name": "Entire Quran Line-by-Line Worksheets",
+        "displayName": "Entire Quran Line-by-Line Worksheets",
+        "path": "http://loveforallah.net/Post/TheNobleQur%E2%80%99an/QuraninWorksheets/50/104",
+        "type": "link",
+        "url": "http://loveforallah.net/Post/TheNobleQur%E2%80%99an/QuraninWorksheets/50/104",
+        "classTags": []
       }
     ]
   },

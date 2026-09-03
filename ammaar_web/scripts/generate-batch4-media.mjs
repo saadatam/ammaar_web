@@ -543,11 +543,15 @@ function buildQuicklinks(educationalLinks, worksheets, practice, tree) {
         /verb scale worksheet/i.test(item.name) ||
         /surah baqarah tarjuma template/i.test(item.name)
     ) ?? [];
-  if (worksheetItems.length) {
+  const quranWorksheetLinks = parseFileLinks()
+    .filter((l) => /loveforallah|line-by-line worksheet|quran.*worksheet/i.test(`${l.title} ${l.url}`))
+    .map((l, i) => linkToItem(l, i + 300));
+  const allWorksheetQuicklinks = [...worksheetItems, ...quranWorksheetLinks];
+  if (allWorksheetQuicklinks.length) {
     sections.push({
       id: 'ql_worksheets',
       name: 'Worksheets',
-      items: worksheetItems,
+      items: allWorksheetQuicklinks,
     });
   }
 
@@ -621,7 +625,9 @@ function categorizeLink(title, url) {
     lower.includes('thirdofthenight') ||
     lower.includes('generator') ||
     lower.includes('map-') ||
-    lower.includes('familyecho')
+    lower.includes('familyecho') ||
+    lower.includes('loveforallah') ||
+    /line-by-line|quran.*worksheet/i.test(lower)
   ) {
     return 'tool';
   }

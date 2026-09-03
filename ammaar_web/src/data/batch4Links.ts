@@ -115,5 +115,11 @@ export const batch4ExternalLinks = [
     "title": "Zakat Calculator",
     "url": "https://islamic-relief.org/zakat-calculator/",
     "category": "tool"
+  },
+  {
+    "id": "ext_18",
+    "title": "Entire Quran Line-by-Line Worksheets",
+    "url": "http://loveforallah.net/Post/TheNobleQur%E2%80%99an/QuraninWorksheets/50/104",
+    "category": "tool"
   }
 ];
