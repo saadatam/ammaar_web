@@ -55,7 +55,9 @@ ammaar_web/.env.example
 # Oversized handwritten notes — linked from Google Drive instead of committed
 ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).pdf
 ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).compressed.pdf
+ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_First_Semester (Sh. Hunzla).pdf
 ammaar_web/public/batch4/Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Review (lejla).pdf
+ammaar_web/public/batch4/Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Flowchart (lejla).pdf
 
 # Full-resolution PDF backups (deploy the compressed .pdf siblings instead)
 ammaar_web/public/batch4/**/*.original.pdf

@@ -123,7 +123,7 @@ function Batch4Content() {
                 clearBatch4Auth();
                 window.location.reload();
               }}
-              className="text-xs b4-text-muted b4-hover-heading px-2 py-1 transition-colors"
+              className="b4-btn-signout rounded-lg border b4-border-panel px-3 py-1.5 text-xs transition-colors"
             >
               Sign out
             </button>

@@ -26,22 +26,6 @@ export const batch4MediaTree: MediaSection[] = [
     "name": "Official Notes & Books",
     "items": [
       {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_201_2024_pdf",
-        "name": "Arabic 201_2024.pdf",
-        "displayName": "Arabic 201 2024",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic%20201_2024.pdf",
-        "type": "pdf"
-      },
-      {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_Nahw_Until_December_Sh_Hunzla_pdf",
-        "name": "Arabic_Nahw_Until_December (Sh. Hunzla).pdf",
-        "displayName": "Arabic Nahw Until December",
-        "credit": "Sh. Hunzla",
-        "path": "https://drive.google.com/file/d/1dpzJ0MYfm2FtHvSvaD7d2f2tEOQdw3eo/view?usp=sharing",
-        "type": "link",
-        "url": "https://drive.google.com/file/d/1dpzJ0MYfm2FtHvSvaD7d2f2tEOQdw3eo/view?usp=sharing"
-      },
-      {
         "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Qasasun_Nabiyyeen_1_4_pdf",
         "name": "Qasasun.Nabiyyeen_1-4.pdf",
         "displayName": "Qasasun.Nabiyyeen 1-4",
@@ -53,14 +37,6 @@ export const batch4MediaTree: MediaSection[] = [
         "name": "Safwa-tul-Masaadir-Arabic-English.pdf",
         "displayName": "Safwa-tul-Masaadir-Arabic-English",
         "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Safwa-tul-Masaadir-Arabic-English.pdf",
-        "type": "pdf"
-      },
-      {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Seekers_Verbs_with_Present_Tense_Sh_Hunzla_pdf",
-        "name": "Seekers Verbs (with Present Tense) (Sh. Hunzla).pdf",
-        "displayName": "Seekers Verbs (with Present Tense)",
-        "credit": "Sh. Hunzla",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Seekers%20Verbs%20(with%20Present%20Tense)%20(Sh.%20Hunzla).pdf",
         "type": "pdf"
       },
       {
@@ -78,31 +54,35 @@ export const batch4MediaTree: MediaSection[] = [
         "type": "pdf"
       },
       {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_inner_dimensions_of_islamic_worship_muhtar_al_ghazali_z_lib_org_1_pdf",
-        "name": "inner-dimensions-of-islamic-worship-muhtar-al-ghazali-z-lib.org-1.pdf",
-        "displayName": "inner-dimensions-of-islamic-worship-muhtar-al-ghazali-z-lib.org-1",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/inner-dimensions-of-islamic-worship-muhtar-al-ghazali-z-lib.org-1.pdf",
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_Nahw_First_Semester_Sh_Hunzla_pdf",
+        "name": "Arabic_Nahw_First_Semester (Sh. Hunzla).pdf",
+        "displayName": "Arabic Nahw First Semester",
+        "credit": "Sh. Hunzla",
+        "path": "https://drive.google.com/file/d/1dpzJ0MYfm2FtHvSvaD7d2f2tEOQdw3eo/view?usp=sharing",
+        "type": "link",
+        "url": "https://drive.google.com/file/d/1dpzJ0MYfm2FtHvSvaD7d2f2tEOQdw3eo/view?usp=sharing"
+      },
+      {
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_40_Rabbana_Duas_From_the_Quran_pdf",
+        "name": "40 Rabbana Duas From the Quran.pdf",
+        "displayName": "40 Rabbana Duas From the Quran",
+        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/40%20Rabbana%20Duas%20From%20the%20Quran.pdf",
         "type": "pdf"
       },
       {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_40_rabbana_dua_book_My_Islam_pdf",
-        "name": "40 rabbana dua book - My Islam.pdf",
-        "displayName": "40 rabbana dua book - My Islam",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/40%20rabbana%20dua%20book%20-%20My%20Islam.pdf",
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_201_2024_Miftaah_pdf",
+        "name": "Arabic 201_2024 (Miftaah).pdf",
+        "displayName": "Arabic 201 2024",
+        "credit": "Miftaah",
+        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic%20201_2024%20(Miftaah).pdf",
         "type": "pdf"
       },
       {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_Stories_for_Language_Learners_pages_deleted_pdf",
-        "name": "Arabic Stories for Language Learners-pages-deleted.pdf",
-        "displayName": "Arabic Stories for Language Learners-pages-deleted",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic%20Stories%20for%20Language%20Learners-pages-deleted.pdf",
-        "type": "pdf"
-      },
-      {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_Vocab_Comp_List_pdf",
-        "name": "Arabic Vocab Comp List.pdf",
-        "displayName": "Arabic Vocab Comp List",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic%20Vocab%20Comp%20List.pdf",
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Arabic_Stories_for_Language_Learners_Sh_Hunzla_pdf",
+        "name": "Arabic Stories for Language Learners (Sh. Hunzla).pdf",
+        "displayName": "Arabic Stories for Language Learners",
+        "credit": "Sh. Hunzla",
+        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic%20Stories%20for%20Language%20Learners%20(Sh.%20Hunzla).pdf",
         "type": "pdf"
       },
       {
@@ -121,10 +101,18 @@ export const batch4MediaTree: MediaSection[] = [
         "type": "pdf"
       },
       {
-        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Seekers_Vocab_No2_pdf",
-        "name": "Seekers Vocab No2.pdf",
-        "displayName": "Seekers Vocab #2",
-        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Seekers%20Vocab%20No2.pdf",
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_The_Essential_Guide_to_Arabic_Vocabulary_Miftaah_pdf",
+        "name": "The Essential Guide to Arabic Vocabulary - Miftaah.pdf",
+        "displayName": "The Essential Guide to Arabic Vocabulary - Miftaah",
+        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/The%20Essential%20Guide%20to%20Arabic%20Vocabulary%20-%20Miftaah.pdf",
+        "type": "pdf"
+      },
+      {
+        "id": "Classmate_Notes_Official_notes_or_Book_pdfs_inner_dimensions_of_islamic_worship_muhtar_Al_Ghazali_pdf",
+        "name": "inner-dimensions-of-islamic-worship-muhtar (Al-Ghazali).pdf",
+        "displayName": "inner-dimensions-of-islamic-worship-muhtar",
+        "credit": "Al-Ghazali",
+        "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/inner-dimensions-of-islamic-worship-muhtar%20(Al-Ghazali).pdf",
         "type": "pdf"
       },
       {
@@ -251,10 +239,33 @@ export const batch4MediaTree: MediaSection[] = [
         "name": "Uloom Hadith",
         "items": [
           {
-            "id": "Classmate_Notes_Comprehensive_Notes_Hadith_Types_JPG",
-            "name": "Hadith_Types.JPG",
+            "id": "Classmate_Notes_Comprehensive_Notes_Hadith_Terminology_Uloom_Al_Hadith_Aqsa_pdf",
+            "name": "Hadith Terminology - Uloom Al Hadith (Aqsa).pdf",
+            "displayName": "Hadith Terminology - Uloom Al Hadith",
+            "credit": "Aqsa",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Hadith%20Terminology%20-%20Uloom%20Al%20Hadith%20(Aqsa).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Uloom Hadith"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Hadith_Types_Yasmine_JPG",
+            "name": "Hadith_Types (Yasmine).JPG",
             "displayName": "Hadith Types",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Hadith_Types.JPG",
+            "credit": "Yasmine",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Hadith_Types%20(Yasmine).JPG",
+            "type": "image",
+            "classTags": [
+              "Uloom Hadith"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Sahih_Sittah_Uloom_Hadith_Amayra_JPG",
+            "name": "Sahih_Sittah_Uloom_Hadith (Amayra).JPG",
+            "displayName": "Sahih Sittah Uloom Hadith",
+            "credit": "Amayra",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Sahih_Sittah_Uloom_Hadith%20(Amayra).JPG",
             "type": "image",
             "classTags": [
               "Uloom Hadith"
@@ -272,34 +283,13 @@ export const batch4MediaTree: MediaSection[] = [
             ]
           },
           {
-            "id": "Classmate_Notes_Comprehensive_Notes_Uloom_Al_Hadith_Terminology_Aqsa_pdf",
-            "name": "Uloom Al Hadith Terminology (Aqsa).pdf",
-            "displayName": "Uloom Al Hadith Terminology",
-            "credit": "Aqsa",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Uloom%20Al%20Hadith%20Terminology%20(Aqsa).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Uloom Hadith"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Uloom_Al_Hadith_Review_lejla_pdf",
-            "name": "Uloom Al- Hadith Review (lejla).pdf",
-            "displayName": "Uloom Al- Hadith Review",
+            "id": "Classmate_Notes_Comprehensive_Notes_Uloom_Al_Hadith_Flowchart_lejla_pdf",
+            "name": "Uloom Al- Hadith Flowchart (lejla).pdf",
+            "displayName": "Uloom Al- Hadith Flowchart",
             "credit": "lejla",
             "path": "https://drive.google.com/file/d/1VQlhXqBzZXeAWvCKSdID1Z-D-Lw9G58W/view?usp=sharing",
             "type": "link",
             "url": "https://drive.google.com/file/d/1VQlhXqBzZXeAWvCKSdID1Z-D-Lw9G58W/view?usp=sharing",
-            "classTags": [
-              "Uloom Hadith"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Uloom_Hadith_Sahih_Sittah_JPG",
-            "name": "Uloom_Hadith_Sahih_Sittah.JPG",
-            "displayName": "Uloom Hadith Sahih Sittah",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Uloom_Hadith_Sahih_Sittah.JPG",
-            "type": "image",
             "classTags": [
               "Uloom Hadith"
             ]
@@ -322,80 +312,107 @@ export const batch4MediaTree: MediaSection[] = [
             ]
           },
           {
-            "id": "Classmate_Notes_Comprehensive_Notes_Study_Guide_Diagram_Juz_Amma_Surahs_93_104_Amayra_pdf",
-            "name": "Study Guide Diagram - Juz Amma Surahs 93-104 (Amayra).pdf",
-            "displayName": "Study Guide Diagram - Juz Amma Surahs 93-104",
+            "id": "Classmate_Notes_Comprehensive_Notes_Ayat_Breakdown_Diagrams_Juz_Amma_Surahs_93_104_Amayra_pdf",
+            "name": "Ayat Breakdown Diagrams - Juz Amma Surahs 93-104 (Amayra).pdf",
+            "displayName": "Ayat Breakdown Diagrams - Juz Amma Surahs 93-104",
             "credit": "Amayra",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Study%20Guide%20Diagram%20-%20Juz%20Amma%20Surahs%2093-104%20(Amayra).pdf",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Ayat%20Breakdown%20Diagrams%20-%20Juz%20Amma%20Surahs%2093-104%20(Amayra).pdf",
             "type": "pdf",
             "classTags": [
               "Tafsir Juz Amma"
             ]
           },
           {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tafseer_of_Juz_Amma_Study_Guide_Noor_Mansoor_pdf",
-            "name": "Tafseer of Juz Amma Study Guide (Noor Mansoor).pdf",
-            "displayName": "Tafseer of Juz Amma Study Guide",
-            "credit": "Noor Mansoor",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafseer%20of%20Juz%20Amma%20Study%20Guide%20(Noor%20Mansoor).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Tafsir Juz Amma"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tafseer_of_Juz_Amma_Study_Guide_2_Yasmine_pdf",
-            "name": "Tafseer of Juz Amma Study Guide 2 (Yasmine).pdf",
-            "displayName": "Tafseer of Juz Amma Study Guide 2",
-            "credit": "Yasmine",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafseer%20of%20Juz%20Amma%20Study%20Guide%202%20(Yasmine).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Tafsir Juz Amma"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_MAW_pt_1_Amayra_pdf",
-            "name": "Tafsir of Juz Amma - MAW pt. 1 (Amayra).pdf",
-            "displayName": "Tafsir of Juz Amma - MAW pt. 1",
-            "credit": "Amayra",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%20-%20MAW%20pt.%201%20(Amayra).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Tafsir Juz Amma"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_MAW_pt_2_Amayra_pdf",
-            "name": "Tafsir of Juz Amma - MAW pt. 2  (Amayra).pdf",
-            "displayName": "Tafsir of Juz Amma - MAW pt. 2",
-            "credit": "Amayra",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%20-%20MAW%20pt.%202%20%20(Amayra).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Tafsir Juz Amma"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_Sheikh_Abdullah_Amayra_pdf",
-            "name": "Tafsir of Juz Amma - Sheikh Abdullah (Amayra).pdf",
-            "displayName": "Tafsir of Juz Amma - Sheikh Abdullah",
-            "credit": "Amayra",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%20-%20Sheikh%20Abdullah%20(Amayra).pdf",
-            "type": "pdf",
-            "classTags": [
-              "Tafsir Juz Amma"
-            ]
-          },
-          {
-            "id": "Classmate_Notes_Comprehensive_Notes_Tarjumaa_Rule_Book_Sumaya_pdf",
-            "name": "Tarjumaa Rule Book (Sumaya).pdf",
-            "displayName": "Tarjumaa Rule Book",
+            "id": "Classmate_Notes_Comprehensive_Notes_Surah_Baqarah_Tarjumaa_Rule_Book_Sumaya_pdf",
+            "name": "Surah Baqarah Tarjumaa Rule Book (Sumaya).pdf",
+            "displayName": "Surah Baqarah Tarjumaa Rule Book",
             "credit": "Sumaya",
-            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tarjumaa%20Rule%20Book%20(Sumaya).pdf",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Surah%20Baqarah%20Tarjumaa%20Rule%20Book%20(Sumaya).pdf",
             "type": "pdf",
             "classTags": [
               "Tafsir Juz Amma"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Tafseer_of_Juz_Amma_Asr_till_Duha_MAW_Yasmine_pdf",
+            "name": "Tafseer of Juz Amma - Asr till Duha - MAW (Yasmine).pdf",
+            "displayName": "Tafseer of Juz Amma - Asr till Duha - MAW",
+            "credit": "Yasmine",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafseer%20of%20Juz%20Amma%20-%20Asr%20till%20Duha%20-%20MAW%20(Yasmine).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Tafsir Juz Amma"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Tafseer_of_Juz_Amma_Last_10_Surahs_MAW_Noor_Mansoor_pdf",
+            "name": "Tafseer of Juz Amma - Last 10 Surahs - MAW (Noor Mansoor).pdf",
+            "displayName": "Tafseer of Juz Amma - Last 10 Surahs - MAW",
+            "credit": "Noor Mansoor",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafseer%20of%20Juz%20Amma%20-%20Last%2010%20Surahs%20-%20MAW%20(Noor%20Mansoor).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Tafsir Juz Amma"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_Asr_till_Duha_MAW_pt_2_Amayra_pdf",
+            "name": "Tafsir of Juz Amma - Asr till Duha- MAW pt. 2  (Amayra).pdf",
+            "displayName": "Tafsir of Juz Amma - Asr till Duha- MAW pt. 2",
+            "credit": "Amayra",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%20-%20Asr%20till%20Duha-%20MAW%20pt.%202%20%20(Amayra).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Tafsir Juz Amma"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_Last_10_Surahs_MAW_Amayra_pdf",
+            "name": "Tafsir of Juz Amma - Last 10 Surahs - MAW (Amayra).pdf",
+            "displayName": "Tafsir of Juz Amma - Last 10 Surahs - MAW",
+            "credit": "Amayra",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%20-%20Last%2010%20Surahs%20-%20MAW%20(Amayra).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Tafsir Juz Amma"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Tafsir_of_Juz_Amma_1st_Half_Sheikh_Abdullah_Amayra_pdf",
+            "name": "Tafsir of Juz Amma 1st Half - Sheikh Abdullah (Amayra).pdf",
+            "displayName": "Tafsir of Juz Amma 1st Half - Sheikh Abdullah",
+            "credit": "Amayra",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Tafsir%20of%20Juz%20Amma%201st%20Half%20-%20Sheikh%20Abdullah%20(Amayra).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Tafsir Juz Amma"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "comp_surah_yusuf",
+        "name": "Surah Yusuf",
+        "items": [
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Surah_Yusuf_Overview_Aqsa_pdf",
+            "name": "Surah Yusuf Overview(Aqsa).pdf",
+            "displayName": "Surah Yusuf Overview",
+            "credit": "Aqsa",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Surah%20Yusuf%20Overview(Aqsa).pdf",
+            "type": "pdf",
+            "classTags": [
+              "Surah Yusuf"
+            ]
+          },
+          {
+            "id": "Classmate_Notes_Comprehensive_Notes_Surah_Yusuf_Question_Answers_Amayra_pdf",
+            "name": "Surah Yusuf Question   Answers (Amayra) .pdf",
+            "displayName": "Surah Yusuf Question   Answers",
+            "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Surah%20Yusuf%20Question%20%20%20Answers%20(Amayra)%20.pdf",
+            "type": "pdf",
+            "classTags": [
+              "Surah Yusuf"
             ]
           }
         ]
@@ -446,11 +463,33 @@ export const batch4MediaTree: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Arabic_Guides_Converting_Masdar_into_verb_equivalent_Amayra_JPG",
-        "name": "Converting_Masdar_into_verb_equivalent (Amayra).JPG",
-        "displayName": "Converting Masdar into verb equivalent",
-        "credit": "Amayra",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/Converting_Masdar_into_verb_equivalent%20(Amayra).JPG",
+        "id": "Classmate_Notes_Arabic_Guides_Beginner_Vocabulary_Sh_Hunzla_JPG",
+        "name": "Beginner Vocabulary (Sh. Hunzla).JPG",
+        "displayName": "Beginner Vocabulary",
+        "credit": "Sh. Hunzla",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Beginner%20Vocabulary%20(Sh.%20Hunzla).JPG",
+        "type": "image",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "Classmate_Notes_Arabic_Guides_Beginner_Vocabulary_2_Sh_Hunzla_JPG",
+        "name": "Beginner Vocabulary 2 (Sh.Hunzla).JPG",
+        "displayName": "Beginner Vocabulary 2",
+        "credit": "Sh.Hunzla",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Beginner%20Vocabulary%202%20(Sh.Hunzla).JPG",
+        "type": "image",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "Classmate_Notes_Arabic_Guides_Flowchart_of_Nuruddin_JPG",
+        "name": "Flowchart of اِلَّا (Nuruddin).JPG",
+        "displayName": "Flowchart of اِلَّا",
+        "credit": "Nuruddin",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Flowchart%20of%20%D8%A7%D9%90%D9%84%D9%8E%D9%91%D8%A7%20(Nuruddin).JPG",
         "type": "image",
         "classTags": [
           "Arabic"
@@ -461,17 +500,6 @@ export const batch4MediaTree: MediaSection[] = [
         "name": "Huroof_Naasiba_wa_Jaazima.JPG",
         "displayName": "Huroof Naasiba wa Jaazima",
         "path": "/batch4/Classmate_Notes/Arabic_Guides/Huroof_Naasiba_wa_Jaazima.JPG",
-        "type": "image",
-        "classTags": [
-          "Arabic"
-        ]
-      },
-      {
-        "id": "Classmate_Notes_Arabic_Guides_iLLa_categories_Nuruddin_JPG",
-        "name": "iLLa_categories (Nuruddin).JPG",
-        "displayName": "iLLa categories",
-        "credit": "Nuruddin",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/iLLa_categories%20(Nuruddin).JPG",
         "type": "image",
         "classTags": [
           "Arabic"
@@ -493,6 +521,17 @@ export const batch4MediaTree: MediaSection[] = [
         "name": "Masculine_and_Feminine_Noun_identification.JPG",
         "displayName": "Masculine and Feminine Noun identification",
         "path": "/batch4/Classmate_Notes/Arabic_Guides/Masculine_and_Feminine_Noun_identification.JPG",
+        "type": "image",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "Classmate_Notes_Arabic_Guides_Masdar_into_Verb_Equivalent_Conversion_Amayra_JPG",
+        "name": "Masdar into Verb Equivalent Conversion(Amayra).JPG",
+        "displayName": "Masdar into Verb Equivalent Conversion",
+        "credit": "Amayra",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Masdar%20into%20Verb%20Equivalent%20Conversion(Amayra).JPG",
         "type": "image",
         "classTags": [
           "Arabic"
@@ -521,26 +560,126 @@ export const batch4MediaTree: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Arabic_Guides_Status_of_ILLA_flowchart_Amayra_JPG",
-        "name": "Status_of_ILLA_flowchart (Amayra).JPG",
-        "displayName": "Status of ILLA flowchart",
+        "id": "Classmate_Notes_Arabic_Guides_Seekers_Verbs_with_Present_Tense_Sh_Hunzla_pdf",
+        "name": "Seekers Verbs (with Present Tense) (Sh. Hunzla).pdf",
+        "displayName": "Seekers Verbs (with Present Tense)",
+        "credit": "Sh. Hunzla",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Seekers%20Verbs%20(with%20Present%20Tense)%20(Sh.%20Hunzla).pdf",
+        "type": "pdf",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "Classmate_Notes_Arabic_Guides_Seekers_Vocab_Past_Present_Sifaat_Sh_Hunzla_pdf",
+        "name": "Seekers Vocab Past-Present-Sifaat (Sh. Hunzla).pdf",
+        "displayName": "Seekers Vocab Past:Present:Sifaat",
+        "credit": "Sh. Hunzla",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Seekers%20Vocab%20Past-Present-Sifaat%20(Sh.%20Hunzla).pdf",
+        "type": "pdf",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "Classmate_Notes_Arabic_Guides_Status_of_flowchart_Amayra_JPG",
+        "name": "Status of اِلَّا flowchart (Amayra).JPG",
+        "displayName": "Status of اِلَّا flowchart",
         "credit": "Amayra",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/Status_of_ILLA_flowchart%20(Amayra).JPG",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Status%20of%20%D8%A7%D9%90%D9%84%D9%8E%D9%91%D8%A7%20flowchart%20(Amayra).JPG",
         "type": "image",
         "classTags": [
           "Arabic"
         ]
       },
       {
-        "id": "Classmate_Notes_Arabic_Guides_Verb_conversion_of_Ann_Maa_masdariyya_Amayra_JPG",
-        "name": "Verb_conversion_of_Ann_Maa_masdariyya (Amayra).JPG",
-        "displayName": "Verb conversion of Ann Maa masdariyya",
+        "id": "Classmate_Notes_Arabic_Guides_Verb_Conversion_to_Ann_Maa_Masdariyya_Amayra_JPG",
+        "name": "Verb Conversion to Ann-Maa Masdariyya (Amayra).JPG",
+        "displayName": "Verb Conversion to Ann-Maa Masdariyya",
         "credit": "Amayra",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/Verb_conversion_of_Ann_Maa_masdariyya%20(Amayra).JPG",
+        "path": "/batch4/Classmate_Notes/Arabic_Guides/Verb%20Conversion%20to%20Ann-Maa%20Masdariyya%20(Amayra).JPG",
         "type": "image",
         "classTags": [
           "Arabic"
         ]
+      },
+      {
+        "id": "link_50_Sentence_Generator_Arhum_",
+        "name": "Sentence Generator (Arhum)",
+        "displayName": "Sentence Generator",
+        "credit": "Arhum",
+        "path": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
+        "type": "link",
+        "url": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
+        "classTags": [
+          "Arabic"
+        ]
+      },
+      {
+        "id": "link_51_Sarf_Word_Practice_Generator",
+        "name": "Sarf Word Practice Generator",
+        "displayName": "Sarf Word Practice Generator",
+        "path": "https://sarfing.app",
+        "type": "link",
+        "url": "https://sarfing.app",
+        "classTags": [
+          "Arabic"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "quizlets",
+    "name": "Quizlets",
+    "items": [
+      {
+        "id": "link_100_Arabic_Vocabulary_Quizlet_Miski_",
+        "name": "Arabic Vocabulary Quizlet (Miski)",
+        "displayName": "Arabic Vocabulary Quizlet",
+        "credit": "Miski",
+        "path": "https://quizlet.com/1077642316/arabic-vocabulary-flash-cards/?i=3s0dgi&x=1jqY",
+        "type": "link",
+        "url": "https://quizlet.com/1077642316/arabic-vocabulary-flash-cards/?i=3s0dgi&x=1jqY",
+        "classTags": []
+      },
+      {
+        "id": "link_101_Arabic_Sarf_Vocab_Set_Sarf_Part_2_Arhum_",
+        "name": "Arabic Sarf Vocab Set - Sarf Part 2 (Arhum)",
+        "displayName": "Arabic Sarf Vocab Set - Sarf Part 2",
+        "credit": "Arhum",
+        "path": "https://quizlet.com/1070870221/vocab-set-2-sarf-section-flash-cards/?i=6qeu4n&x=1jqY",
+        "type": "link",
+        "url": "https://quizlet.com/1070870221/vocab-set-2-sarf-section-flash-cards/?i=6qeu4n&x=1jqY",
+        "classTags": []
+      },
+      {
+        "id": "link_102_Arabic_Sarf_Vocab_Set_Sarf_Part_2",
+        "name": "Arabic Sarf Vocab Set - Sarf Part 2",
+        "displayName": "Arabic Sarf Vocab Set - Sarf Part 2",
+        "path": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
+        "type": "link",
+        "url": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
+        "classTags": []
+      },
+      {
+        "id": "link_103_Quizlet_for_Uloom_Hadith_Terminology_Aqsa_",
+        "name": "Quizlet for Uloom Hadith Terminology (Aqsa)",
+        "displayName": "Quizlet for Uloom Hadith Terminology",
+        "credit": "Aqsa",
+        "path": "https://quizlet.com/845936651/uloom-al-hadith-flash-cards/?i=5zwu9x&x=1jqY",
+        "type": "link",
+        "url": "https://quizlet.com/845936651/uloom-al-hadith-flash-cards/?i=5zwu9x&x=1jqY",
+        "classTags": []
+      },
+      {
+        "id": "link_104_Canva_Flashcards_for_Uloom_Al_Hadith_Yasmine_",
+        "name": "Canva Flashcards for Uloom Al-Hadith (Yasmine)",
+        "displayName": "Canva Flashcards for Uloom Al-Hadith",
+        "credit": "Yasmine",
+        "path": "https://www.canva.com/design/DAG68OVEdNg/K6ABExtWiP3ifWQcRCTxJg/view?utm_content=DAG68OVEdNg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha289dd50a3#1",
+        "type": "link",
+        "url": "https://www.canva.com/design/DAG68OVEdNg/K6ABExtWiP3ifWQcRCTxJg/view?utm_content=DAG68OVEdNg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha289dd50a3#1",
+        "classTags": []
       }
     ]
   },
@@ -1070,26 +1209,6 @@ export const batch4MediaTree: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Arabic_Guides_Beginner_Vocabulary_JPG",
-        "name": "Beginner Vocabulary.JPG",
-        "displayName": "Beginner Vocabulary 1",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/Beginner%20Vocabulary.JPG",
-        "type": "image",
-        "classTags": [
-          "Arabic"
-        ]
-      },
-      {
-        "id": "Classmate_Notes_Arabic_Guides_Beginner_Vocabulary_2_JPG",
-        "name": "Beginner Vocabulary 2.JPG",
-        "displayName": "Beginner Vocabulary 2",
-        "path": "/batch4/Classmate_Notes/Arabic_Guides/Beginner%20Vocabulary%202.JPG",
-        "type": "image",
-        "classTags": [
-          "Arabic"
-        ]
-      },
-      {
         "id": "Classmate_Notes_Worksheets_and_templates_Arabic_Practice_e0f3a0c1_b172_44ac_90a6_b8febc8d7e8c_JPG",
         "name": "e0f3a0c1-b172-44ac-90a6-b8febc8d7e8c.JPG",
         "displayName": "e0f3a0c1-b172-44ac-90a6-b8febc8d7e8c",
@@ -1158,17 +1277,7 @@ export const batch4MediaTree: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_201_Tafsir_Juz_Amma_notes_doc_Amayra_",
-        "name": "Tafsir Juz Amma notes doc (Amayra)",
-        "displayName": "Tafsir Juz Amma notes doc",
-        "credit": "Amayra",
-        "path": "https://docs.google.com/document/d/1bXIJ6dbZmiD9QCrR-Bvj7FJNwQDNr2GakVbk0z1wWmM/mobilebasic",
-        "type": "link",
-        "url": "https://docs.google.com/document/d/1bXIJ6dbZmiD9QCrR-Bvj7FJNwQDNr2GakVbk0z1wWmM/mobilebasic",
-        "classTags": []
-      },
-      {
-        "id": "link_202_Expansion_Chronology_of_Masjid_Nabawi",
+        "id": "link_201_Expansion_Chronology_of_Masjid_Nabawi",
         "name": "Expansion Chronology of Masjid Nabawi",
         "displayName": "Expansion Chronology of Masjid Nabawi",
         "path": "https://madainproject.com/expansion_chronology_of_masjid_al_nabawi",
@@ -1177,7 +1286,7 @@ export const batch4MediaTree: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_203_Quranic_verses_on_Taqwa",
+        "id": "link_202_Quranic_verses_on_Taqwa",
         "name": "Quranic verses on Taqwa",
         "displayName": "Quranic verses on Taqwa",
         "path": "https://myislam.org/quran-verses/taqwa/",
@@ -1186,7 +1295,7 @@ export const batch4MediaTree: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_204_Mufti_Aasim_Path_of_the_Seekers_pt_1",
+        "id": "link_203_Mufti_Aasim_Path_of_the_Seekers_pt_1",
         "name": "Mufti Aasim: Path of the Seekers pt 1",
         "displayName": "Mufti Aasim: Path of the Seekers pt 1",
         "path": "https://youtu.be/uSbTwQD9UNI",
@@ -1195,7 +1304,7 @@ export const batch4MediaTree: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_205_Mufti_Aasim_Path_of_the_Seekers_pt2",
+        "id": "link_204_Mufti_Aasim_Path_of_the_Seekers_pt2",
         "name": "Mufti Aasim: Path of the Seekers pt2",
         "displayName": "Mufti Aasim: Path of the Seekers pt2",
         "path": "https://youtu.be/Bt3608s6FbU",
@@ -1204,7 +1313,7 @@ export const batch4MediaTree: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_206_Minaret_of_Isa_Umayyid_Mosque",
+        "id": "link_205_Minaret_of_Isa_Umayyid_Mosque",
         "name": "Minaret of Isa - Umayyid Mosque",
         "displayName": "Minaret of Isa - Umayyid Mosque",
         "path": "https://madainproject.com/minaret_of_isa_(umayyad_mosque)",
@@ -1223,35 +1332,25 @@ export const batch4MediaTree: MediaSection[] = [
         "name": "Tools",
         "items": [
           {
-            "id": "link_0_Family_tree_of_the_Prophet_SA",
-            "name": "Family tree of the Prophet SA",
-            "displayName": "Family tree of the Prophet SA",
+            "id": "link_0_Family_Tree_of_the_Prophet_SA",
+            "name": "Family Tree of the Prophet SA",
+            "displayName": "Family Tree of the Prophet SA",
             "path": "https://www.familyecho.com/?p=START&c=xb2m6838f1r6wfot&f=528697926351751254&lang=en",
             "type": "link",
             "url": "https://www.familyecho.com/?p=START&c=xb2m6838f1r6wfot&f=528697926351751254&lang=en",
             "classTags": []
           },
           {
-            "id": "link_1_Tahajjud_time_calculator",
-            "name": "Tahajjud time calculator",
-            "displayName": "Tahajjud time calculator",
+            "id": "link_1_Tahajjud_Time_Calculator",
+            "name": "Tahajjud Time Calculator",
+            "displayName": "Tahajjud Time Calculator",
             "path": "https://thirdofthenight.com",
             "type": "link",
             "url": "https://thirdofthenight.com",
             "classTags": []
           },
           {
-            "id": "link_2_Custom_ChatGPT_for_Arabic_sentence_generator_Arhum_",
-            "name": "Custom ChatGPT for Arabic sentence generator (Arhum)",
-            "displayName": "Custom ChatGPT for Arabic sentence generator",
-            "credit": "Arhum",
-            "path": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
-            "type": "link",
-            "url": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
-            "classTags": []
-          },
-          {
-            "id": "link_3_Life_of_Imam_Bukhari_Travels_and_Biography",
+            "id": "link_2_Life_of_Imam_Bukhari_Travels_and_Biography",
             "name": "Life of Imam Bukhari - Travels and Biography",
             "displayName": "Life of Imam Bukhari - Travels and Biography",
             "path": "https://map-bukhari-project.netlify.app",
@@ -1260,85 +1359,21 @@ export const batch4MediaTree: MediaSection[] = [
             "classTags": []
           },
           {
-            "id": "link_4_Sarf_Practice_generator",
-            "name": "Sarf Practice generator",
-            "displayName": "Sarf Practice generator",
-            "path": "https://sarfing.app",
-            "type": "link",
-            "url": "https://sarfing.app",
-            "classTags": []
-          },
-          {
-            "id": "link_5_App_for_calculating_prayer_times_mid_flight_",
-            "name": "App for calculating prayer times mid flight:",
-            "displayName": "App for calculating prayer times mid flight:",
+            "id": "link_3_PrayAir_Midflight_Prayer_Time_Calculator",
+            "name": "PrayAir, Midflight Prayer Time Calculator",
+            "displayName": "PrayAir, Midflight Prayer Time Calculator",
             "path": "https://prayair.app/",
             "type": "link",
             "url": "https://prayair.app/",
             "classTags": []
           },
           {
-            "id": "link_6_Zakat_Calculators",
-            "name": "Zakat Calculators",
-            "displayName": "Zakat Calculators",
+            "id": "link_4_Zakat_Calculator",
+            "name": "Zakat Calculator",
+            "displayName": "Zakat Calculator",
             "path": "https://islamic-relief.org/zakat-calculator/",
             "type": "link",
             "url": "https://islamic-relief.org/zakat-calculator/",
-            "classTags": []
-          }
-        ]
-      },
-      {
-        "id": "links_quizlet",
-        "name": "Quizlets",
-        "items": [
-          {
-            "id": "link_100_Arabic_Vocabulary_Quizlet_Miski_",
-            "name": "Arabic Vocabulary Quizlet (Miski)",
-            "displayName": "Arabic Vocabulary Quizlet",
-            "credit": "Miski",
-            "path": "https://quizlet.com/1077642316/arabic-vocabulary-flash-cards/?i=3s0dgi&x=1jqY",
-            "type": "link",
-            "url": "https://quizlet.com/1077642316/arabic-vocabulary-flash-cards/?i=3s0dgi&x=1jqY",
-            "classTags": []
-          },
-          {
-            "id": "link_101_Arabic_Vocab_Set_Sarf_2_Arhum_",
-            "name": "Arabic Vocab Set - Sarf 2 (Arhum)",
-            "displayName": "Arabic Vocab Set - Sarf 2",
-            "credit": "Arhum",
-            "path": "https://quizlet.com/1070870221/vocab-set-2-sarf-section-flash-cards/?i=6qeu4n&x=1jqY",
-            "type": "link",
-            "url": "https://quizlet.com/1070870221/vocab-set-2-sarf-section-flash-cards/?i=6qeu4n&x=1jqY",
-            "classTags": []
-          },
-          {
-            "id": "link_102_Arabic_Vocab_Set_Sarf_2",
-            "name": "Arabic Vocab Set - Sarf 2",
-            "displayName": "Arabic Vocab Set - Sarf 2",
-            "path": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
-            "type": "link",
-            "url": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
-            "classTags": []
-          },
-          {
-            "id": "link_103_Quizlet_for_Uloom_Hadith_Terminology_Aqsa_",
-            "name": "Quizlet for Uloom Hadith Terminology (Aqsa)",
-            "displayName": "Quizlet for Uloom Hadith Terminology",
-            "credit": "Aqsa",
-            "path": "https://quizlet.com/845936651/uloom-al-hadith-flash-cards/?i=5zwu9x&x=1jqY",
-            "type": "link",
-            "url": "https://quizlet.com/845936651/uloom-al-hadith-flash-cards/?i=5zwu9x&x=1jqY",
-            "classTags": []
-          },
-          {
-            "id": "link_104_Canva_Flashcards_for_Uloom_Al_Hadith_Yasmine_",
-            "name": "Canva Flashcards for Uloom Al-Hadith (Yasmine)",
-            "displayName": "Canva Flashcards for Uloom Al-Hadith",
-            "credit": "Yasmine",
-            "path": "https://www.canva.com/design/DAG68OVEdNg/K6ABExtWiP3ifWQcRCTxJg/view?utm_content=DAG68OVEdNg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha289dd50a3#1",
-            "type": "link",
-            "url": "https://www.canva.com/design/DAG68OVEdNg/K6ABExtWiP3ifWQcRCTxJg/view?utm_content=DAG68OVEdNg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha289dd50a3#1",
             "classTags": []
           }
         ]
@@ -1383,10 +1418,11 @@ export const batch4MediaTree: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Worksheets_and_templates_Mock_Exam_Uloom_Al_Hadith_Amayra_pdf",
-        "name": "Mock Exam Uloom Al Hadith (Amayra) .pdf",
-        "displayName": "Mock Exam Uloom Al Hadith",
-        "path": "/batch4/Classmate_Notes/Worksheets_and_templates/Mock%20Exam%20Uloom%20Al%20Hadith%20(Amayra)%20.pdf",
+        "id": "Classmate_Notes_Worksheets_and_templates_Mock_Exam_Uloom_Al_Hadith_Answers_in_Amayra_pdf",
+        "name": "Mock Exam Uloom Al Hadith - Answers in (Amayra).pdf",
+        "displayName": "Mock Exam Uloom Al Hadith - Answers in",
+        "credit": "Amayra",
+        "path": "/batch4/Classmate_Notes/Worksheets_and_templates/Mock%20Exam%20Uloom%20Al%20Hadith%20-%20Answers%20in%20(Amayra).pdf",
         "type": "pdf"
       },
       {
@@ -1423,26 +1459,6 @@ export const batch4MediaTree: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Comprehensive_Notes_Surah_Yusuf_review_Aqsa_pdf",
-        "name": "Surah Yusuf review (Aqsa) .pdf",
-        "displayName": "Surah Yusuf review",
-        "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Surah%20Yusuf%20review%20(Aqsa)%20.pdf",
-        "type": "pdf",
-        "classTags": [
-          "Surah Yusuf"
-        ]
-      },
-      {
-        "id": "Classmate_Notes_Comprehensive_Notes_Surah_Yusuf_self_questions_Amayra_pdf",
-        "name": "Surah Yusuf self questions (Amayra) .pdf",
-        "displayName": "Surah Yusuf self questions",
-        "path": "/batch4/Classmate_Notes/Comprehensive_Notes/Surah%20Yusuf%20self%20questions%20(Amayra)%20.pdf",
-        "type": "pdf",
-        "classTags": [
-          "Surah Yusuf"
-        ]
-      },
-      {
         "id": "Classmate_Notes_Worksheets_and_templates_Worksheet_Uloom_Al_Hadith_Reference_Charts_lejla_pdf",
         "name": "Worksheet Uloom Al- Hadith Reference Charts (lejla).pdf",
         "displayName": "Worksheet Uloom Al- Hadith Reference Charts",
@@ -1457,8 +1473,8 @@ export const batch4MediaTree: MediaSection[] = [
 
 export const batch4Quicklinks: MediaSection[] = [
   {
-    "id": "ql_morning_adhkaar",
-    "name": "Morning Adhkaar",
+    "id": "ql_morning_adhkaar_tools",
+    "name": "Morning Adhkaar + Tools",
     "items": [
       {
         "id": "Classmate_Notes_Official_notes_or_Book_pdfs_Morning_Adhkaar_Amanah_Fitness_pdf",
@@ -1466,6 +1482,52 @@ export const batch4Quicklinks: MediaSection[] = [
         "displayName": "Morning Adhkaar",
         "path": "/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Morning%20Adhkaar%20Amanah%20Fitness.pdf",
         "type": "pdf"
+      },
+      {
+        "id": "link_1_Tahajjud_Time_Calculator",
+        "name": "Tahajjud Time Calculator",
+        "displayName": "Tahajjud Time Calculator",
+        "path": "https://thirdofthenight.com",
+        "type": "link",
+        "url": "https://thirdofthenight.com",
+        "classTags": []
+      },
+      {
+        "id": "link_2_Sentence_Generator_Arhum_",
+        "name": "Sentence Generator (Arhum)",
+        "displayName": "Sentence Generator",
+        "credit": "Arhum",
+        "path": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
+        "type": "link",
+        "url": "https://chatgpt.com/g/g-68fa247cbe988191b5da9c3de3dedfc3-arabic-sentence-generator-miftaah-seekers",
+        "classTags": []
+      },
+      {
+        "id": "link_4_Sarf_Word_Practice_Generator",
+        "name": "Sarf Word Practice Generator",
+        "displayName": "Sarf Word Practice Generator",
+        "path": "https://sarfing.app",
+        "type": "link",
+        "url": "https://sarfing.app",
+        "classTags": []
+      },
+      {
+        "id": "link_5_PrayAir_Midflight_Prayer_Time_Calculator",
+        "name": "PrayAir, Midflight Prayer Time Calculator",
+        "displayName": "PrayAir, Midflight Prayer Time Calculator",
+        "path": "https://prayair.app/",
+        "type": "link",
+        "url": "https://prayair.app/",
+        "classTags": []
+      },
+      {
+        "id": "link_6_Zakat_Calculator",
+        "name": "Zakat Calculator",
+        "displayName": "Zakat Calculator",
+        "path": "https://islamic-relief.org/zakat-calculator/",
+        "type": "link",
+        "url": "https://islamic-relief.org/zakat-calculator/",
+        "classTags": []
       }
     ]
   },
@@ -1504,9 +1566,9 @@ export const batch4Quicklinks: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_101_Arabic_Vocab_Set_Sarf_2_Arhum_",
-        "name": "Arabic Vocab Set - Sarf 2 (Arhum)",
-        "displayName": "Arabic Vocab Set - Sarf 2",
+        "id": "link_101_Arabic_Sarf_Vocab_Set_Sarf_Part_2_Arhum_",
+        "name": "Arabic Sarf Vocab Set - Sarf Part 2 (Arhum)",
+        "displayName": "Arabic Sarf Vocab Set - Sarf Part 2",
         "credit": "Arhum",
         "path": "https://quizlet.com/1070870221/vocab-set-2-sarf-section-flash-cards/?i=6qeu4n&x=1jqY",
         "type": "link",
@@ -1514,9 +1576,9 @@ export const batch4Quicklinks: MediaSection[] = [
         "classTags": []
       },
       {
-        "id": "link_102_Arabic_Vocab_Set_Sarf_2",
-        "name": "Arabic Vocab Set - Sarf 2",
-        "displayName": "Arabic Vocab Set - Sarf 2",
+        "id": "link_102_Arabic_Sarf_Vocab_Set_Sarf_Part_2",
+        "name": "Arabic Sarf Vocab Set - Sarf Part 2",
+        "displayName": "Arabic Sarf Vocab Set - Sarf Part 2",
         "path": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
         "type": "link",
         "url": "https://quizlet.com/1095134612/sarf-vocab-set-1-flash-cards/?i=6saqto&x=1jqY",
@@ -1560,10 +1622,11 @@ export const batch4Quicklinks: MediaSection[] = [
         ]
       },
       {
-        "id": "Classmate_Notes_Worksheets_and_templates_Mock_Exam_Uloom_Al_Hadith_Amayra_pdf",
-        "name": "Mock Exam Uloom Al Hadith (Amayra) .pdf",
-        "displayName": "Mock Exam Uloom Al Hadith",
-        "path": "/batch4/Classmate_Notes/Worksheets_and_templates/Mock%20Exam%20Uloom%20Al%20Hadith%20(Amayra)%20.pdf",
+        "id": "Classmate_Notes_Worksheets_and_templates_Mock_Exam_Uloom_Al_Hadith_Answers_in_Amayra_pdf",
+        "name": "Mock Exam Uloom Al Hadith - Answers in (Amayra).pdf",
+        "displayName": "Mock Exam Uloom Al Hadith - Answers in",
+        "credit": "Amayra",
+        "path": "/batch4/Classmate_Notes/Worksheets_and_templates/Mock%20Exam%20Uloom%20Al%20Hadith%20-%20Answers%20in%20(Amayra).pdf",
         "type": "pdf"
       },
       {

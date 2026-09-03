@@ -22,7 +22,7 @@ const CLASS_BOOKS = new Set([
   'The Money Handbook.pdf',
   'inner-dimensions-of-islamic-worship-muhtar-al-ghazali-z-lib.org-1.pdf',
   'Arabic 201_2024.pdf',
-  'Arabic_Nahw_Until_December (Sh. Hunzla).pdf',
+  'Arabic_Nahw_First_Semester (Sh. Hunzla).pdf',
   'Seekers Verbs (with Present Tense) (Sh. Hunzla).pdf',
 ]);
 
@@ -43,9 +43,9 @@ const COMPREHENSIVE_CLASS_ORDER = [
 
 /** Oversized handwritten notes — hosted on Drive, not copied into public/. */
 const EXTERNAL_FILE_LINKS = {
-  'Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).pdf':
+  'Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_First_Semester (Sh. Hunzla).pdf':
     'https://drive.google.com/file/d/1dpzJ0MYfm2FtHvSvaD7d2f2tEOQdw3eo/view?usp=sharing',
-  'Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Review (lejla).pdf':
+  'Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Flowchart (lejla).pdf':
     'https://drive.google.com/file/d/1VQlhXqBzZXeAWvCKSdID1Z-D-Lw9G58W/view?usp=sharing',
 };
 
@@ -58,10 +58,16 @@ const PUBLIC_FILENAME_OVERRIDES = {
   'Morning+Adhkaar+Amanah+Fitness.pdf': 'Morning Adhkaar Amanah Fitness.pdf',
   'Tafseer of Juz Amma Study Guide - Noor Mansoor.pdf':
     'Tafseer of Juz Amma Study Guide (Noor Mansoor).pdf',
+  'Seekers Vocab Past:Present:Sifaat (Sh. Hunzla).pdf':
+    'Seekers Vocab Past-Present-Sifaat (Sh. Hunzla).pdf',
 };
 
 function sanitizePublicFilename(name) {
-  return name.replace(/#/g, 'No').replace(/&/g, 'and').replace(/\+/g, ' ');
+  return name
+    .replace(/#/g, 'No')
+    .replace(/&/g, 'and')
+    .replace(/\+/g, ' ')
+    .replace(/:/g, '-');
 }
 
 function publicFilename(name) {
@@ -269,21 +275,43 @@ function toMediaItem(srcRel, extra = {}) {
   if (/seekers vocab no2/i.test(name)) {
     item.displayName = 'Seekers Vocab #2';
   }
+  if (/seekers vocab past-present-sifaat/i.test(name)) {
+    item.displayName = 'Seekers Vocab Past:Present:Sifaat';
+  }
   return item;
+}
+
+function isArabicGuideToolLink(link) {
+  const lower = `${link.title} ${link.url}`.toLowerCase();
+  return (
+    lower.includes('sentence generator') ||
+    lower.includes('sarfing') ||
+    lower.includes('sarf word practice')
+  );
 }
 
 function buildEducationalLinksSection() {
   const links = parseFileLinks();
-  const tools = links.filter((l) => l.category === 'tool');
-  const quizlets = links.filter((l) => l.category === 'quizlet');
+  const tools = links
+    .filter((l) => l.category === 'tool' && !isArabicGuideToolLink(l))
+    .map((l, i) => linkToItem(l, i));
+
+  if (!tools.length) return null;
 
   return {
     id: 'links',
     name: 'Educational Links',
-    children: [
-      { id: 'links_tools', name: 'Tools', items: tools.map((l, i) => linkToItem(l, i)) },
-      { id: 'links_quizlet', name: 'Quizlets', items: quizlets.map((l, i) => linkToItem(l, i + 100)) },
-    ],
+    children: [{ id: 'links_tools', name: 'Tools', items: tools }],
+  };
+}
+
+function buildQuizletsSection() {
+  const quizlets = parseFileLinks().filter((l) => l.category === 'quizlet');
+  if (!quizlets.length) return null;
+  return {
+    id: 'quizlets',
+    name: 'Quizlets',
+    items: quizlets.map((l, i) => linkToItem(l, i + 100)),
   };
 }
 
@@ -350,11 +378,17 @@ function buildTree(educationalLinks, worksheets, practice) {
     });
   }
 
-  // Arabic Guides
+  // Arabic Guides (+ Sentence Generator / Sarf Word Practice Generator)
   const arabicDir = path.join(notesRoot, 'Arabic_Guides');
   const arabicGuidePracticeItems = [];
-  if (fs.existsSync(arabicDir)) {
-    const guideFiles = fs.readdirSync(arabicDir).filter((f) => !f.startsWith('.'));
+  const arabicGuideLinkItems = parseFileLinks()
+    .filter((l) => l.category === 'tool' && isArabicGuideToolLink(l))
+    .map((l, i) => linkToItem(l, i + 50));
+
+  if (fs.existsSync(arabicDir) || arabicGuideLinkItems.length) {
+    const guideFiles = fs.existsSync(arabicDir)
+      ? fs.readdirSync(arabicDir).filter((f) => !f.startsWith('.'))
+      : [];
     for (const f of guideFiles) {
       if (!ARABIC_GUIDE_TO_PRACTICE.has(f)) continue;
       const item = toMediaItem(`Classmate_Notes/Arabic_Guides/${f}`, { classTags: ['Arabic'] });
@@ -368,14 +402,22 @@ function buildTree(educationalLinks, worksheets, practice) {
         .map((f) => ({ name: f, rel: `Classmate_Notes/Arabic_Guides/${f}` })),
       ARABIC_SCALES_PRIORITY
     );
-    if (files.length) {
+    const guideItems = [
+      ...files.map((f) => toMediaItem(f.rel, { classTags: ['Arabic'] })),
+      ...arabicGuideLinkItems.map((item) => ({ ...item, classTags: ['Arabic'] })),
+    ];
+    if (guideItems.length) {
       tree.push({
         id: 'arabic_guides',
         name: 'Arabic Guides',
-        items: files.map((f) => toMediaItem(f.rel, { classTags: ['Arabic'] })),
+        items: guideItems,
       });
     }
   }
+
+  // Quizlets — own top-level folder under Arabic Guides
+  const quizlets = buildQuizletsSection();
+  if (quizlets) tree.push(quizlets);
 
   // Duas
   const duasDir = path.join(notesRoot, 'Duas_from_Seerah');
@@ -444,7 +486,7 @@ function buildTree(educationalLinks, worksheets, practice) {
     });
   }
 
-  // Mirror quicklink sections at library bottom (collapsed by default)
+  // Mirror remaining educational links / worksheets / practice at library bottom
   if (educationalLinks) {
     tree.push({ ...educationalLinks, defaultCollapsed: true });
   }
@@ -461,14 +503,37 @@ function buildTree(educationalLinks, worksheets, practice) {
 function buildQuicklinks(educationalLinks, worksheets, practice, tree) {
   const sections = [];
 
+  const morningAdhkaarTools = [];
   const morningAdhkaar = tree
     .find((s) => s.id === 'official')
     ?.items?.find((item) => /morning adhkaar/i.test(item.displayName));
-  if (morningAdhkaar) {
+  if (morningAdhkaar) morningAdhkaarTools.push(morningAdhkaar);
+
+  const toolItems = parseFileLinks()
+    .filter((l) => l.category === 'tool')
+    .map((l, i) => linkToItem(l, i));
+  const quicklinkToolMatchers = [
+    /tahajjud|thirdofthenight/i,
+    /sentence generator|custom chatgpt/i,
+    /sarf (word )?practice|sarfing/i,
+    /prayair|midflight|mid.?flight|prayer times/i,
+    /zakat/i,
+  ];
+  for (const match of quicklinkToolMatchers) {
+    const item = toolItems.find(
+      (t) =>
+        match.test(t.name) ||
+        match.test(t.displayName) ||
+        match.test(t.url ?? t.path ?? '')
+    );
+    if (item) morningAdhkaarTools.push(item);
+  }
+
+  if (morningAdhkaarTools.length) {
     sections.push({
-      id: 'ql_morning_adhkaar',
-      name: 'Morning Adhkaar',
-      items: [morningAdhkaar],
+      id: 'ql_morning_adhkaar_tools',
+      name: 'Morning Adhkaar + Tools',
+      items: morningAdhkaarTools,
     });
   }
 
@@ -486,8 +551,9 @@ function buildQuicklinks(educationalLinks, worksheets, practice, tree) {
     });
   }
 
-  const quizletItems =
-    educationalLinks?.children?.find((c) => c.id === 'links_quizlet')?.items ?? [];
+  const quizletItems = parseFileLinks()
+    .filter((l) => l.category === 'quizlet')
+    .map((l, i) => linkToItem(l, i + 100));
   if (quizletItems.length) {
     sections.push({
       id: 'ql_quizlets',

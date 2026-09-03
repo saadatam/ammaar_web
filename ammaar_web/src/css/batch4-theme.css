@@ -251,6 +251,17 @@
   color: var(--b4-text);
 }
 
+.b4-btn-signout {
+  background-color: var(--b4-surface-solid);
+  color: var(--b4-text-muted);
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.b4-btn-signout:hover {
+  color: var(--b4-text);
+}
+
 .b4-input {
   border-color: var(--b4-border-muted);
   background-color: var(--b4-surface-deep);
@@ -283,6 +294,16 @@
   font-family: inherit;
   font-weight: 600;
   padding: 0.375rem 0.5rem;
+}
+
+.batch4-root .b4-expand-ctrl {
+  background: transparent;
+  border: none;
+  padding: 0.125rem 0.375rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  cursor: pointer;
 }
 
 .batch4-root[data-theme='miftaah'] .b4-folder-btn {

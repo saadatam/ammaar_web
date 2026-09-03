@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { forwardRef, useImperativeHandle, useMemo, useState } from 'react';
 import type { MediaItem, MediaSection } from '../../data/batch4Media';
+import type { FolderExpandHandle } from './Batch4FileTree';
 
 type Props = {
   sections: MediaSection[];
@@ -7,29 +8,48 @@ type Props = {
   onSelect: (item: MediaItem) => void;
 };
 
+function collectFolderIds(sections: MediaSection[]): string[] {
+  const ids: string[] = [];
+  for (const section of sections) {
+    ids.push(section.id);
+    section.children?.forEach((child) => ids.push(child.id));
+  }
+  return ids;
+}
+
+function initialOpenIds(sections: MediaSection[]): Set<string> {
+  const open = new Set<string>();
+  for (const section of sections) {
+    if (section.defaultCollapsed !== true) open.add(section.id);
+    section.children?.forEach((child) => open.add(child.id));
+  }
+  return open;
+}
+
 function Folder({
   name,
-  defaultOpen = true,
+  isOpen,
+  onToggle,
   children,
 }: {
   name: string;
-  defaultOpen?: boolean;
+  isOpen: boolean;
+  onToggle: () => void;
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="select-none mb-1">
       <button
         type="button"
-        onClick={() => setOpen(!open)}
+        onClick={onToggle}
         className="flex w-full items-center gap-1.5 rounded px-2 py-1.5 text-left text-[15px] font-semibold b4-folder-btn transition-colors"
       >
         <span className="b4-folder-icon w-3 shrink-0 text-[11px] leading-none">
-          {open ? '▾' : '▸'}
+          {isOpen ? '▾' : '▸'}
         </span>
         <span>{name}</span>
       </button>
-      {open && <div className="ml-3 border-l b4-border-panel pl-1 mt-0.5">{children}</div>}
+      {isOpen && <div className="ml-3 border-l b4-border-panel pl-1 mt-0.5">{children}</div>}
     </div>
   );
 }
@@ -59,19 +79,39 @@ function QuicklinkButton({
   );
 }
 
-export default function Batch4Quicklinks({ sections, activeId, onSelect }: Props) {
+const Batch4Quicklinks = forwardRef<FolderExpandHandle, Props>(function Batch4Quicklinks(
+  { sections, activeId, onSelect },
+  ref
+) {
+  const allIds = useMemo(() => collectFolderIds(sections), [sections]);
+  const [openIds, setOpenIds] = useState<Set<string>>(() => initialOpenIds(sections));
+
+  useImperativeHandle(ref, () => ({
+    expandAll: () => setOpenIds(new Set(allIds)),
+    collapseAll: () => setOpenIds(new Set()),
+  }));
+
+  function toggle(id: string) {
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
   return (
     <aside>
-      <h3 className="text-sm font-semibold b4-text-accent mb-3 uppercase tracking-wide">
-        Quicklinks
-      </h3>
       <div className="space-y-2">
         {sections.map((section) => {
-          const defaultOpen = section.defaultCollapsed !== true;
-
           if (section.items && !section.children) {
             return (
-              <Folder key={section.id} name={section.name} defaultOpen={defaultOpen}>
+              <Folder
+                key={section.id}
+                name={section.name}
+                isOpen={openIds.has(section.id)}
+                onToggle={() => toggle(section.id)}
+              >
                 {section.items.map((item) => (
                   <div key={item.id} className="py-0.5">
                     <QuicklinkButton
@@ -86,7 +126,12 @@ export default function Batch4Quicklinks({ sections, activeId, onSelect }: Props
           }
 
           return (
-            <Folder key={section.id} name={section.name} defaultOpen={defaultOpen}>
+            <Folder
+              key={section.id}
+              name={section.name}
+              isOpen={openIds.has(section.id)}
+              onToggle={() => toggle(section.id)}
+            >
               {section.items?.map((item) => (
                 <div key={item.id} className="py-0.5">
                   <QuicklinkButton
@@ -97,7 +142,12 @@ export default function Batch4Quicklinks({ sections, activeId, onSelect }: Props
                 </div>
               ))}
               {section.children?.map((child) => (
-                <Folder key={child.id} name={child.name} defaultOpen={true}>
+                <Folder
+                  key={child.id}
+                  name={child.name}
+                  isOpen={openIds.has(child.id)}
+                  onToggle={() => toggle(child.id)}
+                >
                   {child.items.map((item) => (
                     <div key={item.id} className="py-0.5">
                       <QuicklinkButton
@@ -115,4 +165,6 @@ export default function Batch4Quicklinks({ sections, activeId, onSelect }: Props
       </div>
     </aside>
   );
-}
+});
+
+export default Batch4Quicklinks;

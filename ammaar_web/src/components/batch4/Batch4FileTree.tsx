@@ -1,5 +1,42 @@
-import { useMemo, useState } from 'react';
+import { forwardRef, useImperativeHandle, useMemo, useState } from 'react';
 import type { MediaItem, MediaSection } from '../../data/batch4Media';
+
+export type FolderExpandHandle = {
+  expandAll: () => void;
+  collapseAll: () => void;
+};
+
+export function PanelExpandControls({
+  onExpand,
+  onCollapse,
+}: {
+  onExpand: () => void;
+  onCollapse: () => void;
+}) {
+  return (
+    <div className="flex items-center gap-0.5 shrink-0">
+      <button
+        type="button"
+        onClick={onCollapse}
+        className="b4-expand-ctrl rounded px-1.5 py-0.5 text-[10px] font-medium b4-text-muted hover:b4-text-heading transition-colors"
+        title="Collapse all folders"
+      >
+        Collapse
+      </button>
+      <span className="text-[10px] b4-text-dim" aria-hidden>
+        ·
+      </span>
+      <button
+        type="button"
+        onClick={onExpand}
+        className="b4-expand-ctrl rounded px-1.5 py-0.5 text-[10px] font-medium b4-text-muted hover:b4-text-heading transition-colors"
+        title="Expand all folders"
+      >
+        Expand
+      </button>
+    </div>
+  );
+}
 
 type Props = {
   tree: MediaSection[];
@@ -52,6 +89,10 @@ function filterTree(tree: MediaSection[], query: string): MediaSection[] {
 function initialOpenSections(tree: MediaSection[], startCollapsed = false): Set<string> {
   if (startCollapsed) return new Set();
   return new Set(tree.filter((s) => !s.defaultCollapsed).map((s) => s.id));
+}
+
+function allSectionIds(tree: MediaSection[]): Set<string> {
+  return new Set(tree.map((s) => s.id));
 }
 
 function Folder({
@@ -185,23 +226,34 @@ export function Batch4LibrarySearch({
   );
 }
 
-export default function Batch4FileTree({
-  tree,
-  selectedId,
-  onSelect,
-  searchQuery = '',
-  startCollapsed = false,
-}: Props) {
+const Batch4FileTree = forwardRef<FolderExpandHandle, Props>(function Batch4FileTree(
+  { tree, selectedId, onSelect, searchQuery = '', startCollapsed = false },
+  ref
+) {
   const filteredTree = useMemo(
     () => filterTree(tree, searchQuery),
     [tree, searchQuery]
   );
   const isSearching = searchQuery.trim().length > 0;
-  const nestedDefaultOpen = !startCollapsed;
 
   const [openSections, setOpenSections] = useState<Set<string>>(() =>
     initialOpenSections(tree, startCollapsed)
   );
+  const [nestedDefaultOpen, setNestedDefaultOpen] = useState(!startCollapsed);
+  const [folderEpoch, setFolderEpoch] = useState(0);
+
+  useImperativeHandle(ref, () => ({
+    expandAll: () => {
+      setOpenSections(allSectionIds(filteredTree.length ? filteredTree : tree));
+      setNestedDefaultOpen(true);
+      setFolderEpoch((n) => n + 1);
+    },
+    collapseAll: () => {
+      setOpenSections(new Set());
+      setNestedDefaultOpen(false);
+      setFolderEpoch((n) => n + 1);
+    },
+  }));
 
   function toggleTopSection(id: string) {
     setOpenSections((prev) => {
@@ -237,7 +289,7 @@ export default function Batch4FileTree({
           )}
           {section.children?.map((child) => (
             <NestedFolder
-              key={child.id}
+              key={`${child.id}-${folderEpoch}`}
               name={child.name}
               defaultOpen={nestedDefaultOpen}
               forceOpen={isSearching}
@@ -249,4 +301,6 @@ export default function Batch4FileTree({
       ))}
     </nav>
   );
-}
+});
+
+export default Batch4FileTree;

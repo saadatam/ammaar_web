@@ -19,7 +19,7 @@ function PdfPreview({ src, title }: { src: string; title: string }) {
       <iframe
         title={title}
         src={pdfViewerSrc(src)}
-        className="w-full h-[min(70vh,600px)] rounded-lg border b4-border-panel bg-white"
+        className="w-full h-[min(85vh,900px)] rounded-lg border b4-border-panel bg-white"
       />
     </div>
   );
@@ -84,7 +84,7 @@ export default function Batch4Viewer({ item }: Props) {
           <img
             src={item.path}
             alt={item.displayName}
-            className="mx-auto max-h-[70vh] rounded-lg object-contain"
+            className="mx-auto max-h-[min(85vh,900px)] rounded-lg object-contain"
           />
         )}
 
