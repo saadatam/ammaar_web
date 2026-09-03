@@ -50,6 +50,11 @@ ammaar_web/*.tgz
 # Commit generated assets instead: ammaar_web/public/batch4/ + src/data/batch4*.ts
 ammaar_web/src/context/
 
+# Oversized handwritten notes — linked from Google Drive instead of committed
+ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).pdf
+ammaar_web/public/batch4/Classmate_Notes/Official_notes_or_Book_pdfs/Arabic_Nahw_Until_December (Sh. Hunzla).compressed.pdf
+ammaar_web/public/batch4/Classmate_Notes/Comprehensive_Notes/Uloom Al- Hadith Review (lejla).pdf
+
 # --- Legacy / experimental ---
 rag_test/
 prompt.txt
