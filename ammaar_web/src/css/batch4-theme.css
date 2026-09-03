@@ -1,0 +1,436 @@
+/* Batch 4 themes: default (green) · midnight (dark navy/gold) · miftaah (light site colors) */
+
+.batch4-root {
+  --b4-bg: #030712;
+  --b4-surface: rgb(17 24 39 / 0.8);
+  --b4-surface-solid: #111827;
+  --b4-surface-deep: #030712;
+  --b4-border: #1f2937;
+  --b4-border-muted: #374151;
+  --b4-text: #f3f4f6;
+  --b4-text-muted: #6b7280;
+  --b4-text-dim: #4b5563;
+  --b4-heading: #ffffff;
+  --b4-control-text: #d1d5db;
+  --b4-media-bg: #000000;
+
+  --b4-accent: #4ade80;
+  --b4-accent-hover: #86efac;
+  --b4-accent-text: #111827;
+  --b4-accent-subtle: rgb(74 222 128 / 0.1);
+  --b4-accent-border: rgb(74 222 128 / 0.3);
+  --b4-accent-border-strong: rgb(74 222 128 / 0.4);
+
+  --b4-btn-bg: #4ade80;
+  --b4-btn-hover: #86efac;
+  --b4-btn-text: #111827;
+
+  --b4-folder: rgb(252 211 77 / 0.9);
+  --b4-folder-icon: rgb(245 158 11 / 0.7);
+  --b4-folder-hover: rgb(245 158 11 / 0.1);
+  --b4-folder-bg: transparent;
+  --b4-folder-text: rgb(252 211 77 / 0.9);
+  --b4-folder-bg-hover: rgb(245 158 11 / 0.1);
+  --b4-folder-border: transparent;
+
+  --b4-file-link: rgb(196 181 253 / 0.9);
+  --b4-file-link-hover: rgb(139 92 246 / 0.1);
+  --b4-file-pdf: rgb(125 211 252 / 0.9);
+  --b4-file-pdf-hover: rgb(14 165 233 / 0.1);
+  --b4-file-image: rgb(94 234 212 / 0.9);
+  --b4-file-image-hover: rgb(20 184 166 / 0.1);
+  --b4-file-bg: transparent;
+  --b4-file-border: transparent;
+
+  --b4-selected-bg: rgb(74 222 128 / 0.15);
+  --b4-selected-text: #86efac;
+  --b4-selected-border: rgb(74 222 128 / 0.3);
+
+  --b4-handle: #1f2937;
+  --b4-handle-hover: rgb(74 222 128 / 0.6);
+  --b4-handle-active: #4ade80;
+
+  --b4-warn: #fbbf24;
+  --b4-warn-subtle: rgb(251 191 36 / 0.1);
+  --b4-warn-border: rgb(251 191 36 / 0.3);
+}
+
+.batch4-root[data-theme='midnight'] {
+  --b4-bg: #1a2639;
+  --b4-surface: rgb(36 52 71 / 0.92);
+  --b4-surface-solid: #243447;
+  --b4-surface-deep: #0f1623;
+  --b4-border: #2d4159;
+  --b4-border-muted: #3d5675;
+  --b4-text: #f5f0e8;
+  --b4-text-muted: #9aa8bc;
+  --b4-text-dim: #6b7d94;
+  --b4-heading: #ffffff;
+  --b4-control-text: #c5d0de;
+  --b4-media-bg: #000000;
+
+  --b4-accent: #c5a059;
+  --b4-accent-hover: #d4b76a;
+  --b4-accent-text: #ffffff;
+  --b4-accent-subtle: rgb(197 160 89 / 0.14);
+  --b4-accent-border: rgb(197 160 89 / 0.35);
+  --b4-accent-border-strong: rgb(197 160 89 / 0.5);
+
+  --b4-btn-bg: #922724;
+  --b4-btn-hover: #a82f2c;
+  --b4-btn-text: #ffffff;
+
+  --b4-folder: rgb(197 160 89 / 0.95);
+  --b4-folder-icon: rgb(197 160 89 / 0.75);
+  --b4-folder-hover: rgb(197 160 89 / 0.12);
+  --b4-folder-bg: transparent;
+  --b4-folder-text: rgb(197 160 89 / 0.95);
+  --b4-folder-bg-hover: rgb(197 160 89 / 0.12);
+  --b4-folder-border: transparent;
+
+  --b4-file-link: rgb(212 183 230 / 0.9);
+  --b4-file-link-hover: rgb(146 39 36 / 0.2);
+  --b4-file-pdf: rgb(168 200 230 / 0.95);
+  --b4-file-pdf-hover: rgb(36 52 71 / 0.6);
+  --b4-file-image: rgb(197 160 89 / 0.85);
+  --b4-file-image-hover: rgb(146 39 36 / 0.15);
+  --b4-file-bg: transparent;
+  --b4-file-border: transparent;
+
+  --b4-selected-bg: rgb(146 39 36 / 0.25);
+  --b4-selected-text: #e8d5a8;
+  --b4-selected-border: rgb(197 160 89 / 0.45);
+
+  --b4-handle: #2d4159;
+  --b4-handle-hover: rgb(197 160 89 / 0.55);
+  --b4-handle-active: #c5a059;
+
+  --b4-warn: #c5a059;
+  --b4-warn-subtle: rgb(146 39 36 / 0.2);
+  --b4-warn-border: rgb(197 160 89 / 0.35);
+}
+
+/* Miftaah.com — white body, navy type, burgundy actions */
+.batch4-root[data-theme='miftaah'] {
+  --b4-bg: #f7f8fa;
+  --b4-surface: rgb(255 255 255 / 0.95);
+  --b4-surface-solid: #ffffff;
+  --b4-surface-deep: #f0f2f5;
+  --b4-border: #e2e6ec;
+  --b4-border-muted: #cdd3dc;
+  --b4-text: #1a2639;
+  --b4-text-muted: #5c6b7f;
+  --b4-text-dim: #8a96a8;
+  --b4-heading: #1a2639;
+  --b4-control-text: #5c6b7f;
+  --b4-media-bg: #0f1623;
+
+  --b4-accent: #922724;
+  --b4-accent-hover: #a82f2c;
+  --b4-accent-text: #ffffff;
+  --b4-accent-subtle: rgb(146 39 36 / 0.08);
+  --b4-accent-border: rgb(146 39 36 / 0.28);
+  --b4-accent-border-strong: rgb(146 39 36 / 0.45);
+
+  --b4-btn-bg: #922724;
+  --b4-btn-hover: #7a201e;
+  --b4-btn-text: #ffffff;
+
+  --b4-folder: #922724;
+  --b4-folder-icon: rgb(255 255 255 / 0.9);
+  --b4-folder-hover: #7a201e;
+  --b4-folder-bg: #922724;
+  --b4-folder-text: #ffffff;
+  --b4-folder-bg-hover: #7a201e;
+  --b4-folder-border: transparent;
+
+  --b4-file-link: #5c3d6e;
+  --b4-file-link-hover: rgb(146 39 36 / 0.08);
+  --b4-file-pdf: #1e4a7a;
+  --b4-file-pdf-hover: rgb(26 38 57 / 0.06);
+  --b4-file-image: #922724;
+  --b4-file-image-hover: rgb(146 39 36 / 0.08);
+  --b4-file-bg: #f0f2f5;
+  --b4-file-border: #e2e6ec;
+
+  --b4-selected-bg: rgb(146 39 36 / 0.1);
+  --b4-selected-text: #7a201e;
+  --b4-selected-border: rgb(146 39 36 / 0.35);
+
+  --b4-handle: #e2e6ec;
+  --b4-handle-hover: rgb(146 39 36 / 0.35);
+  --b4-handle-active: #922724;
+
+  --b4-warn: #922724;
+  --b4-warn-subtle: rgb(146 39 36 / 0.06);
+  --b4-warn-border: rgb(146 39 36 / 0.2);
+}
+
+/* Semantic utilities */
+.b4-page {
+  background-color: var(--b4-bg);
+  color: var(--b4-text);
+}
+
+.b4-text-accent {
+  color: var(--b4-accent);
+}
+
+.b4-text-accent-hover:hover {
+  color: var(--b4-accent-hover);
+}
+
+.b4-border-accent {
+  border-color: var(--b4-accent-border);
+}
+
+.b4-border-accent-strong {
+  border-color: var(--b4-accent-border-strong);
+}
+
+.b4-bg-surface {
+  background-color: var(--b4-surface);
+}
+
+.b4-bg-surface-solid {
+  background-color: var(--b4-surface-solid);
+}
+
+.b4-bg-surface-deep {
+  background-color: var(--b4-surface-deep);
+}
+
+.b4-border-panel {
+  border-color: var(--b4-border);
+}
+
+.b4-text-muted {
+  color: var(--b4-text-muted);
+}
+
+.b4-text-dim {
+  color: var(--b4-text-dim);
+}
+
+.b4-text-heading {
+  color: var(--b4-heading);
+}
+
+.b4-text-control {
+  color: var(--b4-control-text);
+}
+
+.b4-hover-heading:hover {
+  color: var(--b4-heading);
+}
+
+.b4-media-bg {
+  background-color: var(--b4-media-bg);
+}
+
+.b4-btn-primary {
+  background-color: var(--b4-btn-bg);
+  color: var(--b4-btn-text);
+}
+
+.b4-btn-primary:hover:not(:disabled) {
+  background-color: var(--b4-btn-hover);
+}
+
+.b4-btn-tab-active {
+  background-color: var(--b4-accent);
+  color: var(--b4-accent-text);
+}
+
+.b4-btn-tab-inactive {
+  background-color: var(--b4-surface-solid);
+  color: var(--b4-text-muted);
+}
+
+.b4-btn-tab-inactive:hover {
+  color: var(--b4-text);
+}
+
+.b4-input {
+  border-color: var(--b4-border-muted);
+  background-color: var(--b4-surface-deep);
+  color: var(--b4-text);
+}
+
+.b4-input:focus {
+  border-color: var(--b4-accent-border-strong);
+  outline: none;
+}
+
+.b4-folder-btn {
+  color: var(--b4-folder-text);
+  background-color: var(--b4-folder-bg);
+  border: 1px solid var(--b4-folder-border);
+}
+
+.b4-folder-btn:hover {
+  background-color: var(--b4-folder-bg-hover);
+  color: var(--b4-folder-text);
+}
+
+.b4-folder-icon {
+  color: var(--b4-folder-icon);
+}
+
+/* Override global button styles inside Batch 4 */
+.batch4-root .b4-folder-btn {
+  border-radius: 0.375rem;
+  font-family: inherit;
+  font-weight: 600;
+  padding: 0.375rem 0.5rem;
+}
+
+.batch4-root[data-theme='miftaah'] .b4-folder-btn {
+  margin-bottom: 0.25rem;
+}
+
+.b4-file-btn {
+  background-color: var(--b4-file-bg);
+  border: 1px solid var(--b4-file-border);
+}
+
+.batch4-root .b4-file-btn {
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem 0.5rem 1.25rem;
+}
+
+.batch4-root[data-theme='miftaah'] .b4-file-btn:hover:not(.b4-file-selected) {
+  border-color: var(--b4-accent-border);
+}
+
+.b4-file-link {
+  color: var(--b4-file-link);
+}
+
+.b4-file-link:hover {
+  background-color: var(--b4-file-link-hover);
+  color: var(--b4-text);
+}
+
+.b4-file-pdf {
+  color: var(--b4-file-pdf);
+}
+
+.b4-file-pdf:hover {
+  background-color: var(--b4-file-pdf-hover);
+  color: var(--b4-text);
+}
+
+.b4-file-image {
+  color: var(--b4-file-image);
+}
+
+.b4-file-image:hover {
+  background-color: var(--b4-file-image-hover);
+  color: var(--b4-text);
+}
+
+.b4-file-selected {
+  background-color: var(--b4-selected-bg);
+  color: var(--b4-selected-text);
+  border-color: var(--b4-selected-border);
+}
+
+.b4-quicklink-active {
+  border-color: var(--b4-accent);
+  background-color: var(--b4-accent-subtle);
+  color: var(--b4-selected-text);
+}
+
+.b4-quicklink-inactive {
+  border-color: var(--b4-border);
+  background-color: var(--b4-surface-deep);
+  color: var(--b4-text);
+}
+
+.b4-quicklink-inactive:hover {
+  border-color: var(--b4-accent-border);
+}
+
+.b4-tag {
+  background-color: var(--b4-accent-subtle);
+  color: var(--b4-accent);
+}
+
+.b4-link-external {
+  color: var(--b4-accent);
+}
+
+.b4-link-external:hover {
+  color: var(--b4-accent-hover);
+}
+
+.b4-recording-active {
+  border-color: var(--b4-accent);
+  background-color: var(--b4-accent-subtle);
+}
+
+.b4-recording-inactive {
+  border-color: var(--b4-border);
+  background-color: var(--b4-surface-solid);
+}
+
+.b4-recording-inactive:hover {
+  border-color: var(--b4-accent-border);
+}
+
+.b4-handle {
+  background-color: var(--b4-handle);
+}
+
+.b4-handle:hover {
+  background-color: var(--b4-handle-hover);
+}
+
+.b4-handle:active {
+  background-color: var(--b4-handle-active);
+}
+
+.b4-warn-banner {
+  color: var(--b4-warn);
+  background-color: var(--b4-warn-subtle);
+  border-color: var(--b4-warn-border);
+}
+
+.b4-theme-toggle {
+  border-color: var(--b4-accent-border);
+  background-color: var(--b4-surface-solid);
+  color: var(--b4-accent);
+}
+
+.b4-theme-toggle:hover {
+  border-color: var(--b4-accent);
+  background-color: var(--b4-accent-subtle);
+}
+
+.b4-resize-bar {
+  background-color: var(--b4-handle);
+  transition: background-color 0.15s;
+}
+
+.group:hover .b4-resize-bar {
+  background-color: var(--b4-handle-hover);
+}
+
+.group:active .b4-resize-bar {
+  background-color: var(--b4-handle-active);
+}
+
+.b4-hover-surface:hover {
+  background-color: var(--b4-surface-solid);
+}
+
+.b4-thumbnail-active {
+  border-color: var(--b4-accent-border-strong);
+}
+
+.batch4-root[data-theme='miftaah'] .b4-theme-toggle {
+  box-shadow: 0 4px 14px rgb(26 38 57 / 0.12);
+}

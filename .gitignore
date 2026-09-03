@@ -1,99 +1,61 @@
-# Dependencies
-/ammaar_web/node_modules/
-/ammaar_web/.pnp
-/ammaar_web/.pnp.js
-
-# Testing
-/ammaar_web/coverage
-
-# Production
-/ammaar_web/build
-/ammaar_web/dist
-
-# Environment files
-/ammaar_web/.env
-/ammaar_web/.env.local
-/ammaar_web/.env.development.local
-/ammaar_web/.env.test.local
-/ammaar_web/.env.production.local
-
-# Debug logs
-/ammaar_web/npm-debug.log*
-/ammaar_web/yarn-debug.log*
-/ammaar_web/yarn-error.log*
-
-# Editor directories and files
-/ammaar_web/.idea/
-/ammaar_web/.vscode/
-/ammaar_web/*.swp
-/ammaar_web/*.swo
-/ammaar_web/.DS_Store
-/ammaar_web/*.sublime-workspace
-/ammaar_web/*.sublime-project
-
-# OS generated files
-/ammaar_web/.DS_Store
-/ammaar_web/.DS_Store?
-/ammaar_web/._*
-/ammaar_web/.Spotlight-V100
-/ammaar_web/.Trashes
-/ammaar_web/ehthumbs.db
-/ammaar_web/Thumbs.db
-
-# Optional npm cache directory
-/ammaar_web/.npm
-
-# Optional eslint cache
-/ammaar_web/.eslintcache
-
-# Optional REPL history
-/ammaar_web/.node_repl_history
-
-# Output of 'npm pack'
-/ammaar_web/*.tgz
-
-# Yarn Integrity file
-/ammaar_web/.yarn-integrity
-
-# TypeScript cache
-/ammaar_web/*.tsbuildinfo
-
-# Next.js build output
-/ammaar_web/.next
-/ammaar_web/out
-
-# Vercel
-/ammaar_web/.vercel
-
-# Local Netlify folder
-/ammaar_web/.netlify
-
-# Temporary files
-/ammaar_web/*.log
-/ammaar_web/*.tmp
-/ammaar_web/*.temp
-
-# System Files
-/ammaar_web/.DS_Store
-/ammaar_web/public/.DS_Store
-/ammaar_web/.DS_Store?
-/ammaar_web/._*
-/ammaar_web/.Spotlight-V100
-/ammaar_web/.Trashes
-/ammaar_web/ehthumbs.db
-/ammaar_web/Thumbs.db
-
-# Project specific
-/ammaar_web/*.bak
-/ammaar_web/*.swp
-/ammaar_web/*~
-
-/ammaar_web/.env
+# --- OS ---
 .DS_Store
-/ammaar_web/public/info.txt
-/rag_test/
-/ammaar_web/src/pages/Rag.tsx
+**/.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# --- Editor / IDE ---
+.idea/
+.cursor/
+*.swp
+*.swo
+*~
+
+# --- Secrets (set in Cloudflare Pages → Environment variables) ---
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Vite exposes only VITE_* vars to the client at build time.
+# For Batch 4: VITE_BATCH4_PASSCODE_HASH (SHA-256 hex of passcode)
+
+# --- ammaar_web: dependencies & build output ---
+ammaar_web/node_modules/
+ammaar_web/dist/
+ammaar_web/.vite/
+ammaar_web/.vercel/
+ammaar_web/.wrangler/
+
+# --- ammaar_web: testing ---
+ammaar_web/coverage/
+ammaar_web/test-results/
+ammaar_web/playwright-report/
+ammaar_web/blob-report/
+
+# --- ammaar_web: logs & cache ---
+ammaar_web/*.log
+ammaar_web/npm-debug.log*
+ammaar_web/yarn-debug.log*
+ammaar_web/yarn-error.log*
+ammaar_web/.eslintcache
+ammaar_web/*.tsbuildinfo
+ammaar_web/.npm
+ammaar_web/.pnp
+ammaar_web/.pnp.js
+ammaar_web/.yarn-integrity
+ammaar_web/*.tgz
+
+# --- Batch 4: local source media & prompts (not deployed) ---
+# Commit generated assets instead: ammaar_web/public/batch4/ + src/data/batch4*.ts
+ammaar_web/src/context/
+
+# --- Legacy / experimental ---
+rag_test/
 prompt.txt
-ammaar_web/public/.DS_Store
+ammaar_web/src/pages/Rag.tsx
+
+# --- Misc local-only files ---
+ammaar_web/public/info.txt
 ammaar_web/src/info*
 ammaar_web/src/info.txt

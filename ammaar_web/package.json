@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "generate:batch4": "node scripts/generate-batch4-media.mjs",
+    "prebuild": "npm run generate:batch4",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
