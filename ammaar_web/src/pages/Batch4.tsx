@@ -139,6 +139,11 @@ function Batch4Content() {
 
         {tab === 'recordings' && day && (
           <div className="max-w-3xl mx-auto space-y-6">
+            {/* <p className="text-center text-gray-400 text-xs sm:text-sm leading-relaxed">
+              This feature maps the day or class to the recorded lecture time stamps.
+              It is currently discontinued, but if popular demand exists, it can
+              resume.
+            </p> */}
             {activeSession && (
               <div className="rounded-xl overflow-hidden border b4-border-accent-strong b4-media-bg">
                 <div className="aspect-video">
@@ -197,7 +202,7 @@ function Batch4Content() {
           </div>
         )}
       </div>
-      <Footer />
+      <Footer message="Asalamualaikum. To whomever reads this, IA the intention for this website is for student of knowledge to benefit from resources accumulated by the Batch 4 Seekers class at Miftaah. May Allah accept this work and use it as a source of service to the Deen. Ameen" />
     </div>
   );
 }
